@@ -41,7 +41,7 @@ class Config:
         self.split_size = .8
         self.visualise = False
         self.save_model = True
-        self.model_name = "ensemble"
-        self.confusion_matrix_name = "ensemble.txt"
+        self.model_name = "xception_2"
+        self.confusion_matrix_name = "xception_2.txt"
         self.data_path = "C:\\Users\\Andi\\Desktop\\xAI_Proj\\pathmnist_shuffled_kaggle.npz"
 

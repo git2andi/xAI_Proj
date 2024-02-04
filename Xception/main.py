@@ -34,14 +34,21 @@ if __name__ == "__main__":
     
     num_classes = len(np.unique(train_labels))
     print(f"Number of classes: {num_classes}")
-    
+
+
+
     # Prepare CSV file to save the results
-    results_path = os.path.join(config.model_data_path, "training_results.csv")
+    results_path = os.path.join(config.model_data_path, "training_results_xception_2.csv")
+
+    # Ensure the directory exists
+    os.makedirs(os.path.dirname(results_path), exist_ok=True)
+
     with open(results_path, mode='w', newline='') as file:
         writer = csv.writer(file)
         # Write header
         writer.writerow(['Epoch', 'Train Loss', 'Train Accuracy', 'Train Precision', 'Train Recall', 'Train F1 Score',
-                         'Validation Loss', 'Validation Accuracy', 'Validation Precision', 'Validation Recall', 'Validation F1 Score'])
+                     'Validation Loss', 'Validation Accuracy', 'Validation Precision', 'Validation Recall', 'Validation F1 Score'])
+
 
 
     model_trainer = ModelTrainer(config, device, num_classes)
@@ -77,7 +84,7 @@ if __name__ == "__main__":
 
 
     if config.save_model:
-        model_path = os.path.join(config.model_path, "ensemble.pth")
+        model_path = os.path.join(config.model_path, "xception_2.pth")
         torch.save(model_trainer.model.state_dict(), model_path)
         print(f"Model saved to {model_path}")
 

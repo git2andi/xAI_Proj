@@ -31,6 +31,7 @@ class ModelTrainer:
             'SGD': optim.SGD,
             'AdamW': optim.AdamW,
             'Adagrad': optim.Adagrad,
+            'RMSprop': optim.RMSprop,
         }
         opti_func = optimizers.get(self.config.opti)
         if opti_func is None:
@@ -39,59 +40,56 @@ class ModelTrainer:
 
 
 
-    #def load_model(self):
-        #ssl._create_default_https_context = ssl._create_unverified_context # Reset context to allow download (for pretrained Xception)
-        #model = pretrainedmodels.__dict__["xception"](pretrained="imagenet")
-        #num_ftrs = model.last_linear.in_features
-        #model.last_linear = nn.Linear(num_ftrs, self.num_classes)
+    def load_model(self):
+        ssl._create_default_https_context = ssl._create_unverified_context # Reset context to allow download (for pretrained Xception)
+        model = pretrainedmodels.__dict__["xception"](pretrained="imagenet")
+        num_ftrs = model.last_linear.in_features
+        model.last_linear = nn.Linear(num_ftrs, self.num_classes)
         
         #model = timm.create_model('resnet152', pretrained=True)
         #num_ftrs = model.fc.in_features
         #model.fc = nn.Linear(num_ftrs, self.num_classes)
         
-        #model.to(self.device)
-        #return model
+        model.to(self.device)
+        return model
 
-    def load_model(self):
+    #def load_model(self):
         
         # Xception 
-        xception_model = pretrainedmodels.__dict__["xception"](pretrained="imagenet")
-        num_ftrs_xception = xception_model.last_linear.in_features
-        xception_model.last_linear = nn.Linear(num_ftrs_xception, self.num_classes)
-        print("Xception model successfully initialized")
+        #xception_model = pretrainedmodels.__dict__["xception"](pretrained="imagenet")
+        #num_ftrs_xception = xception_model.last_linear.in_features
+        #xception_model.last_linear = nn.Linear(num_ftrs_xception, self.num_classes)
+        #print("Xception model successfully initialized")
 
         # ResNet-50
-        resnet_model = timm.create_model('resnet50', pretrained=True)
-        num_ftrs_resnet = resnet_model.fc.in_features
-        resnet_model.fc = nn.Linear(num_ftrs_resnet, self.num_classes)
-        print("ResNet-50 model successfully initialized")
+        #resnet_model = timm.create_model('resnet50', pretrained=True)
+        #num_ftrs_resnet = resnet_model.fc.in_features
+        #resnet_model.fc = nn.Linear(num_ftrs_resnet, self.num_classes)
+        #print("ResNet-50 model successfully initialized")
 
-        class EnsembleModel(nn.Module):
-            def __init__(self, xception_model, resnet_model):
-                super(EnsembleModel, self).__init__()
-                self.xception_model = xception_model
-                self.resnet_model = resnet_model
+        #class EnsembleModel(nn.Module):
+            #def __init__(self, xception_model, resnet_model):
+                #super(EnsembleModel, self).__init__()
+                #self.xception_model = xception_model
+                #self.resnet_model = resnet_model
 
-            def forward(self, x):
-                xception_output = self.xception_model(x)
-                resnet_output = self.resnet_model(x)
+            #def forward(self, x):
+                #xception_output = self.xception_model(x)
+                #resnet_output = self.resnet_model(x)
             
                 # Ensemble by averaging the predictions
-                output = (xception_output + resnet_output) / 2.0
+                #output = (xception_output + resnet_output) / 2.0
 
-                return output
+                #return output
 
-        ensemble_model = EnsembleModel(xception_model, resnet_model)
+        #ensemble_model = EnsembleModel(xception_model, resnet_model)
     
-        ensemble_model.to(self.device)
+        #ensemble_model.to(self.device)
         #print(ensemble_model)
-        print("Ensemble model successfully initialized.")
+        #print("Ensemble model successfully initialized.")
 
     
-        return ensemble_model
-
-
-    
+        #return ensemble_model
 
     def train(self, train_dataloader):
         self.model.train()
@@ -228,7 +226,7 @@ class ModelTrainer:
                 test_predictions.extend(pred.cpu().numpy().flatten())
 
         # Create the submission DataFrame
-        submission_file_path = os.path.join(self.config.submission_path, 'ensemble_submission.csv')
+        submission_file_path = os.path.join(self.config.submission_path, 'xception_2_submission.csv')
         submission = pd.DataFrame({'ID': range(len(test_predictions)), 'CLASS': test_predictions})
         submission.to_csv(submission_file_path, index=False)
-        print("Submission file 'submission.csv' created successfully.")
+        print("Submission file 'submission_2_submission.csv' created successfully.")

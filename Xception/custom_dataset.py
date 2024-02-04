@@ -32,9 +32,9 @@ preprocessing = transforms.Compose([
     transforms.ToPILImage(),
     transforms.Resize(140),
     transforms.ToTensor(),
-    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+    transforms.Normalize(mean=[0.27726755, 0.27726755, 0.27726755], std=[0.37245104, 0.28460753, 0.37250024])
+    # transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
-
 
 ####################
 # Augmentation #
