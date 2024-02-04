@@ -20,7 +20,8 @@ class ModelTrainer:
         self.model = self.load_model()
         self.criterion = config.criterion
         self.optimizer = self.configure_optimizer()
-        self.best_val_loss = float('inf')
+        self.best_val_loss = -float('inf')
+        self.best_val_accuracy = -float('inf')
         self.patience_counter = 0
         self.best_model_state = None
 
@@ -41,8 +42,8 @@ class ModelTrainer:
 
 
     def load_model(self):
-        ssl._create_default_https_context = ssl._create_unverified_context # Reset context to allow download (for pretrained Xception)
-        model = pretrainedmodels.__dict__["xception"](pretrained="imagenet")
+        ssl._create_default_https_context = ssl._create_unverified_context # Reset context to allow download (for pretrainedmodels)
+        model = pretrainedmodels.__dict__["inceptionv4"](pretrained="imagenet")
         num_ftrs = model.last_linear.in_features
         model.last_linear = nn.Linear(num_ftrs, self.num_classes)
         
@@ -53,43 +54,6 @@ class ModelTrainer:
         model.to(self.device)
         return model
 
-    #def load_model(self):
-        
-        # Xception 
-        #xception_model = pretrainedmodels.__dict__["xception"](pretrained="imagenet")
-        #num_ftrs_xception = xception_model.last_linear.in_features
-        #xception_model.last_linear = nn.Linear(num_ftrs_xception, self.num_classes)
-        #print("Xception model successfully initialized")
-
-        # ResNet-50
-        #resnet_model = timm.create_model('resnet50', pretrained=True)
-        #num_ftrs_resnet = resnet_model.fc.in_features
-        #resnet_model.fc = nn.Linear(num_ftrs_resnet, self.num_classes)
-        #print("ResNet-50 model successfully initialized")
-
-        #class EnsembleModel(nn.Module):
-            #def __init__(self, xception_model, resnet_model):
-                #super(EnsembleModel, self).__init__()
-                #self.xception_model = xception_model
-                #self.resnet_model = resnet_model
-
-            #def forward(self, x):
-                #xception_output = self.xception_model(x)
-                #resnet_output = self.resnet_model(x)
-            
-                # Ensemble by averaging the predictions
-                #output = (xception_output + resnet_output) / 2.0
-
-                #return output
-
-        #ensemble_model = EnsembleModel(xception_model, resnet_model)
-    
-        #ensemble_model.to(self.device)
-        #print(ensemble_model)
-        #print("Ensemble model successfully initialized.")
-
-    
-        #return ensemble_model
 
     def train(self, train_dataloader):
         self.model.train()
@@ -161,37 +125,46 @@ class ModelTrainer:
         val_loss = total_val_loss / len(validate_dataloader)
         metrics = self.calculate_metrics(np.concatenate(ground_truth_list), np.concatenate(pred_list))
 
-        # Early Stopping
-        if val_loss < self.best_val_loss:
-            self.best_val_loss = val_loss
+
+        # Check if 99.6%+
+        if val_accuracy >= 99.6:
+            torch.save(self.best_model_state, os.path.join(self.model_path, "996_" + self.model_name))
+            print(f"Model saved with validation accuracy of 99.6% or higher.")
+
+
+        # Early Stopping and Best Model Save
+        if val_accuracy > self.best_val_accuracy:
+            self.best_val_accuracy = val_accuracy
             self.patience_counter = 0
             self.best_model_state = copy.deepcopy(self.model.state_dict())  # Save best model state
-            print("Saved new best model!")
+            torch.save(self.best_model_state, os.path.join(self.model_path, "best_" + self.model_name))
+            print("New best model saved with accuracy:", val_accuracy)
+    
+            # Generate confusion matrix
+            best_val_confusion_matrix = confusion_matrix(
+            np.concatenate([arr.flatten() for arr in ground_truth_list]),
+            np.concatenate([arr.flatten() for arr in pred_list])
+            )
+            best_matrix_file_path = os.path.join(self.config.model_data_path, "best_" + self.model_name + "_CM")
+            np.savetxt(best_matrix_file_path, best_val_confusion_matrix, fmt='%d')
+            print(f"Best model confusion matrix saved as {best_matrix_file_path}")
         else:
             self.patience_counter += 1
 
-        if self.patience_counter >= self.config.patience:
-            val_confusion_matrix = confusion_matrix(
-                np.concatenate([arr.flatten() for arr in ground_truth_list]),
-                np.concatenate([arr.flatten() for arr in pred_list])
-            )
-            print("Patience is reached: created CM")
-            print(val_confusion_matrix)
-            matrix_file_path = os.path.join(self.config.model_data_path, "ensembleCM")
-            np.savetxt(matrix_file_path, val_confusion_matrix, fmt='%d')
-            print(f"Confusion matrix saved as {matrix_file_path}")
-
-
+        # At the end of all epochs, save the final model and its confusion matrix
         if epoch == (self.config.num_epochs - 1):
-            conf_matrix = confusion_matrix(
+            torch.save(self.model.state_dict(), os.path.join(self.model_path, "full_" + self.model_name))
+
+            # Generate CM
+            full_conf_matrix = confusion_matrix(
                 np.concatenate([arr.flatten() for arr in ground_truth_list]),
                 np.concatenate([arr.flatten() for arr in pred_list])
             )
-            print("Max Epochs reached: created CM")
-            print(conf_matrix)
-            matrix_file_path = os.path.join(self.config.model_data_path, self.config.confusion_matrix_name)
-            np.savetxt(matrix_file_path, conf_matrix, fmt='%d')
-            print(f"Confusion matrix saved as {matrix_file_path}")
+            full_matrix_file_path = os.path.join(self.config.model_data_path, "full_" + self.model_name + "_CM")
+            np.savetxt(full_matrix_file_path, full_conf_matrix, fmt='%d')
+            print(f"Final model and its confusion matrix saved as {full_matrix_file_path}")
+
+
 
         # Reset lists so labels don't accumulate across epochs
         ground_truth_list = []
@@ -226,7 +199,7 @@ class ModelTrainer:
                 test_predictions.extend(pred.cpu().numpy().flatten())
 
         # Create the submission DataFrame
-        submission_file_path = os.path.join(self.config.submission_path, 'xception_2_submission.csv')
+        submission_file_path = os.path.join(self.config.submission_path, self.model_name + "_submission.csv")
         submission = pd.DataFrame({'ID': range(len(test_predictions)), 'CLASS': test_predictions})
         submission.to_csv(submission_file_path, index=False)
-        print("Submission file 'submission_2_submission.csv' created successfully.")
+        print("Submission file created successfully.")

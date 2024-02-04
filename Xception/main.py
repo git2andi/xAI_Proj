@@ -38,14 +38,12 @@ if __name__ == "__main__":
 
 
     # Prepare CSV file to save the results
-    results_path = os.path.join(config.model_data_path, "training_results_xception_2.csv")
-
-    # Ensure the directory exists
+    results_path = os.path.join(config.model_data_path, "training_results_" + config.model_name + ".csv")
     os.makedirs(os.path.dirname(results_path), exist_ok=True)
 
     with open(results_path, mode='w', newline='') as file:
         writer = csv.writer(file)
-        # Write header
+        # header
         writer.writerow(['Epoch', 'Train Loss', 'Train Accuracy', 'Train Precision', 'Train Recall', 'Train F1 Score',
                      'Validation Loss', 'Validation Accuracy', 'Validation Precision', 'Validation Recall', 'Validation F1 Score'])
 
@@ -81,12 +79,6 @@ if __name__ == "__main__":
             # Write data for the current epoch
             writer.writerow([epoch+1, train_loss, train_accuracy, train_precision, train_recall, train_f1_score,
                              val_loss, val_accuracy, val_precision, val_recall, val_f1_score])
-
-
-    if config.save_model:
-        model_path = os.path.join(config.model_path, "xception_2.pth")
-        torch.save(model_trainer.model.state_dict(), model_path)
-        print(f"Model saved to {model_path}")
 
     print("Generating predictions on the test dataset...")
     model_trainer.generate_predictions(test_dataloader)

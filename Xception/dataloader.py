@@ -1,7 +1,6 @@
-from torch.utils.data import DataLoader, WeightedRandomSampler, Subset, random_split
+from torch.utils.data import DataLoader, WeightedRandomSampler, random_split
 import numpy as np
-import os
-from visualize import visclassdist  # Ensure this function is imported correctly
+from visualize import visclassdist
 
 class CustomDataLoader:
     def __init__(self, dataset, config):
@@ -9,21 +8,18 @@ class CustomDataLoader:
         self.config = config
         self.train_dataset = None
         self.val_dataset = None
-        if not os.path.exists(self.config.plot_path):
-            os.makedirs(self.config.plot_path)
 
     def prepare_loaders(self):
         total_size = len(self.dataset)
         train_size = int(self.config.split_size * total_size)
         val_size = total_size - train_size
 
-        # Store the subsets directly in the class instance
         self.train_dataset, self.val_dataset = random_split(self.dataset, [train_size, val_size])
 
         # Visualize class distribution before balancing
         if self.config.visualise:
             print("Visualizing class distribution before balancing...")
-            self.visualize_class_distribution(self.train_dataset, "Before Balancing")
+            self.visualize_class_distribution(self.train_dataset, "pre_balancing")
 
         if self.config.balancing:
             print("Applying class balancing...")
@@ -31,8 +27,7 @@ class CustomDataLoader:
             self.train_loader = DataLoader(self.train_dataset, batch_size=self.config.batch_size, sampler=sampler)
             if self.config.visualise:
                 print("Visualizing class distribution after balancing...")
-                self.visualize_post_balancing_distribution()
-
+                self.visualize_post_balancing_distribution("post_balancing")
         else:
             self.train_loader = DataLoader(self.train_dataset, batch_size=self.config.batch_size, shuffle=True)
 
@@ -46,23 +41,22 @@ class CustomDataLoader:
         weights = class_weights[labels]
         return WeightedRandomSampler(weights, len(weights), replacement=True)
 
+
     def visualize_class_distribution(self, dataset, title_suffix):
         labels = np.array([self.dataset.labels[i] for i in dataset.indices])
         unique, counts = np.unique(labels, return_counts=True)
-        visclassdist(unique, counts, title_suffix, "", self.config.plot_path)
+        filename = f"{self.config.model_name}_class_distribution_{title_suffix}.png"
+        visclassdist(unique, counts, title_suffix, self.config.plot_path, filename)
 
 
-    def visualize_post_balancing_distribution(self):
+    def visualize_post_balancing_distribution(self, title_suffix):
         balanced_occurrences = np.zeros(len(np.unique(self.dataset.labels)))
         for _, labels in self.train_loader:
             for label in labels.numpy():
                 balanced_occurrences[label] += 1
         dif_cl_strings = [str(i) for i in range(len(balanced_occurrences))]
-    
-        title = 'training_post_split_post_balancing'
-        filename = title.replace(' ', '_').replace('\n', '_') + '.png'
-        visclassdist(dif_cl_strings, balanced_occurrences, title, self.config.plot_path, filename)
-
+        filename = f"{self.config.model_name}_class_distribution_{title_suffix}.png"
+        visclassdist(dif_cl_strings, balanced_occurrences, "Post Balancing", self.config.plot_path, filename)
 
     def get_train_loader(self):
         return self.train_loader
