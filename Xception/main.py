@@ -56,13 +56,14 @@ if __name__ == "__main__":
     print("Initializing model training...")
     for epoch in range(config.num_epochs):
         train_accuracy, train_loss, train_metrics = model_trainer.train(train_loader)
-        val_accuracy, val_loss, val_metrics, early_stop = model_trainer.evaluate(val_loader, epoch)
+        val_accuracy, val_loss, val_metrics, early_stop, patience_counter = model_trainer.evaluate(val_loader, epoch)
         
         print(f"Epoch {epoch+1}/{config.num_epochs}")
         print(f"Train Loss: {train_loss:.4f}, Train Accuracy: {train_accuracy:.2f}%")
         print(f"Train Metrics: {train_metrics}")
         print(f"Validation Loss: {val_loss:.4f}, Validation Accuracy: {val_accuracy:.2f}%")
         print(f"Validation Metrics: {val_metrics}")
+        print("Patience Counter: " + patience_counter)
         
         # Separate metrics for CSV writing
         train_precision = train_metrics['precision']
@@ -83,10 +84,6 @@ if __name__ == "__main__":
         if early_stop:
             print(f"Early stopping triggered at Epoch {epoch+1}")
             break
-
-        if not early_stop:
-            print("Completed all epochs without early stopping.")
-
 
     print("Generating predictions on the test dataset...")
     model_trainer.generate_predictions(test_dataloader)

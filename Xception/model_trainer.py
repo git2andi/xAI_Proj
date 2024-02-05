@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 import timm
 import numpy as np
 import pandas as pd
@@ -45,18 +46,22 @@ class ModelTrainer:
 
 
     def load_model(self):
-        ssl._create_default_https_context = ssl._create_unverified_context # Reset context to allow download (for pretrainedmodels)
-        model = pretrainedmodels.__dict__["xception"](pretrained="imagenet")
+        #ssl._create_default_https_context = ssl._create_unverified_context # Reset context to allow download (for pretrainedmodels)
+        #model = pretrainedmodels.__dict__["xception"](pretrained="imagenet")
         #model = timm.create_model('xception', pretrained=True)
         #model = timm.create_model('inception_v4', pretrained=True)
-
-        num_ftrs = model.last_linear.in_features
-        model.last_linear = nn.Linear(num_ftrs, self.num_classes)
+        #num_ftrs = model.last_linear.in_features
+        #model.last_linear = nn.Linear(num_ftrs, self.num_classes)
         
         #model = timm.create_model('resnet152', pretrained=True)
         #num_ftrs = model.fc.in_features
         #model.fc = nn.Linear(num_ftrs, self.num_classes)
-        
+
+        model = SimpleCNN(num_classes = self.num_classes)
+
+        #state_dict = torch.load("C:\\Users\\Andi\\Desktop\\xAI_Proj\\Xception\\models\\best_xception_3.pth", map_location=self.device)
+        #model.load_state_dict(state_dict)
+
         model.to(self.device)
         return model
 
@@ -105,6 +110,7 @@ class ModelTrainer:
         total_val_loss = 0
         correct_val = 0
         total_val = 0
+        patience_counter = 0
         ground_truth_list = []
         pred_list = []
 
@@ -140,8 +146,8 @@ class ModelTrainer:
 
         # Early Stopping and Best Model Save
         if val_accuracy > self.best_val_accuracy:
+            patience_counter = 0
             self.best_val_accuracy = val_accuracy
-            self.patience_counter = 0
             self.best_model_state = copy.deepcopy(self.model.state_dict())  # Save best model state
             torch.save(self.best_model_state, os.path.join(self.model_path, f"best_{self.model_name}.pth"))
             print("New best model saved with accuracy:", val_accuracy)
@@ -155,11 +161,11 @@ class ModelTrainer:
             np.save(best_matrix_file_path, best_val_confusion_matrix)
             print(f"Best model confusion matrix saved as {best_matrix_file_path}")
         else:
-            self.patience_counter += 1
+            patience_counter += 1
 
 
         # Set Early Stop flag
-        if self.patience_counter >= self.patience:
+        if patience_counter >= self.patience:
             early_stop = True
         else:
             early_stop = False
@@ -183,7 +189,7 @@ class ModelTrainer:
         ground_truth_list = []
         pred_list = []
 
-        return val_accuracy, val_loss, metrics, early_stop
+        return val_accuracy, val_loss, metrics, early_stop, patience_counter
     
 
     def calculate_metrics(self, ground_truths, predictions):
@@ -216,3 +222,44 @@ class ModelTrainer:
         submission = pd.DataFrame({'ID': range(len(test_predictions)), 'CLASS': test_predictions})
         submission.to_csv(submission_file_path, index=False)
         print("Submission file created successfully.")
+
+
+
+class SimpleCNN(nn.Module):
+    def __init__(self, num_classes):
+        super(SimpleCNN, self).__init__()
+        self.conv1 = nn.Sequential(
+            nn.Conv2d(3, 32, kernel_size=3, stride=1, padding="same"),
+            nn.BatchNorm2d(32),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2),
+            nn.Dropout(0.25)
+        )
+        self.conv2 = nn.Sequential(
+            nn.Conv2d(32, 64, kernel_size=3, stride=1, padding="same"),
+            nn.BatchNorm2d(64),            
+            nn.ReLU(),
+            nn.MaxPool2d(2),
+            nn.Dropout(0.25)
+        )
+        self.conv3 = nn.Sequential(
+            nn.Conv2d(64, 128, kernel_size=3, stride=1, padding="same"),
+            nn.BatchNorm2d(128),
+            nn.ReLU(),
+            nn.MaxPool2d(2),
+            nn.Dropout(0.25)
+        )
+        self.fc1 = nn.Linear(128 * 16 * 16, 256)
+        self.fc_bn = nn.BatchNorm1d(256)
+        self.dropout_fc = nn.Dropout(0.5)
+        self.fc2 = nn.Linear(256, num_classes)
+
+    def forward(self, x):
+        x = self.conv1(x)
+        x = self.conv2(x)
+        x = self.conv3(x)
+        x = x.view(-1, 128 * 16 * 16)
+        x = F.relu(self.fc_bn(self.fc1(x)))
+        x = self.dropout_fc(x)
+        x = self.fc2(x)
+        return torch.log_softmax(x, dim=1)

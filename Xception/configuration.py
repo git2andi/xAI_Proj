@@ -31,11 +31,11 @@ class Config:
         # Hyperparam #
         ####################
         self.learning_rate = 0.001
-        self.opti = "AdamW" # NAdam, Adam, SGD, Adagrad, AdamW, RMSprop 
+        self.opti = "Adam" # NAdam, Adam, SGD, Adagrad, AdamW, RMSprop 
         self.criterion = nn.CrossEntropyLoss()
         self.num_epochs = 100
-        self.batch_size = 64
-        self.patience = 15
+        self.batch_size = 32
+        self.patience = 10
         self.sceduler_LearningRate = .1
         self.sceduler_LearningRatePatience = 10
 
@@ -46,9 +46,9 @@ class Config:
         self.balancing = True
         self.data_augmentation = True
         self.split_size = .8
-        self.visualise = True
+        self.visualise = False
         self.save_model = True
-        self.model_name = "xception_3"
+        self.model_name = "SimpleCNN_all"
         self.data_path = "C:\\Users\\Andi\\Desktop\\xAI_Proj\\pathmnist_shuffled_kaggle.npz"
 
 
