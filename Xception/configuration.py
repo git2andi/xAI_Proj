@@ -30,8 +30,8 @@ class Config:
         ####################
         # Hyperparam #
         ####################
-        self.learning_rate = 0.0005
-        self.opti = "RMSprop" # NAdam, Adam, SGD, Adagrad, AdamW, RMSprop 
+        self.learning_rate = 0.001
+        self.opti = "AdamW" # NAdam, Adam, SGD, Adagrad, AdamW, RMSprop 
         self.criterion = nn.CrossEntropyLoss()
         self.num_epochs = 100
         self.batch_size = 64
@@ -48,7 +48,7 @@ class Config:
         self.split_size = .8
         self.visualise = True
         self.save_model = True
-        self.model_name = "inception_v4_1"
+        self.model_name = "xception_3"
         self.data_path = "C:\\Users\\Andi\\Desktop\\xAI_Proj\\pathmnist_shuffled_kaggle.npz"
 
 

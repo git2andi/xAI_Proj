@@ -46,9 +46,9 @@ class ModelTrainer:
 
     def load_model(self):
         ssl._create_default_https_context = ssl._create_unverified_context # Reset context to allow download (for pretrainedmodels)
-        #model = pretrainedmodels.__dict__["xception"](pretrained="imagenet")
+        model = pretrainedmodels.__dict__["xception"](pretrained="imagenet")
         #model = timm.create_model('xception', pretrained=True)
-        model = timm.create_model('inception_v4', pretrained=True)
+        #model = timm.create_model('inception_v4', pretrained=True)
 
         num_ftrs = model.last_linear.in_features
         model.last_linear = nn.Linear(num_ftrs, self.num_classes)
