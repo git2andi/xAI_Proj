@@ -16,6 +16,7 @@ class ModelTrainer:
     def __init__(self, config, device, num_classes):
         self.config = config
         self.device = device
+        self.model_name = config.model_name
         self.model_path = config.model_path
         self.num_classes = num_classes
         self.model = self.load_model()
@@ -24,6 +25,7 @@ class ModelTrainer:
         self.best_val_loss = -float('inf')
         self.best_val_accuracy = -float('inf')
         self.patience_counter = 0
+        self.patience = config.patience
         self.best_model_state = None
 
     def configure_optimizer(self):
@@ -132,7 +134,7 @@ class ModelTrainer:
 
         # Check if 99.6%+
         if val_accuracy >= 99.6:
-            torch.save(self.best_model_state, os.path.join(self.model_path, "996_" + self.model_name))
+            torch.save(self.best_model_state, os.path.join(self.model_path, f"996_{self.model_name}.pth"))
             print(f"Model saved with validation accuracy of 99.6% or higher.")
 
 
@@ -141,7 +143,7 @@ class ModelTrainer:
             self.best_val_accuracy = val_accuracy
             self.patience_counter = 0
             self.best_model_state = copy.deepcopy(self.model.state_dict())  # Save best model state
-            torch.save(self.best_model_state, os.path.join(self.model_path, "best_" + self.model_name))
+            torch.save(self.best_model_state, os.path.join(self.model_path, f"best_{self.model_name}.pth"))
             print("New best model saved with accuracy:", val_accuracy)
     
             # Generate confusion matrix
@@ -149,32 +151,39 @@ class ModelTrainer:
             np.concatenate([arr.flatten() for arr in ground_truth_list]),
             np.concatenate([arr.flatten() for arr in pred_list])
             )
-            best_matrix_file_path = os.path.join(self.config.model_data_path, "best_" + self.model_name + "_CM")
-            np.savetxt(best_matrix_file_path, best_val_confusion_matrix, fmt='%d')
+            best_matrix_file_path = os.path.join(self.config.model_data_path, f"best_{self.model_name}_CM.npy")
+            np.save(best_matrix_file_path, best_val_confusion_matrix)
             print(f"Best model confusion matrix saved as {best_matrix_file_path}")
         else:
             self.patience_counter += 1
 
+
+        # Set Early Stop flag
+        if self.patience_counter >= self.patience:
+            early_stop = True
+        else:
+            early_stop = False
+
+
         # At the end of all epochs, save the final model and its confusion matrix
         if epoch == (self.config.num_epochs - 1):
-            torch.save(self.model.state_dict(), os.path.join(self.model_path, "full_" + self.model_name))
+            torch.save(self.model.state_dict(), os.path.join(self.model_path, f"full_{self.model_name}.pth"))
 
             # Generate CM
             full_conf_matrix = confusion_matrix(
                 np.concatenate([arr.flatten() for arr in ground_truth_list]),
                 np.concatenate([arr.flatten() for arr in pred_list])
             )
-            full_matrix_file_path = os.path.join(self.config.model_data_path, "full_" + self.model_name + "_CM")
-            np.savetxt(full_matrix_file_path, full_conf_matrix, fmt='%d')
+            full_matrix_file_path = os.path.join(self.config.model_data_path, f"full_{self.model_name}_CM.npy")
+            np.save(full_matrix_file_path, full_conf_matrix)
             print(f"Final model and its confusion matrix saved as {full_matrix_file_path}")
-
 
 
         # Reset lists so labels don't accumulate across epochs
         ground_truth_list = []
         pred_list = []
 
-        return val_accuracy, val_loss, metrics
+        return val_accuracy, val_loss, metrics, early_stop
     
 
     def calculate_metrics(self, ground_truths, predictions):

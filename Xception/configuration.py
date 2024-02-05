@@ -33,9 +33,9 @@ class Config:
         self.learning_rate = 0.0005
         self.opti = "RMSprop" # NAdam, Adam, SGD, Adagrad, AdamW, RMSprop 
         self.criterion = nn.CrossEntropyLoss()
-        self.num_epochs = 50
-        self.batch_size = 128
-        self.patience = 5
+        self.num_epochs = 100
+        self.batch_size = 64
+        self.patience = 15
         self.sceduler_LearningRate = .1
         self.sceduler_LearningRatePatience = 10
 
@@ -46,7 +46,7 @@ class Config:
         self.balancing = True
         self.data_augmentation = True
         self.split_size = .8
-        self.visualise = False
+        self.visualise = True
         self.save_model = True
         self.model_name = "inception_v4_1"
         self.data_path = "C:\\Users\\Andi\\Desktop\\xAI_Proj\\pathmnist_shuffled_kaggle.npz"

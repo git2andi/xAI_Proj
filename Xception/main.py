@@ -50,13 +50,13 @@ if __name__ == "__main__":
 
 
     model_trainer = ModelTrainer(config, device, num_classes)
-
+    early_stop = False
 
     # Training loop
     print("Initializing model training...")
     for epoch in range(config.num_epochs):
         train_accuracy, train_loss, train_metrics = model_trainer.train(train_loader)
-        val_accuracy, val_loss, val_metrics = model_trainer.evaluate(val_loader, epoch)
+        val_accuracy, val_loss, val_metrics, early_stop = model_trainer.evaluate(val_loader, epoch)
         
         print(f"Epoch {epoch+1}/{config.num_epochs}")
         print(f"Train Loss: {train_loss:.4f}, Train Accuracy: {train_accuracy:.2f}%")
@@ -79,6 +79,14 @@ if __name__ == "__main__":
             # Write data for the current epoch
             writer.writerow([epoch+1, train_loss, train_accuracy, train_precision, train_recall, train_f1_score,
                              val_loss, val_accuracy, val_precision, val_recall, val_f1_score])
+            
+        if early_stop:
+            print(f"Early stopping triggered at Epoch {epoch+1}")
+            break
+
+        if not early_stop:
+            print("Completed all epochs without early stopping.")
+
 
     print("Generating predictions on the test dataset...")
     model_trainer.generate_predictions(test_dataloader)
