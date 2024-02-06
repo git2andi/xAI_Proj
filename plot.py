@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the organized data
-df = pd.read_csv('C:\\Users\\Andi\\Desktop\\xAI_Proj\\Xception\\model_data\\training_results_SimpleCNN.csv')
+df = pd.read_csv('C:\\Users\\Andi\\Desktop\\xAI_Proj\\Xception\\model_data\\training_results_SimpleCNN_all.csv')
 
 # Convert numeric columns to floats for plotting
 df[['Train Loss', 'Train Accuracy', 'Train Precision', 'Train Recall', 'Train F1 Score',
@@ -14,9 +14,9 @@ df[['Train Loss', 'Train Accuracy', 'Train Precision', 'Train Recall', 'Train F1
 epochs = df['Epoch'].astype(int)
 
 # Fixed axis limits
-loss_lim = (0, 0.25)
-accuracy_lim = (92, 100)
-precision_recall_f1_lim = (0.92, 1)
+loss_lim = (0, 1)
+accuracy_lim = (70, 100)
+precision_recall_f1_lim = (0, 1)
 
 # Plotting
 fig, axs = plt.subplots(3, 2, figsize=(15, 20), constrained_layout=True)

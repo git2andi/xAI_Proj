@@ -4,7 +4,7 @@ import seaborn as sns
 import os
 
 # File path
-file_path = 'C:\\Users\\Andi\\Desktop\\xAI_Proj\\Xception\\model_data\\Xception_1_CM.txt'
+file_path = 'C:\\Users\\Andi\\Desktop\\xAI_Proj\\Xception\\model_data\\best_xception_1_CM.txt'
 
 _, file_extension = os.path.splitext(file_path)
 

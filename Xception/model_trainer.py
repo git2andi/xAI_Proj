@@ -25,7 +25,6 @@ class ModelTrainer:
         self.optimizer = self.configure_optimizer()
         self.best_val_loss = -float('inf')
         self.best_val_accuracy = -float('inf')
-        self.patience_counter = 0
         self.patience = config.patience
         self.best_model_state = None
 
@@ -46,13 +45,13 @@ class ModelTrainer:
 
 
     def load_model(self):
-        ssl._create_default_https_context = ssl._create_unverified_context # Reset context to allow download (for pretrainedmodels)
-        model = pretrainedmodels.__dict__["xception"](pretrained="imagenet")
+        #ssl._create_default_https_context = ssl._create_unverified_context # Reset context (for pretrainedmodels)
+        #model = pretrainedmodels.__dict__["xception"](pretrained="imagenet")
         #model = timm.create_model('xception', pretrained=True)
-        num_ftrs = model.last_linear.in_features
-        model.last_linear = nn.Linear(num_ftrs, self.num_classes)
+        #num_ftrs = model.last_linear.in_features
+        #model.last_linear = nn.Linear(num_ftrs, self.num_classes)
         
-        #model = SimpleCNN(num_classes = self.num_classes)
+        model = SimpleCNN(num_classes = self.num_classes)
 
         model.to(self.device)
         return model
@@ -138,7 +137,7 @@ class ModelTrainer:
 
         # Early Stopping and Best Model Save
         if val_accuracy > self.best_val_accuracy:
-            patience_counter = 0
+            self.patience_counter = 0
             self.best_val_accuracy = val_accuracy
             self.best_model_state = copy.deepcopy(self.model.state_dict())  # Save best model state
             torch.save(self.best_model_state, os.path.join(self.model_path, f"best_{self.model_name}.pth"))
@@ -157,7 +156,7 @@ class ModelTrainer:
 
 
         # Set Early Stop flag
-        if patience_counter >= self.patience:
+        if self.patience_counter > self.patience:
             early_stop = True
         else:
             early_stop = False
@@ -181,7 +180,7 @@ class ModelTrainer:
         ground_truth_list = []
         pred_list = []
 
-        return val_accuracy, val_loss, metrics, early_stop, patience_counter
+        return val_accuracy, val_loss, metrics, early_stop, self.patience_counter
     
 
     def calculate_metrics(self, ground_truths, predictions):
@@ -225,25 +224,25 @@ class SimpleCNN(nn.Module):
             nn.BatchNorm2d(32),
             nn.ReLU(),
             nn.MaxPool2d(kernel_size=2),
-            nn.Dropout(0.25)
+            #nn.Dropout(0.25)
         )
         self.conv2 = nn.Sequential(
             nn.Conv2d(32, 64, kernel_size=3, stride=1, padding="same"),
             nn.BatchNorm2d(64),            
             nn.ReLU(),
             nn.MaxPool2d(2),
-            nn.Dropout(0.25)
+            #nn.Dropout(0.25)
         )
         self.conv3 = nn.Sequential(
             nn.Conv2d(64, 128, kernel_size=3, stride=1, padding="same"),
             nn.BatchNorm2d(128),
             nn.ReLU(),
             nn.MaxPool2d(2),
-            nn.Dropout(0.25)
+            #nn.Dropout(0.25)
         )
         self.fc1 = nn.Linear(128 * 16 * 16, 256)
         self.fc_bn = nn.BatchNorm1d(256)
-        self.dropout_fc = nn.Dropout(0.5)
+        #self.dropout_fc = nn.Dropout(0.5)
         self.fc2 = nn.Linear(256, num_classes)
 
     def forward(self, x):
@@ -251,7 +250,7 @@ class SimpleCNN(nn.Module):
         x = self.conv2(x)
         x = self.conv3(x)
         x = x.view(-1, 128 * 16 * 16)
-        x = F.relu(self.fc_bn(self.fc1(x)))
-        x = self.dropout_fc(x)
+        x = F.relu(self.fc_bn(self.fc1(x))) #BN: x = F.relu(self.fc1(x))
+        #x = self.dropout_fc(x)
         x = self.fc2(x)
         return torch.log_softmax(x, dim=1)
