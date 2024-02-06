@@ -45,13 +45,13 @@ class ModelTrainer:
 
 
     def load_model(self):
-        #ssl._create_default_https_context = ssl._create_unverified_context # Reset context (for pretrainedmodels)
-        #model = pretrainedmodels.__dict__["xception"](pretrained="imagenet")
+        ssl._create_default_https_context = ssl._create_unverified_context # Reset context (for pretrainedmodels)
+        model = pretrainedmodels.__dict__["xception"](pretrained="imagenet")
         #model = timm.create_model('xception', pretrained=True)
-        #num_ftrs = model.last_linear.in_features
-        #model.last_linear = nn.Linear(num_ftrs, self.num_classes)
+        num_ftrs = model.last_linear.in_features
+        model.last_linear = nn.Linear(num_ftrs, self.num_classes)
         
-        model = SimpleCNN(num_classes = self.num_classes)
+        #model = SimpleCNN(num_classes = self.num_classes)
 
         model.to(self.device)
         return model
@@ -101,7 +101,6 @@ class ModelTrainer:
         total_val_loss = 0
         correct_val = 0
         total_val = 0
-        patience_counter = 0
         ground_truth_list = []
         pred_list = []
 
@@ -137,8 +136,8 @@ class ModelTrainer:
 
         # Early Stopping and Best Model Save
         if val_accuracy > self.best_val_accuracy:
-            self.patience_counter = 0
             self.best_val_accuracy = val_accuracy
+            self.patience_counter = 0
             self.best_model_state = copy.deepcopy(self.model.state_dict())  # Save best model state
             torch.save(self.best_model_state, os.path.join(self.model_path, f"best_{self.model_name}.pth"))
             print("New best model saved with accuracy:", val_accuracy)
@@ -152,7 +151,7 @@ class ModelTrainer:
             np.save(best_matrix_file_path, best_val_confusion_matrix)
             print(f"Best model confusion matrix saved as {best_matrix_file_path}")
         else:
-            patience_counter += 1
+            self.patience_counter += 1
 
 
         # Set Early Stop flag
