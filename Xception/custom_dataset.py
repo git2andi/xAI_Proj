@@ -30,7 +30,7 @@ class CustomDataset(Dataset):
 ####################
 preprocessing = transforms.Compose([
     transforms.ToPILImage(),
-    transforms.Resize(128),
+    transforms.Resize(168),
     transforms.ToTensor(),
     #transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
     #transforms.Normalize(mean=[0.27726755, 0.27726755, 0.27726755], std=[0.37245104, 0.28460753, 0.37250024])

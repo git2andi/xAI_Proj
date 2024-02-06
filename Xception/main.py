@@ -63,7 +63,7 @@ if __name__ == "__main__":
         print(f"Train Metrics: {train_metrics}")
         print(f"Validation Loss: {val_loss:.4f}, Validation Accuracy: {val_accuracy:.2f}%")
         print(f"Validation Metrics: {val_metrics}")
-        print("Patience Counter: " + patience_counter)
+        print("Patience Counter: ", patience_counter)
         
         # Separate metrics for CSV writing
         train_precision = train_metrics['precision']

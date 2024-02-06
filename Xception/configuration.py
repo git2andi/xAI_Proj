@@ -33,9 +33,9 @@ class Config:
         self.learning_rate = 0.001
         self.opti = "Adam" # NAdam, Adam, SGD, Adagrad, AdamW, RMSprop 
         self.criterion = nn.CrossEntropyLoss()
-        self.num_epochs = 100
+        self.num_epochs = 75
         self.batch_size = 32
-        self.patience = 10
+        self.patience = 7
         self.sceduler_LearningRate = .1
         self.sceduler_LearningRatePatience = 10
 
@@ -48,7 +48,7 @@ class Config:
         self.split_size = .8
         self.visualise = False
         self.save_model = True
-        self.model_name = "SimpleCNN_all"
+        self.model_name = "SimpleCNN_noBN"
         self.data_path = "C:\\Users\\Andi\\Desktop\\xAI_Proj\\pathmnist_shuffled_kaggle.npz"
 
 
