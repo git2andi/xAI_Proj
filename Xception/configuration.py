@@ -30,11 +30,11 @@ class Config:
         ####################
         # Hyperparam #
         ####################
-        self.learning_rate = 0.0005
+        self.learning_rate = 0.001
         self.opti = "AdamW" # NAdam, Adam, SGD, Adagrad, AdamW, RMSprop 
         self.criterion = nn.CrossEntropyLoss()
         self.num_epochs = 100
-        self.batch_size = 64
+        self.batch_size = 32
         self.patience = 7
 
 

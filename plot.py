@@ -22,7 +22,7 @@ precision_recall_f1_lim = (0, 1)
 fig, axs = plt.subplots(3, 2, figsize=(15, 20), constrained_layout=True)
 
 # Loss Plot
-axs[0, 0].plot(epochs, df['Train Loss'], label='Train Loss')
+axs[0, 0].plot(epochs, df['Train Loss'], label='Train Loss')                # marker='o'
 axs[0, 0].plot(epochs, df['Validation Loss'], label='Validation Loss')
 axs[0, 0].set_title('Training and Validation Loss')
 axs[0, 0].set_xlabel('Epochs')
