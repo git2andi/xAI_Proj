@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex ofu_xai_2022"] 1708419526 "ofu_xai_2022.aux" "ofu_xai_2022.bbl" "ofu_xai_2022" 1708419529 0
-  "./bibliography.bib" 1708416123 955 33dadeaf446e5a5a82718a028f3d755b ""
+["bibtex ofu_xai_2022"] 1708422431 "ofu_xai_2022.aux" "ofu_xai_2022.bbl" "ofu_xai_2022" 1708423081 0
+  "./bibliography.bib" 1708420668 1005 189e9206ab3aeb1c66bf37dde0192121 ""
   "C:/Users/andi/AppData/Local/Programs/MiKTeX/bibtex/bst/natbib/abbrvnat.bst" 1284451856 26532 66bed5cc59495faaa3f9ae9af9fa5e42 ""
-  "ofu_xai_2022.aux" 1708419528 3778 e0cfbb35a51b80e0221aa5d1620d1ff6 "pdflatex"
+  "ofu_xai_2022.aux" 1708423080 3733 7718fc20852a94ac81a3a158e9dfa108 "pdflatex"
   (generated)
   "ofu_xai_2022.bbl"
   "ofu_xai_2022.blg"
   (rewritten before read)
-["pdflatex"] 1708419526 "c:/Users/andi/Desktop/xAI_Proj/Final_Report/ofu_xai_2022.tex" "ofu_xai_2022.pdf" "ofu_xai_2022" 1708419529 0
+["pdflatex"] 1708423079 "c:/Users/andi/Desktop/xAI_Proj/Final_Report/ofu_xai_2022.tex" "ofu_xai_2022.pdf" "ofu_xai_2022" 1708423081 0
   "C:/Users/andi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1708416324 83275 1978d112df17b20d7bf8100df3a5a7ea ""
   "C:/Users/andi/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1000.pk" 1708416327 20028 2ab091ff8ae815695b85655c748fb47c ""
   "C:/Users/andi/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1695627327 24141436 f5ceb816a26d4adc78fbb0bd7a7be1f4 ""
@@ -139,23 +139,23 @@
   "C:/Users/andi/AppData/Local/Programs/MiKTeX/tex/latex/units/nicefrac.sty" 1469025550 4163 0462ee5ab265cf59dc15a41a3b883101 ""
   "C:/Users/andi/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/andi/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656233290 56148 51a9a8571c07b9921892ae11063ae853 ""
-  "c:/Users/andi/Desktop/xAI_Proj/Final_Report/ofu_xai_2022.tex" 1708419523 6486 ff2b1ee779fc9add862e35d5c4ef1638 ""
+  "c:/Users/andi/Desktop/xAI_Proj/Final_Report/ofu_xai_2022.tex" 1708420759 6470 428b56f3996d7de335c35744f538f709 ""
   "chapter/architectures.tex" 1708419348 144 8a225b4fe1724ea82b3bd9deee486d99 ""
   "chapter/conclusion.tex" 1708419512 46 9cad3c3879fb7d0cd999e6e9a038a4b4 ""
-  "chapter/data.tex" 1708419310 143 5230a797df0a6aa1674b4ffc9377ed21 ""
+  "chapter/data.tex" 1708420103 88 884aed51a54685cfa27c96f848f8c26a ""
   "chapter/discussion.tex" 1708419189 46 b5f9715423066d2289192fa6ca7c41c6 ""
-  "chapter/introduction.tex" 1708417507 43 6ed8ace2a9e3595e4af8c8d404fa6e20 ""
-  "chapter/methods.tex" 1708419297 93 1f8a0f1f3196c444a42f19ce48d6738f ""
+  "chapter/introduction.tex" 1708423078 1983 e206e774a191705bc74e370067fd652d ""
+  "chapter/methods.tex" 1708420156 67 adbb59607552f46238860d78e3dabdf7 ""
   "chapter/resnet.tex" 1708419425 213 62edf1b25b9902176f84367d6ea1e63b ""
   "chapter/simplecnn.tex" 1708419358 52 da7f363723d8177f90b0f26989d2c2c9 ""
   "chapter/xception.tex" 1708419402 50 f9932181b0b23ff81e02395b19d5b213 ""
   "math_commands.tex" 1708416123 12955 459796780de7bf785c81d48f09c4cfa6 ""
   "math_notation.tex" 1708416123 8287 ec167875e81ce830a35f40734b7f6425 ""
-  "ofu_xai_2022.aux" 1708419528 3778 e0cfbb35a51b80e0221aa5d1620d1ff6 "pdflatex"
-  "ofu_xai_2022.bbl" 1708419526 511 e6dfaf67743bf9d9ccbf8b9a8ce348cb "bibtex ofu_xai_2022"
-  "ofu_xai_2022.out" 1708419528 1589 b729b96d131cbfc81d47d0cbcebe6e74 "pdflatex"
+  "ofu_xai_2022.aux" 1708423080 3733 7718fc20852a94ac81a3a158e9dfa108 "pdflatex"
+  "ofu_xai_2022.bbl" 1708422432 1055 a73676fb01102363e5d5d3ab1053c6e7 "bibtex ofu_xai_2022"
+  "ofu_xai_2022.out" 1708423080 1471 1d196b47890a75daa3ec4f5f7715767f "pdflatex"
   "ofu_xai_2022.sty" 1708416123 11992 1f62aa2ac9ecf94b4ccb5b3d57665f45 ""
-  "ofu_xai_2022.tex" 1708419523 6486 ff2b1ee779fc9add862e35d5c4ef1638 ""
+  "ofu_xai_2022.tex" 1708420759 6470 428b56f3996d7de335c35744f538f709 ""
   (generated)
   "ofu_xai_2022.aux"
   "ofu_xai_2022.log"
