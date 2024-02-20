@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9.24) (preloaded format=pdflatex 2023.9.25)  20 FEB 2024 10:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9.24) (preloaded format=pdflatex 2023.9.25)  20 FEB 2024 11:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -480,73 +480,41 @@ Package microtype Info: Loading generic protrusion settings for font family
  (chapter/introduction.tex (chapter/data.tex)) (chapter/methods.tex [1
 
 
-{C:/Users/andi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] (chapter/architectures.tex (chapter/simplecnn.tex) (chapter/resnet.tex) (chapter/xception.tex))) (chapter/discussion.tex) (chapter/conclusion.tex) (math_notation.tex
-Underfull \hbox (badness 10000) in paragraph at lines 7--11
-
- []
-
-
-Underfull \vbox (badness 4181) has occurred while \output is active []
-
- [2]
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmss' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4] [5]) (ofu_xai_2022.bbl)
-Underfull \hbox (badness 10000) in paragraph at lines 171--174
+{C:/Users/andi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] (chapter/architectures.tex (chapter/simplecnn.tex) (chapter/resnet.tex) (chapter/xception.tex))) (chapter/discussion.tex) (chapter/conclusion.tex) (ofu_xai_2022.bbl [2])
+Underfull \hbox (badness 10000) in paragraph at lines 151--154
 [][]  []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--180
+Underfull \hbox (badness 10000) in paragraph at lines 157--160
 [][]  []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--187
+Underfull \hbox (badness 10000) in paragraph at lines 163--167
 [][]  []
  []
 
-[6
-
-] (ofu_xai_2022.aux)
+[3] (ofu_xai_2022.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 Package rerunfilecheck Info: File `ofu_xai_2022.out' has not changed.
-(rerunfilecheck)             Checksum: 1D196B47890A75DAA3EC4F5F7715767F;1471.
- )
-(\end occurred inside a group at level 8)
-
-### simple group (level 8) entered at line 149 ({)
-### simple group (level 7) entered at line 125 ({)
-### simple group (level 6) entered at line 105 ({)
-### simple group (level 5) entered at line 86 ({)
-### simple group (level 4) entered at line 74 ({)
-### simple group (level 3) entered at line 59 ({)
-### simple group (level 2) entered at line 37 ({)
-### simple group (level 1) entered at line 17 ({)
-### bottom level 
+(rerunfilecheck)             Checksum: 3D5689178C594D595DAFDEE4878773C1;1103.
+ ) 
 Here is how much of TeX's memory you used:
- 13478 strings out of 475248
- 206476 string characters out of 5758285
- 1936785 words of memory out of 5000000
- 34614 multiletter control sequences out of 15000+600000
- 601753 words of font info for 169 fonts, out of 8000000 for 9000
+ 13399 strings out of 475248
+ 205360 string characters out of 5758285
+ 1931785 words of memory out of 5000000
+ 34582 multiletter control sequences out of 15000+600000
+ 591687 words of font info for 142 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,16n,79p,1053b,600s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ofu_xai_2022.pdf (6 pages, 233648 bytes).
+ 75i,10n,79p,1053b,564s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on ofu_xai_2022.pdf (3 pages, 122707 bytes).
 PDF statistics:
- 233 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
- 47737 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 149 PDF objects out of 1000 (max. 8388607)
+ 21 named destinations out of 1000 (max. 500000)
+ 34393 words of extra memory for PDF output out of 35830 (max. 10000000)
 
