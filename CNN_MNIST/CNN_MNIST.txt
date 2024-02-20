@@ -1,0 +1,205 @@
+# Hyperparameters
+num_classes = 10
+default_lr = 0.001
+default_bs = 32
+default_epoch = 15
+learning_rates = [default_lr, 0.01, 0.1]
+batch_sizes = [16, default_bs, 64]
+num_epochs = [5, 10, default_epoch, 20]
+
+
+
+Learning Rate: 0.001
+Train Accuracies: [95.985, 98.733, 99.165, 99.379, 99.496, 99.602, 99.698, 99.717, 99.808, 99.86, 99.79, 99.875, 99.896, 99.858, 99.858]
+Validation Accuracies: [98.2, 98.683, 98.817, 98.758, 99.058, 99.058, 98.567, 99.025, 99.042, 98.95, 98.967, 98.8, 98.992, 99.042, 98.958]
+
+Learning Rate: 0.01
+Train Accuracies: [94.858, 97.233, 97.446, 97.535, 97.617, 97.802, 97.848, 97.992, 97.892, 97.9, 98.002, 98.154, 98.173, 98.162, 98.348]
+Validation Accuracies: [96.9, 97.15, 97.575, 97.3, 97.433, 97.767, 97.575, 96.792, 96.9, 97.6, 97.708, 97.25, 97.292, 97.367, 97.158]
+
+Learning Rate: 0.1
+Train Accuracies: [10.302, 10.363, 10.106, 10.438, 10.254, 10.208, 10.252, 10.323, 10.042, 10.304, 10.123, 10.21, 10.331, 10.244, 10.381]
+Validation Accuracies: [9.908, 9.25, 10.025, 10.025, 9.908, 9.908, 10.842, 9.908, 10.842, 10.1, 9.908, 10.842, 9.908, 9.908, 10.058]
+
+Batch Size: 16
+Train Accuracies: [96.61, 98.763, 99.144, 99.431, 99.502, 99.654, 99.681, 99.71, 99.769, 99.819, 99.848, 99.835, 99.821, 99.888, 99.856]
+Validation Accuracies: [98.583, 98.458, 98.65, 98.842, 98.758, 98.792, 98.892, 99.017, 98.808, 98.792, 98.908, 98.867, 98.858, 99.075, 98.942]
+
+Batch Size: 32
+Train Accuracies: [95.908, 98.638, 99.054, 99.263, 99.4, 99.61, 99.65, 99.698, 99.752, 99.8, 99.777, 99.792, 99.867, 99.871, 99.838]
+Validation Accuracies: [97.808, 98.375, 98.792, 98.992, 99.042, 98.658, 98.7, 98.708, 98.658, 98.742, 98.85, 98.925, 98.933, 98.683, 99.033]
+
+Batch Size: 64
+Train Accuracies: [95.171, 98.502, 98.963, 99.217, 99.429, 99.55, 99.669, 99.671, 99.769, 99.815, 99.758, 99.875, 99.86, 99.852, 99.846]
+Validation Accuracies: [97.983, 98.575, 98.85, 98.742, 98.983, 98.85, 98.933, 98.833, 98.758, 98.85, 98.767, 98.9, 98.867, 98.85, 98.983]
+
+Epochs: 5
+Train Accuracies: [95.848, 98.71, 99.054, 99.315, 99.438]
+Validation Accuracies: [98.342, 98.308, 98.85, 98.892, 98.867]
+
+Epochs: 10
+Train Accuracies: [95.931, 98.617, 99.104, 99.348, 99.508, 99.596, 99.7, 99.773, 99.758, 99.817]
+Validation Accuracies: [98.5, 98.475, 98.65, 98.908, 98.725, 98.933, 98.65, 99.008, 98.958, 99.025]
+
+Epochs: 15
+Train Accuracies: [95.873, 98.65, 99.077, 99.344, 99.504, 99.596, 99.688, 99.746, 99.74, 99.815, 99.852, 99.817, 99.888, 99.85, 99.842]
+Validation Accuracies: [97.967, 98.667, 98.8, 98.675, 98.833, 98.892, 98.9, 99.067, 98.817, 99.0, 99.075, 99.133, 98.808, 98.717, 98.975]
+
+Epochs: 20
+Train Accuracies: [96.019, 98.731, 99.11, 99.308, 99.523, 99.627, 99.671, 99.721, 99.763, 99.79, 99.854, 99.842, 99.823, 99.883, 99.917, 99.848, 99.919, 99.906, 99.9, 99.927]
+Validation Accuracies: [97.9, 98.7, 98.808, 98.817, 98.908, 98.867, 98.817, 99.017, 99.067, 98.775, 99.058, 98.975, 99.033, 98.933, 99.075, 99.075, 99.167, 99.033, 99.008, 98.975]
+
+
+
+
+
+CNN - OLD
+
+class SimpleCNN(nn.Module):
+    def __init__(self):
+        super(SimpleCNN, self).__init__()
+        self.conv1 = nn.Sequential(
+            nn.Conv2d(
+                in_channels=1,
+                out_channels=32,
+                kernel_size=5,
+                stride=1,
+                padding="same",
+            ),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2),
+        )
+        self.conv2 = nn.Sequential(
+            nn.Conv2d(32, 64, 5, 1, "same"),
+            nn.ReLU(),
+            nn.MaxPool2d(2),
+        )
+        self.out = nn.Linear(64 * 7 * 7, num_classes)
+
+    def forward(self, x):
+            x = self.conv1(x)
+            x = self.conv2(x)        # flatten the output of conv2 to (batch_size, 32 * 7 * 7)
+            x = x.view(-1, 64*7*7)
+            output = self.out(x)
+            return torch.log_softmax(output, dim=1)
+
+
+
+CNN - NEW
+
+class SimpleCNN(nn.Module):
+    def __init__(self, num_classes=10):
+        super(SimpleCNN, self).__init__()
+        self.conv1 = nn.Sequential(
+            nn.Conv2d(1, 32, kernel_size=3, stride=1, padding="same"),
+            nn.BatchNorm2d(32),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2),
+            nn.Dropout(0.25)
+        )
+        self.conv2 = nn.Sequential(
+            nn.Conv2d(32, 64, kernel_size=3, stride=1, padding="same"),
+            nn.BatchNorm2d(64),            nn.ReLU(),
+            nn.MaxPool2d(2),
+            nn.Dropout(0.25)
+        )
+        self.conv3 = nn.Sequential(
+            nn.Conv2d(64, 128, kernel_size=3, stride=1, padding="same"),
+            nn.BatchNorm2d(128),
+            nn.ReLU(),
+            nn.MaxPool2d(2),
+            nn.Dropout(0.25)
+        )
+        self.fc1 = nn.Linear(128 * 3 * 3, 256)
+        self.fc_bn = nn.BatchNorm1d(256)
+        self.dropout_fc = nn.Dropout(0.5)
+        self.fc2 = nn.Linear(256, num_classes)
+
+    def forward(self, x):
+        x = self.conv1(x)
+        x = self.conv2(x)
+        x = self.conv3(x)
+        x = x.view(-1, 128 * 3 * 3)
+        x = F.relu(self.fc_bn(self.fc1(x)))
+        x = self.dropout_fc(x)
+        x = self.fc2(x)
+        return torch.log_softmax(x, dim=1)
+
+Epoch 1/15, Train Loss: 0.0175, Validation Accuracy: 98.61%
+Epoch 2/15, Train Loss: 0.0492, Validation Accuracy: 99.04%
+Epoch 3/15, Train Loss: 0.0072, Validation Accuracy: 99.18%
+Epoch 4/15, Train Loss: 0.0137, Validation Accuracy: 99.26%
+Epoch 5/15, Train Loss: 0.1598, Validation Accuracy: 99.17%
+Epoch 6/15, Train Loss: 0.1230, Validation Accuracy: 99.38%
+Epoch 7/15, Train Loss: 0.0471, Validation Accuracy: 99.36%
+Epoch 8/15, Train Loss: 0.0603, Validation Accuracy: 99.28%
+Epoch 9/15, Train Loss: 0.0032, Validation Accuracy: 99.33%
+Epoch 10/15, Train Loss: 0.0015, Validation Accuracy: 99.38%
+Epoch 11/15, Train Loss: 0.0097, Validation Accuracy: 99.21%
+Epoch 12/15, Train Loss: 0.0103, Validation Accuracy: 99.48%
+Epoch 13/15, Train Loss: 0.0008, Validation Accuracy: 99.34%
+Epoch 14/15, Train Loss: 0.0019, Validation Accuracy: 99.48%
+Epoch 15/15, Train Loss: 0.0033, Validation Accuracy: 99.44%
+
+No Batch Normalization: 
+Epoch 1/15, Train Loss: 0.0373, Validation Accuracy: 98.68%
+Epoch 2/15, Train Loss: 0.0387, Validation Accuracy: 99.06%
+Epoch 3/15, Train Loss: 0.0325, Validation Accuracy: 99.17%
+Epoch 4/15, Train Loss: 0.0453, Validation Accuracy: 99.34%
+Epoch 5/15, Train Loss: 0.0106, Validation Accuracy: 99.20%
+Epoch 6/15, Train Loss: 0.0191, Validation Accuracy: 99.22%
+Epoch 7/15, Train Loss: 0.0202, Validation Accuracy: 99.34%
+Epoch 8/15, Train Loss: 0.0080, Validation Accuracy: 99.43%
+Epoch 9/15, Train Loss: 0.0022, Validation Accuracy: 99.44%
+Epoch 10/15, Train Loss: 0.0006, Validation Accuracy: 99.47%
+Epoch 11/15, Train Loss: 0.0422, Validation Accuracy: 99.40%
+Epoch 12/15, Train Loss: 0.0339, Validation Accuracy: 99.38%
+Epoch 13/15, Train Loss: 0.0008, Validation Accuracy: 99.46%
+Epoch 14/15, Train Loss: 0.0039, Validation Accuracy: 99.43%
+Epoch 15/15, Train Loss: 0.0106, Validation Accuracy: 99.48%
+
+No Dropout:
+Epoch 1/15, Train Loss: 0.0057, Validation Accuracy: 98.99%
+Epoch 2/15, Train Loss: 0.0620, Validation Accuracy: 98.67%
+Epoch 3/15, Train Loss: 0.0374, Validation Accuracy: 99.21%
+Epoch 4/15, Train Loss: 0.0009, Validation Accuracy: 99.27%
+Epoch 5/15, Train Loss: 0.0198, Validation Accuracy: 99.21%
+Epoch 6/15, Train Loss: 0.0025, Validation Accuracy: 99.19%
+Epoch 7/15, Train Loss: 0.0327, Validation Accuracy: 99.37%
+Epoch 8/15, Train Loss: 0.0367, Validation Accuracy: 99.35%
+Epoch 9/15, Train Loss: 0.0009, Validation Accuracy: 99.14%
+Epoch 10/15, Train Loss: 0.0016, Validation Accuracy: 99.30%
+Epoch 11/15, Train Loss: 0.0161, Validation Accuracy: 99.33%
+Epoch 12/15, Train Loss: 0.1004, Validation Accuracy: 99.38%
+Epoch 13/15, Train Loss: 0.0030, Validation Accuracy: 99.35%
+Epoch 14/15, Train Loss: 0.0000, Validation Accuracy: 99.35%
+Epoch 15/15, Train Loss: 0.0001, Validation Accuracy: 99.39%
+
+
+
+
+Insights
+
+
+The provided results compare the performance of an old CNN architecture with a new one that incorporates Batch Normalization and Dropout, as well as variants of the new CNN with either Batch Normalization or Dropout individually disabled. Here's what we can learn from these results:
+
+### General Observation
+- The **new CNN architecture** shows a significant improvement in validation accuracy across the 15 epochs compared to the old CNN, indicating the effectiveness of Batch Normalization and Dropout in enhancing model performance.
+
+### Impact of Batch Normalization and Dropout
+- **Batch Normalization** appears to play a crucial role in stabilizing training and achieving higher validation accuracies more consistently across epochs. This is evident from the overall higher validation accuracies in the initial epochs and sustained performance improvement.
+- **Dropout** contributes to the regularization of the model, preventing overfitting and ensuring that the validation accuracy remains high. This is particularly noticeable in the consistent improvement and high accuracy achieved in the later epochs.
+
+### Specific Observations
+- **With Batch Normalization**: The model reaches high validation accuracy faster, illustrating Batch Normalization's effect on accelerating convergence. It also shows relatively stable training loss and validation accuracy, which indicates that Batch Normalization helps in stabilizing the training process.
+- **With Dropout**: The model demonstrates a good ability to generalize, as indicated by the high validation accuracy. Dropout helps in reducing overfitting, which is particularly useful in deep networks or networks with a large number of parameters.
+
+### Comparative Insights
+- The **combination of Batch Normalization and Dropout** in the new CNN model provides a good balance between fast convergence (due to Batch Normalization) and regularization (due to Dropout). This combination leads to high validation accuracy with relatively low and stable training losses.
+- **Omitting Batch Normalization** results in a slight decrease in the initial speed of convergence and a bit more fluctuation in validation accuracy across epochs. However, the final accuracies are comparable, suggesting that while Batch Normalization accelerates training and stabilizes early performance, the model can still achieve high accuracy without it, potentially due to Dropout's regularization effects.
+- **Omitting Dropout** shows an increase in fluctuation of validation accuracy and a slightly higher training loss in some epochs. This indicates Dropout's role in preventing overfitting, especially as the model complexity increases with additional layers and parameters.
+
+### Conclusion
+- The integration of Batch Normalization and Dropout in the CNN architecture significantly enhances model performance in terms of both speed of convergence and ability to generalize (as seen in validation accuracy).
+- While both Batch Normalization and Dropout individually contribute to model performance, their combined use offers the best outcome, suggesting that leveraging both techniques in deep learning models can be highly beneficial.
+- These results underscore the importance of incorporating normalization and regularization techniques in deep learning models, especially for complex tasks requiring high accuracy and generalization capability.

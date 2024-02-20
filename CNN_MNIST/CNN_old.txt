@@ -1,0 +1,362 @@
+Epoch 1/30, Train Loss: 1.0872, Train Accuracy: 59.31%, Validation Loss: 0.9485, Validation Accuracy: 66.07%
+Epoch 2/30, Train Loss: 0.8203, Train Accuracy: 70.08%, Validation Loss: 0.7606, Validation Accuracy: 72.14%
+Epoch 3/30, Train Loss: 0.6934, Train Accuracy: 74.80%, Validation Loss: 0.6200, Validation Accuracy: 77.86%
+Epoch 4/30, Train Loss: 0.6201, Train Accuracy: 77.52%, Validation Loss: 0.5975, Validation Accuracy: 77.90%
+Epoch 5/30, Train Loss: 0.5676, Train Accuracy: 79.29%, Validation Loss: 0.5608, Validation Accuracy: 79.13%
+Epoch 6/30, Train Loss: 0.5208, Train Accuracy: 80.79%, Validation Loss: 0.5011, Validation Accuracy: 81.54%
+Epoch 7/30, Train Loss: 0.4819, Train Accuracy: 82.47%, Validation Loss: 0.4567, Validation Accuracy: 83.15%
+Epoch 8/30, Train Loss: 0.4505, Train Accuracy: 83.54%, Validation Loss: 0.5007, Validation Accuracy: 82.04%
+Epoch 9/30, Train Loss: 0.4165, Train Accuracy: 84.79%, Validation Loss: 0.6484, Validation Accuracy: 77.12%
+Epoch 10/30, Train Loss: 0.4028, Train Accuracy: 85.39%, Validation Loss: 0.4079, Validation Accuracy: 84.98%
+Epoch 11/30, Train Loss: 0.3761, Train Accuracy: 86.32%, Validation Loss: 0.4078, Validation Accuracy: 85.19%
+Epoch 12/30, Train Loss: 0.3541, Train Accuracy: 87.14%, Validation Loss: 0.3941, Validation Accuracy: 85.94%
+Epoch 13/30, Train Loss: 0.3363, Train Accuracy: 87.82%, Validation Loss: 0.4434, Validation Accuracy: 84.16%
+Epoch 14/30, Train Loss: 0.3206, Train Accuracy: 88.27%, Validation Loss: 0.4021, Validation Accuracy: 85.73%
+Epoch 15/30, Train Loss: 0.3022, Train Accuracy: 88.90%, Validation Loss: 0.4115, Validation Accuracy: 85.67%
+Epoch 16/30, Train Loss: 0.2866, Train Accuracy: 89.52%, Validation Loss: 0.3831, Validation Accuracy: 86.27%
+Epoch 17/30, Train Loss: 0.2828, Train Accuracy: 89.62%, Validation Loss: 0.3754, Validation Accuracy: 86.95%
+Epoch 18/30, Train Loss: 0.2619, Train Accuracy: 90.45%, Validation Loss: 0.4572, Validation Accuracy: 84.69%
+Epoch 19/30, Train Loss: 0.2548, Train Accuracy: 90.50%, Validation Loss: 0.4976, Validation Accuracy: 84.06%
+Epoch 20/30, Train Loss: 0.2404, Train Accuracy: 91.16%, Validation Loss: 0.3849, Validation Accuracy: 87.12%
+Epoch 21/30, Train Loss: 0.2354, Train Accuracy: 91.45%, Validation Loss: 0.3810, Validation Accuracy: 87.39%
+Epoch 22/30, Train Loss: 0.2237, Train Accuracy: 91.75%, Validation Loss: 0.5574, Validation Accuracy: 81.82%
+Epoch 23/30, Train Loss: 0.2221, Train Accuracy: 91.77%, Validation Loss: 0.4425, Validation Accuracy: 85.90%
+Epoch 24/30, Train Loss: 0.2079, Train Accuracy: 92.32%, Validation Loss: 0.4295, Validation Accuracy: 86.63%
+Epoch 25/30, Train Loss: 0.1985, Train Accuracy: 92.80%, Validation Loss: 0.3966, Validation Accuracy: 87.70%
+Epoch 26/30, Train Loss: 0.1863, Train Accuracy: 93.24%, Validation Loss: 0.4362, Validation Accuracy: 86.75%
+Epoch 27/30, Train Loss: 0.1820, Train Accuracy: 93.36%, Validation Loss: 0.4423, Validation Accuracy: 87.02%
+Epoch 28/30, Train Loss: 0.1744, Train Accuracy: 93.56%, Validation Loss: 0.5234, Validation Accuracy: 85.34%
+Epoch 29/30, Train Loss: 0.1656, Train Accuracy: 93.91%, Validation Loss: 0.4219, Validation Accuracy: 87.16%
+Epoch 30/30, Train Loss: 0.1658, Train Accuracy: 93.90%, Validation Loss: 0.4468, Validation Accuracy: 86.86%
+
+
+
+
+import numpy as np
+import zipfile
+import torch
+from torch.utils.data import TensorDataset, DataLoader
+import torch.nn as nn
+import torch.nn.functional as F
+import torch.optim as optim
+from sklearn.model_selection import train_test_split
+
+
+# Load the data
+data_path = '/content/pathmnist_shuffled_kaggle.npz'  # Adjust if needed
+with np.load(data_path) as data:
+    train_images = data["train_images_shuffled"]
+    train_labels = data["train_labels_shuffled"]
+    test_images = data["test_images_shuffled"]
+
+print("Original shape of train_images:", train_images.shape)
+print("Shape of train_labels:", train_labels.shape)
+print("First few labels:", train_labels[:5])
+
+# Hyperparameters
+learning_rate = 0.001
+batch_size = 32
+num_epochs = 30
+training_split = 0.8
+split_idx = int(len(train_images) * training_split)
+
+train_images_split, val_images_split = train_images[:split_idx], train_images[split_idx:]
+train_labels_split, val_labels_split = train_labels[:split_idx], train_labels[split_idx:]
+
+
+# normalize RGB
+train_images_split = torch.tensor(train_images_split).float() / 255.0
+train_images_split = train_images_split.permute(0, 3, 1, 2)
+val_images_split = torch.tensor(val_images_split).float() / 255.0
+val_images_split = val_images_split.permute(0, 3, 1, 2)
+
+# labels
+train_labels_split = torch.tensor(train_labels_split).squeeze().long()
+val_labels_split = torch.tensor(val_labels_split).squeeze().long()
+
+
+# Create data loaders
+train_dataset = TensorDataset(train_images_split, train_labels_split)
+train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+
+val_dataset = TensorDataset(val_images_split, val_labels_split)
+val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
+
+
+class SimpleCNN(nn.Module):
+    def __init__(self):
+        super(SimpleCNN, self).__init__()
+        self.conv1 = nn.Conv2d(3, 32, kernel_size=3)
+        self.conv2 = nn.Conv2d(32, 64, kernel_size=3)
+        self.fc1 = nn.Linear(64 * 5 * 5, 128)
+        self.fc2 = nn.Linear(128, 9)
+
+    def forward(self, x):
+        x = F.relu(F.max_pool2d(self.conv1(x), 2))
+        x = F.relu(F.max_pool2d(self.conv2(x), 2))
+        x = x.view(-1, 64 * 5 * 5)
+        x = F.relu(self.fc1(x))
+        x = self.fc2(x)
+        return x
+
+model = SimpleCNN()
+
+# allow CUDA
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+model.to(device)
+
+
+def train(model, train_loader, optimizer, criterion):
+    model.train()
+    running_loss = 0.0
+    correct = 0
+    total = 0
+
+    for batch_idx, (data, target) in enumerate(train_loader):
+        data, target = data.to(device), target.to(device)
+        optimizer.zero_grad()
+        output = model(data)
+        loss = criterion(output, target)
+        loss.backward()
+        optimizer.step()
+
+        running_loss += loss.item()
+        _, predicted = torch.max(output.data, 1)
+        total += target.size(0)
+        correct += (predicted == target).sum().item()
+
+    train_loss = running_loss / len(train_loader)
+    train_accuracy = 100 * correct / total
+    return train_loss, train_accuracy
+
+def evaluate(model, data_loader, criterion):
+    model.eval()
+    running_loss = 0.0
+    correct = 0
+    total = 0
+
+    with torch.no_grad():
+        for data, target in data_loader:
+            data, target = data.to(device), target.to(device)
+            output = model(data)
+            loss = criterion(output, target)
+            running_loss += loss.item()
+            _, predicted = torch.max(output.data, 1)
+            total += target.size(0)
+            correct += (predicted == target).sum().item()
+
+    loss = running_loss / len(data_loader)
+    accuracy = 100 * correct / total
+    return loss, accuracy
+
+
+
+optimizer = optim.Adam(model.parameters(), lr=learning_rate)
+criterion = nn.CrossEntropyLoss()
+
+train_losses, train_accuracies = [], []
+val_losses, val_accuracies = [], []
+
+for epoch in range(num_epochs):
+    train_loss, train_accuracy = train(model, train_loader, optimizer, criterion)
+    val_loss, val_accuracy = evaluate(model, val_loader, criterion)
+
+    train_losses.append(train_loss)
+    train_accuracies.append(train_accuracy)
+    val_losses.append(val_loss)
+    val_accuracies.append(val_accuracy)
+
+    print(f'Epoch {epoch+1}/{num_epochs}, Train Loss: {train_loss:.4f}, Train Accuracy: {train_accuracy:.2f}%, Validation Loss: {val_loss:.4f}, Validation Accuracy: {val_accuracy:.2f}%')
+
+
+
+import matplotlib.pyplot as plt
+
+# Function to plot graphs
+def plot_graphs(train_data, val_data, title):
+    plt.figure(figsize=(10, 5))
+    plt.plot(train_data, label='Train')
+    plt.plot(val_data, label='Validation')
+    plt.title(title)
+    plt.legend()
+    plt.show()
+
+# Plot loss and accuracy graphs
+plot_graphs(train_losses, val_losses, "Loss over Epochs")
+plot_graphs(train_accuracies, val_accuracies, "Accuracy over Epochs")
+
+
+model.eval()
+test_predictions = []
+with torch.no_grad():
+  model = model.to(device)
+  for data in test_images:
+    data = data.to(device)
+    output = model(data.unsqueeze(0))
+    pred = output.argmax(dim=1, keepdim=True)
+    test_predictions.append(pred.item())
+
+# Create the submission file
+import pandas as pd
+
+submission = pd.DataFrame({'ID': range(len(test_predictions)), 'CLASS': test_predictions})
+submission.to_csv('submission.csv', index=False)
+
+
+
+
+
+
+Dropout:
+
+class SimpleCNN(nn.Module):
+    def __init__(self):
+        super(SimpleCNN, self).__init__()
+        self.conv1 = nn.Conv2d(3, 32, kernel_size=3)
+        self.conv2 = nn.Conv2d(32, 64, kernel_size=3)
+        self.dropout1 = nn.Dropout(0.25)
+        self.fc1 = nn.Linear(64 * 5 * 5, 128)
+        self.dropout2 = nn.Dropout(0.5)
+        self.fc2 = nn.Linear(128, 9)
+
+    def forward(self, x):
+        x = F.relu(F.max_pool2d(self.conv1(x), 2))
+        x = F.relu(F.max_pool2d(self.conv2(x), 2))
+        x = x.view(-1, 64 * 5 * 5)
+        x = self.dropout1(x)
+        x = F.relu(self.fc1(x))
+        x = self.dropout2(x)
+        x = self.fc2(x)
+        return x
+
+Epoch 1/30, Train Loss: 1.3363, Train Accuracy: 49.44%, Validation Loss: 1.0689, Validation Accuracy: 58.93%
+Epoch 2/30, Train Loss: 1.0032, Train Accuracy: 63.56%, Validation Loss: 0.9215, Validation Accuracy: 67.66%
+Epoch 3/30, Train Loss: 0.9002, Train Accuracy: 67.55%, Validation Loss: 0.7510, Validation Accuracy: 72.08%
+Epoch 4/30, Train Loss: 0.8354, Train Accuracy: 70.01%, Validation Loss: 0.7208, Validation Accuracy: 73.52%
+Epoch 5/30, Train Loss: 0.7916, Train Accuracy: 71.77%, Validation Loss: 0.6612, Validation Accuracy: 75.48%
+Epoch 6/30, Train Loss: 0.7482, Train Accuracy: 73.15%, Validation Loss: 0.6181, Validation Accuracy: 77.86%
+Epoch 7/30, Train Loss: 0.7198, Train Accuracy: 74.20%, Validation Loss: 0.5591, Validation Accuracy: 79.86%
+Epoch 8/30, Train Loss: 0.6847, Train Accuracy: 75.62%, Validation Loss: 0.5796, Validation Accuracy: 79.48%
+Epoch 9/30, Train Loss: 0.6572, Train Accuracy: 76.34%, Validation Loss: 0.5346, Validation Accuracy: 80.98%
+Epoch 10/30, Train Loss: 0.6307, Train Accuracy: 77.70%, Validation Loss: 0.4924, Validation Accuracy: 82.59%
+Epoch 11/30, Train Loss: 0.6161, Train Accuracy: 78.21%, Validation Loss: 0.5478, Validation Accuracy: 80.28%
+Epoch 12/30, Train Loss: 0.5940, Train Accuracy: 78.87%, Validation Loss: 0.4863, Validation Accuracy: 82.68%
+Epoch 13/30, Train Loss: 0.5774, Train Accuracy: 79.55%, Validation Loss: 0.4792, Validation Accuracy: 82.39%
+Epoch 14/30, Train Loss: 0.5698, Train Accuracy: 79.51%, Validation Loss: 0.5384, Validation Accuracy: 80.49%
+Epoch 15/30, Train Loss: 0.5570, Train Accuracy: 80.04%, Validation Loss: 0.4578, Validation Accuracy: 83.53%
+Epoch 16/30, Train Loss: 0.5391, Train Accuracy: 80.82%, Validation Loss: 0.4840, Validation Accuracy: 82.42%
+Epoch 17/30, Train Loss: 0.5290, Train Accuracy: 81.14%, Validation Loss: 0.4534, Validation Accuracy: 83.93%
+Epoch 18/30, Train Loss: 0.5249, Train Accuracy: 81.35%, Validation Loss: 0.4220, Validation Accuracy: 85.15%
+Epoch 19/30, Train Loss: 0.5161, Train Accuracy: 81.73%, Validation Loss: 0.4146, Validation Accuracy: 84.81%
+Epoch 20/30, Train Loss: 0.5088, Train Accuracy: 81.84%, Validation Loss: 0.4141, Validation Accuracy: 85.28%
+Epoch 21/30, Train Loss: 0.4966, Train Accuracy: 82.35%, Validation Loss: 0.4794, Validation Accuracy: 83.23%
+Epoch 22/30, Train Loss: 0.4910, Train Accuracy: 82.48%, Validation Loss: 0.4137, Validation Accuracy: 85.20%
+Epoch 23/30, Train Loss: 0.4854, Train Accuracy: 82.66%, Validation Loss: 0.4874, Validation Accuracy: 82.81%
+Epoch 24/30, Train Loss: 0.4819, Train Accuracy: 82.90%, Validation Loss: 0.3844, Validation Accuracy: 86.38%
+Epoch 25/30, Train Loss: 0.4757, Train Accuracy: 83.17%, Validation Loss: 0.4206, Validation Accuracy: 85.18%
+Epoch 26/30, Train Loss: 0.4642, Train Accuracy: 83.56%, Validation Loss: 0.4178, Validation Accuracy: 85.30%
+Epoch 27/30, Train Loss: 0.4612, Train Accuracy: 83.61%, Validation Loss: 0.3824, Validation Accuracy: 86.07%
+Epoch 28/30, Train Loss: 0.4557, Train Accuracy: 83.79%, Validation Loss: 0.4218, Validation Accuracy: 85.13%
+Epoch 29/30, Train Loss: 0.4476, Train Accuracy: 84.18%, Validation Loss: 0.3956, Validation Accuracy: 85.88%
+Epoch 30/30, Train Loss: 0.4496, Train Accuracy: 83.78%, Validation Loss: 0.3766, Validation Accuracy: 86.71%
+
+
+
+
+
+Early Stopping:
+patience = 5  # Number of epochs to wait for improvement
+min_delta = 0.001  # Minimum change to signify an improvement
+
+best_val_loss = float('inf')
+patience_counter = 0
+
+for epoch in range(num_epochs):
+    train_loss, train_accuracy = train(model, train_loader, optimizer, criterion)
+    val_loss, val_accuracy = evaluate(model, val_loader, criterion)
+
+    # Check if the validation loss improved
+    if val_loss < best_val_loss - min_delta:
+        best_val_loss = val_loss
+        patience_counter = 0  # Reset the counter if there's an improvement
+    else:
+        patience_counter += 1  # Increase the counter if no improvement
+
+    print(f'Epoch {epoch+1}/{num_epochs}, Train Loss: {train_loss:.4f}, Train Accuracy: {train_accuracy:.2f}%, Validation Loss: {val_loss:.4f}, Validation Accuracy: {val_accuracy:.2f}%')
+
+    # Early stopping check
+    if patience_counter >= patience:
+        print(f'Early stopping triggered at epoch {epoch+1}')
+        break
+
+
+Epoch 1/30, Train Loss: 0.6078, Train Accuracy: 77.79%, Validation Loss: 0.5417, Validation Accuracy: 80.55%
+Epoch 2/30, Train Loss: 0.5691, Train Accuracy: 79.16%, Validation Loss: 0.6054, Validation Accuracy: 77.87%
+Epoch 3/30, Train Loss: 0.5297, Train Accuracy: 80.74%, Validation Loss: 0.5171, Validation Accuracy: 81.60%
+Epoch 4/30, Train Loss: 0.5031, Train Accuracy: 81.61%, Validation Loss: 0.4862, Validation Accuracy: 82.64%
+Epoch 5/30, Train Loss: 0.4745, Train Accuracy: 82.60%, Validation Loss: 0.4951, Validation Accuracy: 82.23%
+Epoch 6/30, Train Loss: 0.4507, Train Accuracy: 83.62%, Validation Loss: 0.4470, Validation Accuracy: 83.88%
+Epoch 7/30, Train Loss: 0.4353, Train Accuracy: 83.97%, Validation Loss: 0.4332, Validation Accuracy: 84.47%
+Epoch 8/30, Train Loss: 0.4094, Train Accuracy: 85.04%, Validation Loss: 0.4850, Validation Accuracy: 82.83%
+Epoch 9/30, Train Loss: 0.3910, Train Accuracy: 85.79%, Validation Loss: 0.4027, Validation Accuracy: 85.39%
+Epoch 10/30, Train Loss: 0.3753, Train Accuracy: 86.23%, Validation Loss: 0.5089, Validation Accuracy: 82.55%
+Epoch 11/30, Train Loss: 0.3680, Train Accuracy: 86.59%, Validation Loss: 0.3926, Validation Accuracy: 86.11%
+Epoch 12/30, Train Loss: 0.3477, Train Accuracy: 87.21%, Validation Loss: 0.4680, Validation Accuracy: 84.07%
+Epoch 13/30, Train Loss: 0.3392, Train Accuracy: 87.48%, Validation Loss: 0.4564, Validation Accuracy: 84.36%
+Epoch 14/30, Train Loss: 0.3237, Train Accuracy: 88.03%, Validation Loss: 0.4276, Validation Accuracy: 84.89%
+Epoch 15/30, Train Loss: 0.3147, Train Accuracy: 88.39%, Validation Loss: 0.3826, Validation Accuracy: 86.56%
+Epoch 16/30, Train Loss: 0.3012, Train Accuracy: 88.93%, Validation Loss: 0.4443, Validation Accuracy: 84.96%
+Epoch 17/30, Train Loss: 0.2928, Train Accuracy: 89.31%, Validation Loss: 0.3828, Validation Accuracy: 86.65%
+Epoch 18/30, Train Loss: 0.2799, Train Accuracy: 89.69%, Validation Loss: 0.3708, Validation Accuracy: 87.13%
+Epoch 19/30, Train Loss: 0.2729, Train Accuracy: 90.10%, Validation Loss: 0.4895, Validation Accuracy: 83.25%
+Epoch 20/30, Train Loss: 0.2603, Train Accuracy: 90.42%, Validation Loss: 0.4417, Validation Accuracy: 84.66%
+Epoch 21/30, Train Loss: 0.2553, Train Accuracy: 90.51%, Validation Loss: 0.4683, Validation Accuracy: 84.98%
+Epoch 22/30, Train Loss: 0.2486, Train Accuracy: 90.73%, Validation Loss: 0.4209, Validation Accuracy: 85.77%
+Epoch 23/30, Train Loss: 0.2346, Train Accuracy: 91.23%, Validation Loss: 0.4773, Validation Accuracy: 84.08%
+Early stopping triggered at epoch 23
+
+
+
+
+Early Stopping + Dropout:
+
+Epoch 1/30, Train Loss: 1.2926, Train Accuracy: 50.92%, Validation Loss: 1.0358, Validation Accuracy: 59.91%
+Epoch 2/30, Train Loss: 1.0106, Train Accuracy: 62.50%, Validation Loss: 0.8908, Validation Accuracy: 65.60%
+Epoch 3/30, Train Loss: 0.9171, Train Accuracy: 65.99%, Validation Loss: 0.7331, Validation Accuracy: 73.14%
+Epoch 4/30, Train Loss: 0.8499, Train Accuracy: 69.14%, Validation Loss: 0.6690, Validation Accuracy: 75.67%
+Epoch 5/30, Train Loss: 0.7984, Train Accuracy: 70.91%, Validation Loss: 0.6496, Validation Accuracy: 76.33%
+Epoch 6/30, Train Loss: 0.7644, Train Accuracy: 72.36%, Validation Loss: 0.6613, Validation Accuracy: 76.46%
+Epoch 7/30, Train Loss: 0.7327, Train Accuracy: 73.45%, Validation Loss: 0.5736, Validation Accuracy: 79.90%
+Epoch 8/30, Train Loss: 0.6988, Train Accuracy: 74.62%, Validation Loss: 0.5361, Validation Accuracy: 80.66%
+Epoch 9/30, Train Loss: 0.6790, Train Accuracy: 75.42%, Validation Loss: 0.5456, Validation Accuracy: 80.49%
+Epoch 10/30, Train Loss: 0.6559, Train Accuracy: 76.34%, Validation Loss: 0.5697, Validation Accuracy: 79.14%
+Epoch 11/30, Train Loss: 0.6349, Train Accuracy: 77.18%, Validation Loss: 0.5003, Validation Accuracy: 81.96%
+Epoch 12/30, Train Loss: 0.6201, Train Accuracy: 77.64%, Validation Loss: 0.5214, Validation Accuracy: 81.06%
+Epoch 13/30, Train Loss: 0.6128, Train Accuracy: 77.86%, Validation Loss: 0.4734, Validation Accuracy: 83.44%
+Epoch 14/30, Train Loss: 0.5956, Train Accuracy: 78.50%, Validation Loss: 0.5230, Validation Accuracy: 80.53%
+Epoch 15/30, Train Loss: 0.5837, Train Accuracy: 79.04%, Validation Loss: 0.4758, Validation Accuracy: 82.28%
+Epoch 16/30, Train Loss: 0.5638, Train Accuracy: 79.86%, Validation Loss: 0.4778, Validation Accuracy: 82.40%
+Epoch 17/30, Train Loss: 0.5593, Train Accuracy: 79.82%, Validation Loss: 0.5141, Validation Accuracy: 81.58%
+Epoch 18/30, Train Loss: 0.5428, Train Accuracy: 80.43%, Validation Loss: 0.4460, Validation Accuracy: 83.73%
+Epoch 19/30, Train Loss: 0.5433, Train Accuracy: 80.61%, Validation Loss: 0.4534, Validation Accuracy: 83.54%
+Epoch 20/30, Train Loss: 0.5281, Train Accuracy: 81.13%, Validation Loss: 0.4432, Validation Accuracy: 83.77%
+Epoch 21/30, Train Loss: 0.5128, Train Accuracy: 81.49%, Validation Loss: 0.4043, Validation Accuracy: 85.42%
+Epoch 22/30, Train Loss: 0.5093, Train Accuracy: 81.78%, Validation Loss: 0.4144, Validation Accuracy: 85.13%
+Epoch 23/30, Train Loss: 0.5048, Train Accuracy: 81.93%, Validation Loss: 0.4463, Validation Accuracy: 83.73%
+Epoch 24/30, Train Loss: 0.5007, Train Accuracy: 81.99%, Validation Loss: 0.4280, Validation Accuracy: 84.70%
+Epoch 25/30, Train Loss: 0.4842, Train Accuracy: 82.61%, Validation Loss: 0.4205, Validation Accuracy: 84.88%
+Epoch 26/30, Train Loss: 0.4867, Train Accuracy: 82.62%, Validation Loss: 0.4413, Validation Accuracy: 83.21%
+Early stopping triggered at epoch 26
+
+
+
+
+
+
+
+
+
+
+
+
+
