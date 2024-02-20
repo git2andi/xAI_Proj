@@ -267,6 +267,13 @@ INPUT chapter\resnet.tex
 INPUT .\chapter\xception.tex
 INPUT .\chapter\xception.tex
 INPUT chapter\xception.tex
+INPUT .\figures\xception_architecture.png
+INPUT .\figures\xception_architecture.png
+INPUT .\figures\xception_architecture.png
+INPUT .\figures\xception_architecture.png
+INPUT .\figures\xception_architecture.png
+INPUT .\figures\xception_architecture.png
+INPUT .\figures\xception_architecture.png
 INPUT .\chapter\discussion.tex
 INPUT .\chapter\discussion.tex
 INPUT chapter\discussion.tex

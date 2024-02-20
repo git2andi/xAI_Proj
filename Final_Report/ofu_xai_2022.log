@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9.24) (preloaded format=pdflatex 2023.9.25)  20 FEB 2024 11:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9.24) (preloaded format=pdflatex 2023.9.25)  20 FEB 2024 11:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -504,7 +504,13 @@ File: figures/MNIST.png Graphic file (type png)
 <use figures/MNIST.png>
 Package pdftex.def Info: figures/MNIST.png  used on input line 6.
 (pdftex.def)             Requested size: 119.2467pt x 119.23988pt.
-)) (chapter/methods.tex (chapter/architectures.tex (chapter/simplecnn.tex) (chapter/resnet.tex) (chapter/xception.tex))) (chapter/discussion.tex) (chapter/conclusion.tex) (ofu_xai_2022.bbl [2 <./figures/MNIST.png>])
+)) (chapter/methods.tex (chapter/architectures.tex (chapter/simplecnn.tex) (chapter/resnet.tex) (chapter/xception.tex
+<figures/xception_architecture.png, id=68, 814.54312pt x 572.1375pt>
+File: figures/xception_architecture.png Graphic file (type png)
+<use figures/xception_architecture.png>
+Package pdftex.def Info: figures/xception_architecture.png  used on input line 9.
+(pdftex.def)             Requested size: 357.73405pt x 251.26985pt.
+))) (chapter/discussion.tex) (chapter/conclusion.tex) (ofu_xai_2022.bbl [2 <./figures/MNIST.png>] [3 <./figures/xception_architecture.png>])
 Underfull \hbox (badness 10000) in paragraph at lines 155--158
 [][]  []
  []
@@ -519,7 +525,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 167--171
 [][]  []
  []
 
-[3] [4] (ofu_xai_2022.aux)
+[4] (ofu_xai_2022.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -528,17 +534,17 @@ Package rerunfilecheck Info: File `ofu_xai_2022.out' has not changed.
 (rerunfilecheck)             Checksum: 3D5689178C594D595DAFDEE4878773C1;1103.
  ) 
 Here is how much of TeX's memory you used:
- 13761 strings out of 475248
- 211700 string characters out of 5758285
+ 13774 strings out of 475248
+ 212118 string characters out of 5758285
  1932785 words of memory out of 5000000
- 34911 multiletter control sequences out of 15000+600000
+ 34922 multiletter control sequences out of 15000+600000
  592207 words of font info for 150 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,1053b,564s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,1053b,566s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ofu_xai_2022.pdf (4 pages, 159571 bytes).
+Output written on ofu_xai_2022.pdf (4 pages, 456522 bytes).
 PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
- 23 named destinations out of 1000 (max. 500000)
- 34398 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 167 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
+ 34403 words of extra memory for PDF output out of 35830 (max. 10000000)
 
