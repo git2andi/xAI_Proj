@@ -37,5 +37,4 @@
             \PYG{n}{x} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dropout\PYGZus{}fc}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}
             \PYG{n}{x} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{fc2}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}
             \PYG{k}{return} \PYG{n}{torch}\PYG{o}{.}\PYG{n}{log\PYGZus{}softmax}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{dim}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
-     \PYG{k}{return} \PYG{n}{torch}\PYG{o}{.}\PYG{n}{log\PYGZus{}softmax}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{dim}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
 \end{Verbatim}

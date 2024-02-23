@@ -14,10 +14,10 @@ class Config:
         #########################################
         # Paths for saving plots, the model etc.#
         #########################################
-        self.plot_path = "./plots/"
-        self.model_path = "./models/"
-        self.model_data_path = "./model_data/"
-        self.submission_path = "./submissions/"
+        self.plot_path = "./Andreas/plots/"
+        self.model_path = "./Andreas/models/"
+        self.model_data_path = "./Andreas/model_data/"
+        self.submission_path = "./Andreas/submissions/"
 
         # Ensure all folders exist
         self.ensure_folders_exist([
