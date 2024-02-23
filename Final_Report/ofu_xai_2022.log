@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.23)  23 FEB 2024 10:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.23)  23 FEB 2024 10:23
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -663,7 +663,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has 
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.12 \bibitem[Deng(2012)]{deng2012mnist}
-                                         <./figures/xception_architecture.png>])
+                                         <./figures/xception_architecture.png>]) [4]
 Underfull \hbox (badness 10000) in paragraph at lines 178--181
 [][]  []
  []
@@ -678,24 +678,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 190--194
 [][]  []
  []
 
-(chapter/appendix.tex
+[5] (chapter/appendix.tex
 \openout3 = `ofu_xai_2022.pyg'.
 
- (_minted-ofu_xai_2022/default.pygstyle)
-runsystem(pygmentize -l "python" -f latex -P commandprefix=PYG -F tokenmerge -P stripnl="False" -P mathescape="True" -o _minted-ofu_xai_2022/67EE3F08A9B3F1952DF23967E8E86919C79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex ofu_xai_2022.pyg)...executed.
-
- (_minted-ofu_xai_2022/67EE3F08A9B3F1952DF23967E8E86919C79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex
+ (_minted-ofu_xai_2022/default.pygstyle) (_minted-ofu_xai_2022/67EE3F08A9B3F1952DF23967E8E86919C79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <7> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 2.
- [4])
+)
 \openout3 = `ofu_xai_2022.pyg'.
 
-runsystem(pygmentize -l "python" -f latex -P commandprefix=PYG -F tokenmerge -P stripnl="False" -P mathescape="True" -o _minted-ofu_xai_2022/038846699B89FF4EA30FFE6BEEF343CFC79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex ofu_xai_2022.pyg)...executed.
-
- (_minted-ofu_xai_2022/038846699B89FF4EA30FFE6BEEF343CFC79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex))
-runsystem(del _minted-ofu_xai_2022\844FFC44ACCA5FA77257D12932846DB2C79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex)...executed.
-
- [5] (ofu_xai_2022.aux)
+ (_minted-ofu_xai_2022/038846699B89FF4EA30FFE6BEEF343CFC79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex)) [6] (ofu_xai_2022.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-13>
@@ -706,17 +698,17 @@ runsystem(del ofu_xai_2022.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 18296 strings out of 474462
- 303878 string characters out of 5743355
- 1939998 words of memory out of 5000000
- 40132 multiletter control sequences out of 15000+600000
- 597404 words of font info for 162 fonts, out of 8000000 for 9000
+ 18291 strings out of 474462
+ 303556 string characters out of 5743355
+ 1944998 words of memory out of 5000000
+ 40129 multiletter control sequences out of 15000+600000
+ 597274 words of font info for 160 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,10n,81p,1053b,900s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 77i,10n,81p,1053b,602s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi525\ectt0800.pk> <C:\Users\andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ofu_xai_2022.pdf (5 pages, 474538 bytes).
+Output written on ofu_xai_2022.pdf (6 pages, 474674 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
- 26 named destinations out of 1000 (max. 500000)
+ 234 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
  41059 words of extra memory for PDF output out of 42996 (max. 10000000)
 
