@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.23)  25 FEB 2024 13:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.23)  25 FEB 2024 14:07
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -605,7 +605,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 {C:/Users/andi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-<figures/MNIST.png, id=64, 568.1225pt x 568.1225pt>
+<figures/MNIST.png, id=68, 568.1225pt x 568.1225pt>
 File: figures/MNIST.png Graphic file (type png)
 <use figures/MNIST.png>
 Package pdftex.def Info: figures/MNIST.png  used on input line 6.
@@ -625,7 +625,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has
                                                   \__shipout_drop_firstpage_...
 l.1 \section
             {Methods}\label{methods} <./figures/MNIST.png>] (chapter/architectures.tex (chapter/simplecnn.tex) (chapter/resnet.tex) (chapter/xception.tex
-<figures/xception_architecture.png, id=85, 814.54312pt x 572.1375pt>
+<figures/xception_architecture.png, id=90, 814.54312pt x 572.1375pt>
 File: figures/xception_architecture.png Graphic file (type png)
 <use figures/xception_architecture.png>
 Package pdftex.def Info: figures/xception_architecture.png  used on input line 9.
@@ -675,22 +675,22 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-13>
  ***********
 Package rerunfilecheck Info: File `ofu_xai_2022.out' has not changed.
-(rerunfilecheck)             Checksum: 3D5689178C594D595DAFDEE4878773C1;1103.
+(rerunfilecheck)             Checksum: 33AA0985088DC17F93697F79DE632E55;1263.
 runsystem(del ofu_xai_2022.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 16953 strings out of 474462
- 283939 string characters out of 5743355
+ 16956 strings out of 474462
+ 283983 string characters out of 5743355
  1944998 words of memory out of 5000000
- 38788 multiletter control sequences out of 15000+600000
+ 38790 multiletter control sequences out of 15000+600000
  597794 words of font info for 168 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  77i,10n,81p,1053b,574s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi525\ectt0800.pk> <C:\Users\andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ofu_xai_2022.pdf (6 pages, 483080 bytes).
+Output written on ofu_xai_2022.pdf (6 pages, 483912 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 30 named destinations out of 1000 (max. 500000)
- 41059 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 261 PDF objects out of 1000 (max. 8388607)
+ 31 named destinations out of 1000 (max. 500000)
+ 41067 words of extra memory for PDF output out of 42996 (max. 10000000)
 
