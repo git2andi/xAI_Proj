@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.23)  25 FEB 2024 12:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.23)  25 FEB 2024 13:58
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -337,39 +337,17 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 )
 \Gin@req@height=\dimen176
 \Gin@req@width=\dimen177
-) (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count296
-\lst@gtempboxa=\box54
-\lst@token=\toks28
-\lst@length=\count297
-\lst@currlwidth=\dimen178
-\lst@column=\count298
-\lst@pos=\count299
-\lst@lostspace=\dimen179
-\lst@width=\dimen180
-\lst@newlines=\count300
-\lst@lineno=\count301
-\lst@maxwidth=\dimen181
- (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
-File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count302
-\lst@skipnumbers=\count303
-\lst@framebox=\box55
-) (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
-File: listings.cfg 2023/02/27 1.9 listings configuration
-))
-Package: listings 2023/02/27 1.9 (Carsten Heinz)
- (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/minted\minted.sty
+) (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/minted\minted.sty
 Package: minted 2023/12/18 v2.9 Yet another Pygments shim for LaTeX
  (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/fvextra\fvextra.sty
 Package: fvextra 2023/11/28 v1.6.1 fvextra - extensions and patches for fancyvrb
  (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
 Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
-\FV@CodeLineNo=\count304
+\FV@CodeLineNo=\count296
 \FV@InFile=\read2
-\FV@TabBox=\box56
-\c@FancyVerbLine=\count305
-\FV@StepNumber=\count306
+\FV@TabBox=\box54
+\c@FancyVerbLine=\count297
+\FV@StepNumber=\count298
 \FV@OutFile=\write3
 ) (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
@@ -377,51 +355,51 @@ Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbat
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )) (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
 Package: lineno 2023/05/20 line numbers on paragraphs v5.3
-\linenopenalty=\count307
-\output=\toks29
-\linenoprevgraf=\count308
-\linenumbersep=\dimen182
-\linenumberwidth=\dimen183
-\c@linenumber=\count309
-\c@pagewiselinenumber=\count310
-\c@LN@truepage=\count311
-\c@internallinenumber=\count312
-\c@internallinenumbers=\count313
-\quotelinenumbersep=\dimen184
-\bframerule=\dimen185
-\bframesep=\dimen186
-\bframebox=\box57
-\linenoamsmath@ams@eqpen=\count314
+\linenopenalty=\count299
+\output=\toks28
+\linenoprevgraf=\count300
+\linenumbersep=\dimen178
+\linenumberwidth=\dimen179
+\c@linenumber=\count301
+\c@pagewiselinenumber=\count302
+\c@LN@truepage=\count303
+\c@internallinenumber=\count304
+\c@internallinenumbers=\count305
+\quotelinenumbersep=\dimen180
+\bframerule=\dimen181
+\bframesep=\dimen182
+\bframebox=\box55
+\linenoamsmath@ams@eqpen=\count306
 LaTeX Info: Redefining \\ on input line 3180.
 )
-\c@FancyVerbWriteLine=\count315
-\c@FancyVerbBufferIndex=\count316
-\c@FancyVerbBufferLength=\count317
-\c@FancyVerbBufferLine=\count318
-\c@FV@oldbufferlength=\count319
-\c@FV@TrueTabGroupLevel=\count320
-\c@FV@TrueTabCounter=\count321
-\FV@TabBox@Group=\box58
+\c@FancyVerbWriteLine=\count307
+\c@FancyVerbBufferIndex=\count308
+\c@FancyVerbBufferLength=\count309
+\c@FancyVerbBufferLine=\count310
+\c@FV@oldbufferlength=\count311
+\c@FV@TrueTabGroupLevel=\count312
+\c@FV@TrueTabCounter=\count313
+\FV@TabBox@Group=\box56
 \FV@TmpLength=\skip62
-\c@FV@HighlightLinesStart=\count322
-\c@FV@HighlightLinesStop=\count323
-\FV@LoopCount=\count324
-\FV@NCharsBox=\box59
-\FV@BreakIndent=\dimen187
-\FV@BreakIndentNChars=\count325
-\FV@BreakSymbolSepLeft=\dimen188
-\FV@BreakSymbolSepLeftNChars=\count326
-\FV@BreakSymbolSepRight=\dimen189
-\FV@BreakSymbolSepRightNChars=\count327
-\FV@BreakSymbolIndentLeft=\dimen190
-\FV@BreakSymbolIndentLeftNChars=\count328
-\FV@BreakSymbolIndentRight=\dimen191
-\FV@BreakSymbolIndentRightNChars=\count329
-\c@FancyVerbLineBreakLast=\count330
-\FV@LineBox=\box60
-\FV@LineIndentBox=\box61
-\c@FV@BreakBufferDepth=\count331
-\FV@LineWidth=\dimen192
+\c@FV@HighlightLinesStart=\count314
+\c@FV@HighlightLinesStop=\count315
+\FV@LoopCount=\count316
+\FV@NCharsBox=\box57
+\FV@BreakIndent=\dimen183
+\FV@BreakIndentNChars=\count317
+\FV@BreakSymbolSepLeft=\dimen184
+\FV@BreakSymbolSepLeftNChars=\count318
+\FV@BreakSymbolSepRight=\dimen185
+\FV@BreakSymbolSepRightNChars=\count319
+\FV@BreakSymbolIndentLeft=\dimen186
+\FV@BreakSymbolIndentLeftNChars=\count320
+\FV@BreakSymbolIndentRight=\dimen187
+\FV@BreakSymbolIndentRightNChars=\count321
+\c@FancyVerbLineBreakLast=\count322
+\FV@LineBox=\box58
+\FV@LineIndentBox=\box59
+\c@FV@BreakBufferDepth=\count323
+\FV@LineWidth=\dimen188
 ) (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
 Package shellesc Info: Unrestricted shell escape enabled on input line 75.
@@ -434,67 +412,64 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )) (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )) (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
-\xs_counta=\count332
-\xs_countb=\count333
+\xs_counta=\count324
+\xs_countb=\count325
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 ) (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/framed\framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip63
-\fb@frw=\dimen193
-\fb@frh=\dimen194
-\FrameRule=\dimen195
-\FrameSep=\dimen196
+\fb@frw=\dimen189
+\fb@frh=\dimen190
+\FrameRule=\dimen191
+\FrameSep=\dimen192
 ) (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count334
-\float@exts=\toks30
-\float@box=\box62
-\@float@everytoks=\toks31
-\@floatcapt=\box63
+\c@float@type=\count326
+\float@exts=\toks29
+\float@box=\box60
+\@float@everytoks=\toks30
+\@floatcapt=\box61
 )
 \minted@appexistsfile=\read3
-\minted@bgbox=\box64
+\minted@bgbox=\box62
 \minted@code=\write4
-\c@minted@FancyVerbLineTemp=\count335
-\c@minted@pygmentizecounter=\count336
-\@float@every@listing=\toks32
-\c@listing=\count337
+\c@minted@FancyVerbLineTemp=\count327
+\c@minted@pygmentizecounter=\count328
+\@float@every@listing=\toks31
+\c@listing=\count329
 )
 runsystem(if not exist _minted-ofu_xai_2022 mkdir _minted-ofu_xai_2022)...executed.
 
- (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-)
 runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > ofu_xai_2022.aex <nul: /p x=^%~$PATH:i>> ofu_xai_2022.aex)...executed.
 
 runsystem(del ofu_xai_2022.aex)...executed.
 
  (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count338
-\l__pdf_internal_box=\box65
+\l__color_backend_stack_int=\count330
+\l__pdf_internal_box=\box63
 ) (ofu_xai_2022.aux)
 \openout1 = `ofu_xai_2022.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -562,24 +537,24 @@ LaTeX Font Info:    ... okay on input line 106.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 106.
+Package hyperref Info: Link coloring OFF on input line 83.
 (ofu_xai_2022.out) (ofu_xai_2022.out)
 \@outlinefile=\write5
 \openout5 = `ofu_xai_2022.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 106.
-Package microtype Info: Applying patch `item' on input line 106.
-Package microtype Info: Applying patch `toc' on input line 106.
-Package microtype Info: Applying patch `eqnum' on input line 106.
-Package microtype Info: Applying patch `footnote' on input line 106.
-Package microtype Info: Applying patch `verbatim' on input line 106.
+LaTeX Info: Redefining \microtypecontext on input line 83.
+Package microtype Info: Applying patch `item' on input line 83.
+Package microtype Info: Applying patch `toc' on input line 83.
+Package microtype Info: Applying patch `eqnum' on input line 83.
+Package microtype Info: Applying patch `footnote' on input line 83.
+Package microtype Info: Applying patch `verbatim' on input line 83.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 106.
+LaTeX Info: Redefining \showhyphens on input line 83.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -587,40 +562,38 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 ) (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count339
-\scratchdimen=\dimen197
-\scratchbox=\box66
-\nofMPsegments=\count340
-\nofMParguments=\count341
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count342
-\MPscratchDim=\dimen198
-\MPnumerator=\count343
-\makeMPintoPDFobject=\count344
-\everyMPtoPDFconversion=\toks34
+\scratchcounter=\count331
+\scratchdimen=\dimen193
+\scratchbox=\box64
+\nofMPsegments=\count332
+\nofMParguments=\count333
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count334
+\MPscratchDim=\dimen194
+\MPnumerator=\count335
+\makeMPintoPDFobject=\count336
+\everyMPtoPDFconversion=\toks33
 ) (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-))
-\c@lstlisting=\count345
- (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+)) (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 110.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 87.
  (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 110.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 87.
  (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 110.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 87.
  (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
@@ -637,47 +610,53 @@ File: figures/MNIST.png Graphic file (type png)
 <use figures/MNIST.png>
 Package pdftex.def Info: figures/MNIST.png  used on input line 6.
 (pdftex.def)             Requested size: 119.2467pt x 119.23988pt.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 23.
- (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-))) (chapter/methods.tex [2
+File: figures/MNIST.png Graphic file (type png)
+<use figures/MNIST.png>
+Package pdftex.def Info: figures/MNIST.png  used on input line 21.
+(pdftex.def)             Requested size: 119.2467pt x 119.23988pt.
+)) (chapter/methods.tex [2
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.1 \section
+            {Methods}\label{methods}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1 \section
             {Methods}\label{methods} <./figures/MNIST.png>] (chapter/architectures.tex (chapter/simplecnn.tex) (chapter/resnet.tex) (chapter/xception.tex
-<figures/xception_architecture.png, id=78, 814.54312pt x 572.1375pt>
+<figures/xception_architecture.png, id=85, 814.54312pt x 572.1375pt>
 File: figures/xception_architecture.png Graphic file (type png)
 <use figures/xception_architecture.png>
 Package pdftex.def Info: figures/xception_architecture.png  used on input line 9.
 (pdftex.def)             Requested size: 357.73405pt x 251.26985pt.
-))) (chapter/discussion.tex) (chapter/conclusion.tex) (ofu_xai_2022.bbl [3
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.12 \bibitem[Deng(2012)]{deng2012mnist}
-                                         <./figures/xception_architecture.png>]) [4
+))) (chapter/discussion.tex) (chapter/conclusion.tex) [3
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.169 \newpage
+l.104 \end{figure}
+                   <./figures/xception_architecture.png>] (ofu_xai_2022.bbl) [4
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.145 \newpage
               
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.169 \newpage
+l.145 \newpage
               ]
-Underfull \hbox (badness 10000) in paragraph at lines 178--181
+Underfull \hbox (badness 10000) in paragraph at lines 154--157
 [][]  []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--187
+Underfull \hbox (badness 10000) in paragraph at lines 160--163
 [][]  []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--194
+Underfull \hbox (badness 10000) in paragraph at lines 166--170
 [][]  []
  []
 
@@ -701,17 +680,17 @@ runsystem(del ofu_xai_2022.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 18345 strings out of 474462
- 304248 string characters out of 5743355
+ 16953 strings out of 474462
+ 283939 string characters out of 5743355
  1944998 words of memory out of 5000000
- 40153 multiletter control sequences out of 15000+600000
- 598584 words of font info for 178 fonts, out of 8000000 for 9000
+ 38788 multiletter control sequences out of 15000+600000
+ 597794 words of font info for 168 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,10n,81p,1053b,598s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 77i,10n,81p,1053b,574s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi525\ectt0800.pk> <C:\Users\andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ofu_xai_2022.pdf (6 pages, 478591 bytes).
+Output written on ofu_xai_2022.pdf (6 pages, 483080 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
- 43107 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 255 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
+ 41059 words of extra memory for PDF output out of 42996 (max. 10000000)
 

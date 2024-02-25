@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -15,6 +15,20 @@ L.~Deng.
   research.
 \newblock \emph{IEEE Signal Processing Magazine}, 29\penalty0 (6):\penalty0
   141--142, 2012.
+
+\bibitem[Kather et~al.(2018)Kather, Halama, and Marx]{kather2018}
+J.~N. Kather, N.~Halama, and A.~Marx.
+\newblock 100.000 histological images of human colorectal cancer and healthy
+  tissue, 2018.
+\newblock URL \url{https://doi.org/10.5281/zenodo.1214456}.
+
+\bibitem[Kather et~al.(2019)Kather, Krisam, Charoentong, Luedde, Herpel, Weis,
+  Gaiser, Marx, Valous, Ferber, et~al.]{kather2019}
+J.~N. Kather, J.~Krisam, P.~Charoentong, T.~Luedde, E.~Herpel, C.-A. Weis,
+  T.~Gaiser, A.~Marx, N.~A. Valous, D.~Ferber, et~al.
+\newblock Predicting survival from colorectal cancer histology slides using
+  deep learning: A retrospective multicenter study.
+\newblock \emph{PLoS Medicine}, 16\penalty0 (1):\penalty0 e1002730, 2019.
 
 \bibitem[Yang et~al.(2021)Yang, Shi, and Ni]{medmnistv1}
 J.~Yang, R.~Shi, and B.~Ni.
