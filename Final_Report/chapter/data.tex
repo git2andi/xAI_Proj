@@ -1,5 +1,5 @@
 \subsection{MNIST}\label{mnist}
-The ``modified National Institute of Standards and Technology'' dataset comprises a collection of 70,000 handwritten digits carefully divided into a training set of 60,000 images and a test set of 10,000 images. Each digit is represented in a grayscale image of 28$\times$28 pixels, and offers a wide range of styles and shapes. This feature makes MNIST not only an ideal starting point for novices in the field of machine learning, but also a benchmark for evaluating the performance of different image classification models. Some examples of the dataset can be seeen in Figure~\ref{fig:MNIST}
+The ``modified National Institute of Standards and Technology'' dataset comprises a collection of 70,000 handwritten digits carefully divided into a training set of 60,000 images and a test set of 10,000 images. Each digit is represented in a grayscale image of 28$\times$28 pixels, and offers a wide range of styles and shapes. This dataset is widely recognized for its simplicity and effectiveness in benchmarking classification algorithms, making it an ideal starting point for those new to deep learning. Some examples of the dataset can be seeen in Figure~\ref{fig:MNIST}
 
 \begin{figure}
     \centering
@@ -7,10 +7,19 @@ The ``modified National Institute of Standards and Technology'' dataset comprise
     \caption{Example greyscale images of the MNIST dataset - CHANGE IMAGE - RENDER OWN!!!}\label{fig:MNIST}
 \end{figure}
 
-
-In our project, the MNIST dataset provided a foundational experience that allowed us to understand the basics of neural network architecture and effectively implement them for the task of classifying numbers.
-
+Chosen for our initial challenge, MNIST provided a fundamental platform to explore neural network basics and experiment with simple model architectures. It allowed us to grasp the essentials of model training, and hyperparameter testing.
 
 
 \subsection{MedMNIST}\label{medmnist}
-//TODO
+
+MedMNIST, a more specialized and challenging dataset than MNIST, is tailored for medical image classification tasks. It extends the concept of handwritten digit classification to a diverse range of medical imaging modalities, including dermatology or radiology. Unlike MNIST's uniform format, MedMNIST encompasses 12 subsets for 2D and 6 subsets for 3D data. For our project, we focused on the PathMNIST subset, which includes ``100.000 non-overlapping image patches from hematoxylin and eosin stained histological images, and a test dataset [$\ldots$] of 7.180 image patches from a different clinical center'' \citep{medmnistv1}. 
+
+PathMNIST is designed to introduce the complexities of medical image analysis, featuring high-resolution images that require more sophisticated models and techniques. This subset challenges learners to apply and adapt advanced deep learning concepts, such as transfer learning and complex architectures like ResNet and Xception, to accurately classify medical images.
+
+Engaging with MedMNIST, particularly the PathMNIST subset, allowed us to explore deep learning applications in a context with significant real-world implications. It provided an opportunity to extend our knowledge and skills beyond basic image classification, preparing us for the intricacies of analyzing medical images—a field where deep learning can have a profound impact on diagnostic processes and patient care.
+
+
+
+Originally, the images were of high resolution (3 × 224 × 224 pixels), but for the purposes of this project, they were resized to 3 × 28 × 28 pixels to maintain consistency with the MNIST format and to make the dataset more manageable for training deep learning models. The NCT-CRC-HE-100K dataset was divided into training and validation sets in a 9:1 ratio, while the CRC-VAL-HE-7K dataset was used as the test set.
+
+The PathMNIST subset of MedMNIST2D provides a unique challenge by introducing the complexity of medical image analysis. It requires the use of advanced deep learning techniques and models to accurately classify different types of tissue, making it an excellent progression from the simpler MNIST dataset. Working with PathMNIST allowed us to delve into the application of deep learning in medical diagnostics, showcasing the potential of these technologies to impact real-world healthcare outcomes significantly.

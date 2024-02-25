@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.23)  23 FEB 2024 10:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.23)  25 FEB 2024 12:26
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -637,33 +637,36 @@ File: figures/MNIST.png Graphic file (type png)
 <use figures/MNIST.png>
 Package pdftex.def Info: figures/MNIST.png  used on input line 6.
 (pdftex.def)             Requested size: 119.2467pt x 119.23988pt.
-)) (chapter/methods.tex (chapter/architectures.tex (chapter/simplecnn.tex) (chapter/resnet.tex) (chapter/xception.tex
-<figures/xception_architecture.png, id=68, 814.54312pt x 572.1375pt>
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 23.
+ (C:\Users\andi\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+))) (chapter/methods.tex [2
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1 \section
+            {Methods}\label{methods} <./figures/MNIST.png>] (chapter/architectures.tex (chapter/simplecnn.tex) (chapter/resnet.tex) (chapter/xception.tex
+<figures/xception_architecture.png, id=78, 814.54312pt x 572.1375pt>
 File: figures/xception_architecture.png Graphic file (type png)
 <use figures/xception_architecture.png>
 Package pdftex.def Info: figures/xception_architecture.png  used on input line 9.
 (pdftex.def)             Requested size: 357.73405pt x 251.26985pt.
-))) (chapter/discussion.tex) (chapter/conclusion.tex) (ofu_xai_2022.bbl [2
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.12 \bibitem[Deng(2012)]{deng2012mnist}
-                                         <./figures/MNIST.png>] [3
+))) (chapter/discussion.tex) (chapter/conclusion.tex) (ofu_xai_2022.bbl [3
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.12 \bibitem[Deng(2012)]{deng2012mnist}
-                                        
+                                         <./figures/xception_architecture.png>]) [4
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.12 \bibitem[Deng(2012)]{deng2012mnist}
-                                        
+l.169 \newpage
+              
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.12 \bibitem[Deng(2012)]{deng2012mnist}
-                                         <./figures/xception_architecture.png>]) [4]
+l.169 \newpage
+              ]
 Underfull \hbox (badness 10000) in paragraph at lines 178--181
 [][]  []
  []
@@ -698,17 +701,17 @@ runsystem(del ofu_xai_2022.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 18291 strings out of 474462
- 303556 string characters out of 5743355
+ 18345 strings out of 474462
+ 304248 string characters out of 5743355
  1944998 words of memory out of 5000000
- 40129 multiletter control sequences out of 15000+600000
- 597274 words of font info for 160 fonts, out of 8000000 for 9000
+ 40153 multiletter control sequences out of 15000+600000
+ 598584 words of font info for 178 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,10n,81p,1053b,602s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 77i,10n,81p,1053b,598s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi525\ectt0800.pk> <C:\Users\andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ofu_xai_2022.pdf (6 pages, 474674 bytes).
+Output written on ofu_xai_2022.pdf (6 pages, 478591 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
+ 236 PDF objects out of 1000 (max. 8388607)
  27 named destinations out of 1000 (max. 500000)
- 41059 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 43107 words of extra memory for PDF output out of 51595 (max. 10000000)
 
