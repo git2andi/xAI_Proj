@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.23)  27 FEB 2024 14:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.23)  27 FEB 2024 14:45
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -661,12 +661,23 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.1 \subsection
-               {ResNeT}\label{resultsReNet} <./figures/simpleCNN_old_vs_new.png>]) (chapter/experimentsXception.tex)) (chapter/discussion.tex) (chapter/conclusion.tex) (ofu_xai_2022.bbl [6
+               {ResNeT}\label{resultsReNet} <./figures/simpleCNN_old_vs_new.png>]) (chapter/experimentsXception.tex
+<figures/xception_PathMNIST_result.png, id=156, 988.6536pt x 581.0508pt>
+File: figures/xception_PathMNIST_result.png Graphic file (type png)
+<use figures/xception_PathMNIST_result.png>
+Package pdftex.def Info: figures/xception_PathMNIST_result.png  used on input line 10.
+(pdftex.def)             Requested size: 357.73405pt x 210.25092pt.
+)) (chapter/discussion.tex) (chapter/conclusion.tex) (ofu_xai_2022.bbl [6
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.39 
-      <./figures/simpleCNN_PathMNIST_variations.png>]) [7]
+l.1 \begin{thebibliography}{5}
+                               <./figures/simpleCNN_PathMNIST_variations.png>]) [7
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.123 \newpage
+               <./figures/xception_PathMNIST_result.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 132--135
 [][]  []
  []
@@ -704,22 +715,22 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-13>
  ***********
 Package rerunfilecheck Info: File `ofu_xai_2022.out' has not changed.
-(rerunfilecheck)             Checksum: 86AB3FA413BCCAD4BB1F412EAFF4AF44;2089.
+(rerunfilecheck)             Checksum: E2C3D242E6C2138E485452A683030D8D;2084.
 runsystem(del ofu_xai_2022.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 17100 strings out of 474462
- 288281 string characters out of 5743355
+ 17109 strings out of 474462
+ 288620 string characters out of 5743355
  1943998 words of memory out of 5000000
- 38858 multiletter control sequences out of 15000+600000
+ 38866 multiletter control sequences out of 15000+600000
  599996 words of font info for 195 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  77i,10n,81p,1718b,853s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi525\ectt0800.pk> <C:\Users\andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit0900.pk> <C:\Users\andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ofu_xai_2022.pdf (10 pages, 1646492 bytes).
+Output written on ofu_xai_2022.pdf (10 pages, 1727810 bytes).
 PDF statistics:
- 367 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
- 42162 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 371 PDF objects out of 1000 (max. 8388607)
+ 44 named destinations out of 1000 (max. 500000)
+ 42167 words of extra memory for PDF output out of 42996 (max. 10000000)
 
