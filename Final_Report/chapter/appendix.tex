@@ -1,5 +1,5 @@
 \section{Appendix}
-\subsection{SimpleCNN architecture}\label{codeSnippets}
+\subsection{SimpleCNN architectures}\label{codeSnippets}
 Initial version of our SimpleCNN, including two convulutional layers:\@
 
 \begin{minted}[mathescape, linenos, fontsize=\scriptsize]{python}
@@ -119,3 +119,44 @@ class SimpleCNN(nn.Module):
         x = self.fc2(x)
         return torch.log_softmax(x, dim=1)
 \end{minted}
+
+
+\subsection{Additional Tables}\label{Appendixtables}
+
+\begin{table}[ht]
+    \caption{Impact of Learning Rate, Batch Size, and Epochs on Accuracy in order to determine the best set of Hyperparameters for the SimpleCNN}\label{table:lr_bs_ep}
+    \centering
+    \begin{tabular}{lll}
+    \toprule
+    \addlinespace
+    \multicolumn{3}{c}{Learning Rate} \\
+    \midrule
+    Learning Rate & Average Train Accuracy (\%) & Average Validation Accuracy (\%) \\
+    \midrule
+    0.001 & 99.6 & 98.9 \\
+    0.01  & 97.7 & 97.2 \\
+    0.1   & 10.3 & 10.0 \\
+    \midrule
+    \addlinespace
+    \addlinespace
+    \multicolumn{3}{c}{Batch Size} \\
+    \midrule
+    Batch Size & Average Train Accuracy (\%) & Average Validation Accuracy (\%) \\
+    \midrule
+    16 & 99.7 & 98.9 \\
+    32 & 99.5 & 98.9 \\
+    64 & 99.4 & 98.9 \\
+    \midrule
+    \addlinespace
+    \addlinespace
+    \multicolumn{3}{c}{Epochs} \\
+    \midrule
+    Epochs & Average Train Accuracy (\%) & Average Validation Accuracy (\%) \\
+    \midrule
+    5  & 99.4 & 98.8 \\
+    10 & 99.6 & 99.0 \\
+    15 & 99.6 & 99.0 \\
+    20 & 99.7 & 99.0 \\
+    \bottomrule
+    \end{tabular}
+    \end{table}
