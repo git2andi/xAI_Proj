@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.23)  27 FEB 2024 11:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.23)  27 FEB 2024 13:12
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -617,8 +617,8 @@ Underfull \vbox (badness 6078) has occurred while \output is active []
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.3 
-     <./figures/xception_architecture.png>]
+l.1 \subsection
+               {MNIST}\label{mnist} <./figures/xception_architecture.png>]
 <figures/MNIST.png, id=118, 859.71187pt x 118.56796pt>
 File: figures/MNIST.png Graphic file (type png)
 <use figures/MNIST.png>
@@ -633,42 +633,32 @@ Package pdftex.def Info: figures/MedMNIST.png  used on input line 18.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.6 
+l.4 
     
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.6 
+l.4 
      <./figures/MNIST.png> <./figures/MedMNIST.png>]
 \openout3 = `ofu_xai_2022.pyg'.
 
  (_minted-ofu_xai_2022/default.pygstyle) (_minted-ofu_xai_2022/E3A98D9297D445370113356C02265ACAC79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex)
-<figures/simpleCNN_old_vs_new.png, id=140, 722.7pt x 361.35pt>
+<figures/simpleCNN_old_vs_new.png, id=138, 722.7pt x 361.35pt>
 File: figures/simpleCNN_old_vs_new.png Graphic file (type png)
 <use figures/simpleCNN_old_vs_new.png>
-Package pdftex.def Info: figures/simpleCNN_old_vs_new.png  used on input line 97.
+Package pdftex.def Info: figures/simpleCNN_old_vs_new.png  used on input line 95.
 (pdftex.def)             Requested size: 357.73405pt x 178.86604pt.
-) (chapter/experimentsAlexNet.tex) (chapter/experimentsResNet.tex) (chapter/experimentsXception.tex)) (chapter/discussion.tex [5
+) (chapter/experimentsAlexNet.tex [5
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1 \section
-            {Discussion}\label{discussion}
-pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1 \section
-            {Discussion}\label{discussion}
-pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1 \section
-            {Discussion}\label{discussion}]) (chapter/conclusion.tex) (ofu_xai_2022.bbl) [6
+l.1 \subsection
+               {AlexNet}\label{resultsAlexNet}]) (chapter/experimentsResNet.tex) (chapter/experimentsXception.tex)) (chapter/discussion.tex) (chapter/conclusion.tex) (ofu_xai_2022.bbl [6
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.123 \newpage
-               <./figures/simpleCNN_old_vs_new.png>]
+l.40 \end{thebibliography}
+                           <./figures/simpleCNN_old_vs_new.png>]) [7]
 Underfull \hbox (badness 10000) in paragraph at lines 132--135
 [][]  []
  []
@@ -683,7 +673,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 144--148
 [][]  []
  []
 
-[7] (chapter/appendix.tex
+[8] (chapter/appendix.tex
 \openout3 = `ofu_xai_2022.pyg'.
 
  (_minted-ofu_xai_2022/91D5D86E785AC6F9311BF890852389A5C79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex
@@ -695,28 +685,28 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <7> not available
  (_minted-ofu_xai_2022/361A8C1CCEF340C783AFF8DCB46417EDC79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex)
 \openout3 = `ofu_xai_2022.pyg'.
 
- (_minted-ofu_xai_2022/249FE7E204F8C0E096D14A7B4FFA6254C79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex [8])) [9] (ofu_xai_2022.aux)
+ (_minted-ofu_xai_2022/249FE7E204F8C0E096D14A7B4FFA6254C79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex [9])) [10] (ofu_xai_2022.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-13>
  ***********
 Package rerunfilecheck Info: File `ofu_xai_2022.out' has not changed.
-(rerunfilecheck)             Checksum: EFC86D6A4D77A96E54FC6A30144F76EE;1925.
+(rerunfilecheck)             Checksum: 3785D0882F2A72E7CD70E8F57709991A;1937.
 runsystem(del ofu_xai_2022.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 17085 strings out of 474462
- 287838 string characters out of 5743355
+ 17082 strings out of 474462
+ 287805 string characters out of 5743355
  1943998 words of memory out of 5000000
- 38850 multiletter control sequences out of 15000+600000
+ 38848 multiletter control sequences out of 15000+600000
  599736 words of font info for 191 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  77i,10n,81p,1718b,853s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi525\ectt0800.pk> <C:\Users\andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit0900.pk> <C:\Users\andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ofu_xai_2022.pdf (9 pages, 1532930 bytes).
+Output written on ofu_xai_2022.pdf (10 pages, 1533486 bytes).
 PDF statistics:
  358 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
+ 41 named destinations out of 1000 (max. 500000)
  42149 words of extra memory for PDF output out of 42996 (max. 10000000)
 

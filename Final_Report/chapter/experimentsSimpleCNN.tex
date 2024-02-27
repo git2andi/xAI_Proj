@@ -4,7 +4,8 @@ After establishing the basic architecture of our SimpleCNN (as described in Sect
 
 The training process was completed relatively quickly, which prompted us to implement a function to test the hyperparameters. This required us to set default values for each training and evaluation session, with certain values being adjusted at each iteration. For example, we set the batch size to 32, the learning rate to 0.001 and the epochs to 15. In subsequent runs, we changed one hyperparameter at a time, while keeping the others constant. This means that we ran training sessions with learning rates of 0.001, 0.01 and 0.1, respectively, while keeping the default values for batch size and epochs. Similarly, we experimented with different batch sizes and varied the number of epochs. This systematic approach allowed us to evaluate the effects of each hyperparameter. The following code snippedt provides a brief summary of the hyperparameters that were explored during this process:
 
-\begin{minted}[mathescape, linenos, fontsize=\small]{python}
+\begin{minted}[mathescape, linenos, fontsize=\small]
+{python}
     ...
     # Hyperparameters
     num_classes = 10
@@ -15,43 +16,39 @@ The training process was completed relatively quickly, which prompted us to impl
     batch_sizes = [16, default_bs, 64]
     num_epochs = [5, 10, default_epoch, 20]
     ...
-    \end{minted}
+\end{minted}
 
-Upon reviewing the experiment results in Tables~\ref{table:lr},~\ref{table:batch-size}, and~\ref{table:epochs}, we identified the optimal hyperparameters for our SimpleCNN model, surprisingly finding that default values already yielded the best outcomes.
+Upon reviewing the experiment results in Table~\ref{table:lr_bs_ep}, we identified the optimal hyperparameters for our SimpleCNN model, surprisingly finding that default values already yielded the best outcomes.
+
 
 \begin{table}[ht]
-\caption{Impact of Learning Rate on Accuracy}\label{table:lr}
-\centering
-\begin{tabular}{lll}
+  \caption{Impact of Learning Rate, Batch Size, and Epochs on Accuracy}\label{table:lr_bs_ep}
+  \centering
+  \begin{tabular}{lll}
   \toprule
+  \addlinespace
+  \multicolumn{3}{c}{Learning Rate} \\
+  \midrule
   Learning Rate & Average Train Accuracy (\%) & Average Validation Accuracy (\%) \\
   \midrule
   0.001 & 99.6 & 98.9 \\
   0.01  & 97.7 & 97.2 \\
   0.1   & 10.3 & 10.0 \\
-  \bottomrule
-\end{tabular}
-\end{table}
-
-\begin{table}[ht]
-\caption{Impact of Batch Size on Accuracy}\label{table:batch-size}
-\centering
-\begin{tabular}{lll}
-  \toprule
+  \midrule
+  \addlinespace
+  \addlinespace
+  \multicolumn{3}{c}{Batch Size} \\
+  \midrule
   Batch Size & Average Train Accuracy (\%) & Average Validation Accuracy (\%) \\
   \midrule
   16 & 99.7 & 98.9 \\
   32 & 99.5 & 98.9 \\
   64 & 99.4 & 98.9 \\
-  \bottomrule
-\end{tabular}
-\end{table}
-
-\begin{table}[ht]
-\caption{Impact of Epochs on Accuracy}\label{table:epochs}
-\centering
-\begin{tabular}{lll}
-  \toprule
+  \midrule
+  \addlinespace
+  \addlinespace
+  \multicolumn{3}{c}{Epochs} \\
+  \midrule
   Epochs & Average Train Accuracy (\%) & Average Validation Accuracy (\%) \\
   \midrule
   5  & 99.4 & 98.8 \\
@@ -59,8 +56,9 @@ Upon reviewing the experiment results in Tables~\ref{table:lr},~\ref{table:batch
   15 & 99.6 & 99.0 \\
   20 & 99.7 & 99.0 \\
   \bottomrule
-\end{tabular}
-\end{table}
+  \end{tabular}
+  \end{table}
+  
 
 The above results were all optained using the initial SimpleCNN architecture. The adpated, newer version of the SimpleCNN was also then trained using the best hyperparameters determined. In order to evaluate the effectiveness of the changes, we compared the performance of both architectures. The results can be seen in Figure~\ref{fig:SimpleCNN_old_new}.
 
@@ -97,3 +95,5 @@ The above results were all optained using the initial SimpleCNN architecture. Th
     \includegraphics[width=.9\textwidth]{figures/simpleCNN_old_vs_new.png}
     \caption{Comparison of validation accuracy across epochs between the initial and the adapted SimpleCNN model, highlighting the overall improved performance of the adapted model.}\label{fig:SimpleCNN_old_new}
 \end{figure}
+
+For the second challenge, which focused on the PathMNIST dataset, our approach exclusively employed the adapted version of our SimpleCNN architecture due to its improved performance. To combat overfitting, we introduced an early stopping mechanism. The core of this experiment was to assess the impact of incorporating batch normalization and dropout techniques. We conducted three separate trials: one with both batch normalization and dropout, one with only dropout, and another with only batch normalization. The outcomes of these trials can be seen in Figures .
