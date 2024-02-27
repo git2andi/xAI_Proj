@@ -9,13 +9,6 @@
 F.~Chollet.
 \newblock Xception: Deep learning with depthwise separable convolutions, 2017.
 
-\bibitem[Deng(2012)]{deng2012mnist}
-L.~Deng.
-\newblock The mnist database of handwritten digit images for machine learning
-  research.
-\newblock \emph{IEEE Signal Processing Magazine}, 29\penalty0 (6):\penalty0
-  141--142, 2012.
-
 \bibitem[Kather et~al.(2018)Kather, Halama, and Marx]{kather2018}
 J.~N. Kather, N.~Halama, and A.~Marx.
 \newblock 100.000 histological images of human colorectal cancer and healthy
@@ -29,6 +22,13 @@ J.~N. Kather, J.~Krisam, P.~Charoentong, T.~Luedde, E.~Herpel, C.-A. Weis,
 \newblock Predicting survival from colorectal cancer histology slides using
   deep learning: A retrospective multicenter study.
 \newblock \emph{PLoS Medicine}, 16\penalty0 (1):\penalty0 e1002730, 2019.
+
+\bibitem[Lecun et~al.(1998)Lecun, Bottou, Bengio, and Haffner]{mnist}
+Y.~Lecun, L.~Bottou, Y.~Bengio, and P.~Haffner.
+\newblock Gradient-based learning applied to document recognition.
+\newblock \emph{Proceedings of the IEEE}, 86\penalty0 (11):\penalty0
+  2278--2324, 1998.
+\newblock \doi{10.1109/5.726791}.
 
 \bibitem[Yang et~al.(2021)Yang, Shi, and Ni]{medmnistv1}
 J.~Yang, R.~Shi, and B.~Ni.
