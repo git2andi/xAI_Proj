@@ -1,8 +1,9 @@
 \subsubsection{ResNet}\label{resnet}
 The Residual Network architecture (ResNet) was first introduced by \citep{he2015deep} in their paper ``Deep Residual Learning for Image Recognition''. This marked a big advancement in deep learning for computer vision, as previous model architectures did not have the ability to effectively scale with more layers. These models would, among other issues, run into a vanishing or exploding gradient problem, making deeper layers less usefull and impacting performance. To combat this, ResNet introduces a solution using residual blocks, as shown in Figure~\ref{fig:residualBlock}. The input X goes through two paths. One is called a skip connection and carries the original input to a junction point. The other carries the input through multiple convolutional layers to process it. Following the first layer, the input is passed through a ReLu function, introducing non-linearity to the model. Then it is passed trough a second convolutional layer, which returns a residual function. In the end, the learned residual function is added to the original input.
+
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.7\textwidth]{figures/ResidualBlock.png}
+    \includegraphics[width=0.4\textwidth]{figures/ResidualBlock.png}
     \caption{Residual Block as outlined by \citeauthor{he2015deep}.}\label{fig:residualBlock}
 \end{figure}
 
@@ -11,7 +12,7 @@ Using the block shown in Figure~\ref{fig:residualBlock}, the researchers built t
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.6\textwidth]{figures/BottleNeckBlock.png}
+    \includegraphics[width=0.35\textwidth]{figures/BottleNeckBlock.png}
     \caption{Bottleneck Block as outlined by \citeauthor{he2015deep}.}\label{fig:bottleneckBlock}
 \end{figure}
 

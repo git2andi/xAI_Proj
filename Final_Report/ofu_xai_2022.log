@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.26)  28 FEB 2024 20:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.26)  28 FEB 2024 20:16
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -638,12 +638,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 File: ./figures/Pipeline.png Graphic file (type png)
 <use ./figures/Pipeline.png>
 Package pdftex.def Info: ./figures/Pipeline.png  used on input line 8.
-(pdftex.def)             Requested size: 390.85062pt x 187.14456pt.
- [2 <./figures/Pipeline.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]) (chapter/architectures.tex (chapter/simplecnn.tex) (chapter/alexnet.tex
-<./figures/AlexNet-architecture.png, id=209, 985.6825pt x 303.1325pt>
+(pdftex.def)             Requested size: 369.53189pt x 176.93687pt.
+ [2 <./figures/Pipeline.png>] [3]) (chapter/architectures.tex (chapter/simplecnn.tex) (chapter/alexnet.tex
+<./figures/AlexNet-architecture.png, id=210, 985.6825pt x 303.1325pt>
 File: ./figures/AlexNet-architecture.png Graphic file (type png)
 <use ./figures/AlexNet-architecture.png>
 Package pdftex.def Info: ./figures/AlexNet-architecture.png  used on input line 5.
@@ -652,79 +649,75 @@ Package pdftex.def Info: ./figures/AlexNet-architecture.png  used on input line 
 <figures/ResidualBlock.png, id=224, 511.15968pt x 301.125pt>
 File: figures/ResidualBlock.png Graphic file (type png)
 <use figures/ResidualBlock.png>
-Package pdftex.def Info: figures/ResidualBlock.png  used on input line 5.
-(pdftex.def)             Requested size: 278.23827pt x 163.90999pt.
+Package pdftex.def Info: figures/ResidualBlock.png  used on input line 6.
+(pdftex.def)             Requested size: 158.99156pt x 93.66022pt.
 <figures/BottleNeckBlock.png, id=229, 489.32813pt x 399.74344pt>
 File: figures/BottleNeckBlock.png Graphic file (type png)
 <use figures/BottleNeckBlock.png>
-Package pdftex.def Info: figures/BottleNeckBlock.png  used on input line 14.
-(pdftex.def)             Requested size: 238.49341pt x 194.83296pt.
-) (chapter/xception.tex
-Underfull \vbox (badness 3503) has occurred while \output is active []
-
- [5 <./figures/AlexNet-architecture.png>]))) (chapter/experiments.tex [6 <./figures/ResidualBlock.png> <./figures/BottleNeckBlock.png>] (chapter/data.tex
-<figures/MNIST.png, id=253, 859.71187pt x 118.56796pt>
+Package pdftex.def Info: figures/BottleNeckBlock.png  used on input line 15.
+(pdftex.def)             Requested size: 139.12216pt x 113.65358pt.
+) (chapter/xception.tex [5 <./figures/AlexNet-architecture.png> <./figures/ResidualBlock.png>]))) (chapter/experiments.tex (chapter/data.tex
+<figures/MNIST.png, id=247, 859.71187pt x 118.56796pt>
 File: figures/MNIST.png Graphic file (type png)
 <use figures/MNIST.png>
 Package pdftex.def Info: figures/MNIST.png  used on input line 6.
 (pdftex.def)             Requested size: 317.9892pt x 43.85678pt.
+ [6 <./figures/BottleNeckBlock.png>]
 <figures/MedMNIST.png, id=260, 708.39656pt x 130.23656pt>
 File: figures/MedMNIST.png Graphic file (type png)
 <use figures/MedMNIST.png>
 Package pdftex.def Info: figures/MedMNIST.png  used on input line 18.
 (pdftex.def)             Requested size: 317.9892pt x 58.46281pt.
-) (chapter/experimentsSimpleCNN.tex [7 <./figures/MNIST.png> <./figures/MedMNIST.png>]
-<figures/simpleCNN_old_vs_new.png, id=274, 722.7pt x 361.35pt>
+) (chapter/experimentsSimpleCNN.tex
+<figures/simpleCNN_old_vs_new.png, id=264, 722.7pt x 361.35pt>
 File: figures/simpleCNN_old_vs_new.png Graphic file (type png)
 <use figures/simpleCNN_old_vs_new.png>
 Package pdftex.def Info: figures/simpleCNN_old_vs_new.png  used on input line 11.
 (pdftex.def)             Requested size: 298.11374pt x 149.05872pt.
-<figures/simpleCNN_PathMNIST_variations.png, id=276, 988.6536pt x 581.0508pt>
+ [7 <./figures/MNIST.png> <./figures/MedMNIST.png>]
+<figures/simpleCNN_PathMNIST_variations.png, id=277, 988.6536pt x 581.0508pt>
 File: figures/simpleCNN_PathMNIST_variations.png Graphic file (type png)
 <use figures/simpleCNN_PathMNIST_variations.png>
 Package pdftex.def Info: figures/simpleCNN_PathMNIST_variations.png  used on input line 19.
 (pdftex.def)             Requested size: 317.9892pt x 186.88872pt.
-) (chapter/experimentsAlexNet.tex [8 <./figures/simpleCNN_old_vs_new.png>]
+) (chapter/experimentsAlexNet.tex [8 <./figures/simpleCNN_old_vs_new.png> <./figures/simpleCNN_PathMNIST_variations.png>]
 <./figures/model_1_no_balancing_conf_matrix_cropped.png, id=287, 307.1475pt x 248.72925pt>
 File: ./figures/model_1_no_balancing_conf_matrix_cropped.png Graphic file (type png)
 <use ./figures/model_1_no_balancing_conf_matrix_cropped.png>
 Package pdftex.def Info: ./figures/model_1_no_balancing_conf_matrix_cropped.png  used on input line 6.
 (pdftex.def)             Requested size: 230.36005pt x 186.54648pt.
- [9 <./figures/simpleCNN_PathMNIST_variations.png> <./figures/model_1_no_balancing_conf_matrix_cropped.png>]
-<./figures/Alex_420_no_balancing_conf_matrix_cropped.png, id=296, 312.86888pt x 254.1495pt>
+<./figures/Alex_420_no_balancing_conf_matrix_cropped.png, id=290, 312.86888pt x 254.1495pt>
 File: ./figures/Alex_420_no_balancing_conf_matrix_cropped.png Graphic file (type png)
 <use ./figures/Alex_420_no_balancing_conf_matrix_cropped.png>
 Package pdftex.def Info: ./figures/Alex_420_no_balancing_conf_matrix_cropped.png  used on input line 34.
 (pdftex.def)             Requested size: 194.76982pt x 158.21869pt.
-<./figures/Alex_420_with_balancing_conf_matrix_cropped.png, id=297, 311.36325pt x 250.23488pt>
+<./figures/Alex_420_with_balancing_conf_matrix_cropped.png, id=291, 311.36325pt x 250.23488pt>
 File: ./figures/Alex_420_with_balancing_conf_matrix_cropped.png Graphic file (type png)
 <use ./figures/Alex_420_with_balancing_conf_matrix_cropped.png>
 Package pdftex.def Info: ./figures/Alex_420_with_balancing_conf_matrix_cropped.png  used on input line 38.
 (pdftex.def)             Requested size: 194.76982pt x 156.53004pt.
+ [9 <./figures/model_1_no_balancing_conf_matrix_cropped.png>]
 File: ./figures/Alex_420_with_balancing_conf_matrix_cropped.png Graphic file (type png)
 <use ./figures/Alex_420_with_balancing_conf_matrix_cropped.png>
 Package pdftex.def Info: ./figures/Alex_420_with_balancing_conf_matrix_cropped.png  used on input line 66.
 (pdftex.def)             Requested size: 194.76982pt x 156.53004pt.
-<./figures/Alex_420_augment_conf_matrix_cropped.png, id=300, 308.95425pt x 249.63263pt>
+<./figures/Alex_420_augment_conf_matrix_cropped.png, id=301, 308.95425pt x 249.63263pt>
 File: ./figures/Alex_420_augment_conf_matrix_cropped.png Graphic file (type png)
 <use ./figures/Alex_420_augment_conf_matrix_cropped.png>
 Package pdftex.def Info: ./figures/Alex_420_augment_conf_matrix_cropped.png  used on input line 70.
 (pdftex.def)             Requested size: 194.76982pt x 157.37222pt.
  [10 <./figures/Alex_420_no_balancing_conf_matrix_cropped.png> <./figures/Alex_420_with_balancing_conf_matrix_cropped.png>]
-<./figures/Alex_4_with_balancing_conf_matrix_cropped.png, id=310, 310.45987pt x 251.13824pt>
+<./figures/Alex_4_with_balancing_conf_matrix_cropped.png, id=311, 310.45987pt x 251.13824pt>
 File: ./figures/Alex_4_with_balancing_conf_matrix_cropped.png Graphic file (type png)
 <use ./figures/Alex_4_with_balancing_conf_matrix_cropped.png>
 Package pdftex.def Info: ./figures/Alex_4_with_balancing_conf_matrix_cropped.png  used on input line 81.
 (pdftex.def)             Requested size: 194.76982pt x 157.55498pt.
-<./figures/Alex_4_with_augment_conf_matrix_cropped.png, id=311, 311.06212pt x 250.83713pt>
+<./figures/Alex_4_with_augment_conf_matrix_cropped.png, id=312, 311.06212pt x 250.83713pt>
 File: ./figures/Alex_4_with_augment_conf_matrix_cropped.png Graphic file (type png)
 <use ./figures/Alex_4_with_augment_conf_matrix_cropped.png>
 Package pdftex.def Info: ./figures/Alex_4_with_augment_conf_matrix_cropped.png  used on input line 85.
 (pdftex.def)             Requested size: 194.76982pt x 157.06752pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11 <./figures/Alex_420_augment_conf_matrix_cropped.png>]) (chapter/experimentsResNet.tex [12 <./figures/Alex_4_with_balancing_conf_matrix_cropped.png> <./figures/Alex_4_with_augment_conf_matrix_cropped.png>]
+ [11 <./figures/Alex_420_augment_conf_matrix_cropped.png> <./figures/Alex_4_with_balancing_conf_matrix_cropped.png> <./figures/Alex_4_with_augment_conf_matrix_cropped.png>]) (chapter/experimentsResNet.tex [12]
 <figures/Resnet18_8_epochs.png, id=335, 722.7pt x 361.35pt>
 File: figures/Resnet18_8_epochs.png Graphic file (type png)
 <use figures/Resnet18_8_epochs.png>
@@ -740,16 +733,13 @@ File: figures/model_152_v4_accuracy.png Graphic file (type png)
 <use figures/model_152_v4_accuracy.png>
 Package pdftex.def Info: figures/model_152_v4_accuracy.png  used on input line 47.
 (pdftex.def)             Requested size: 298.11374pt x 149.05872pt.
-) (chapter/experimentsXception.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13] [14 <./figures/Resnet18_8_epochs.png> <./figures/model_18_v5_accuracy.png>]
-<figures/xception_PathMNIST_result.png, id=366, 988.6536pt x 581.0508pt>
+) (chapter/experimentsXception.tex [13 <./figures/Resnet18_8_epochs.png>] [14 <./figures/model_18_v5_accuracy.png> <./figures/model_152_v4_accuracy.png>]
+<figures/xception_PathMNIST_result.png, id=367, 988.6536pt x 581.0508pt>
 File: figures/xception_PathMNIST_result.png Graphic file (type png)
 <use figures/xception_PathMNIST_result.png>
 Package pdftex.def Info: figures/xception_PathMNIST_result.png  used on input line 12.
 (pdftex.def)             Requested size: 317.9892pt x 186.88872pt.
-)) (chapter/discussion.tex [15 <./figures/model_152_v4_accuracy.png> <./figures/xception_PathMNIST_result.png>]) (chapter/conclusion.tex) (ofu_xai_2022.bbl
+)) (chapter/discussion.tex [15 <./figures/xception_PathMNIST_result.png>]) (chapter/conclusion.tex) (ofu_xai_2022.bbl
 Underfull \hbox (badness 2913) in paragraph at lines 18--23
 \T1/cmtt/m/n/10 pytorch$[]\T1/ptm/m/n/10 (+20) , 2018.  Ac-cessed: 14.01.2024, PyPI link: []$\T1/cmtt/m/n/10 https : / / pypi . org / project /
  []
@@ -806,7 +796,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  77i,10n,81p,3094b,853s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi525\ectt0800.pk> <C:\Users\Andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ofu_xai_2022.pdf (21 pages, 2751975 bytes).
+Output written on ofu_xai_2022.pdf (21 pages, 2751907 bytes).
 PDF statistics:
  588 PDF objects out of 1000 (max. 8388607)
  98 named destinations out of 1000 (max. 500000)
