@@ -6,45 +6,45 @@ Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: abbrvnat.bst
 Database file #1: bibliography.bib
 Warning--empty journal in kaurbalancing
-You've used 17 entries,
+You've used 18 entries,
             2773 wiz_defined-function locations,
-            701 strings with 8111 characters,
-and the built_in function-call counts, 8287 in all, are:
-= -- 711
-> -- 567
+            705 strings with 8227 characters,
+and the built_in function-call counts, 8735 in all, are:
+= -- 745
+> -- 606
 < -- 9
-+ -- 192
-- -- 175
-* -- 680
-:= -- 1293
-add.period$ -- 60
-call.type$ -- 17
-change.case$ -- 107
-chr.to.int$ -- 17
-cite$ -- 35
-duplicate$ -- 340
-empty$ -- 639
-format.name$ -- 194
-if$ -- 1727
++ -- 205
+- -- 187
+* -- 718
+:= -- 1362
+add.period$ -- 62
+call.type$ -- 18
+change.case$ -- 114
+chr.to.int$ -- 18
+cite$ -- 37
+duplicate$ -- 356
+empty$ -- 672
+format.name$ -- 207
+if$ -- 1819
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 10
-newline$ -- 100
-num.names$ -- 70
-pop$ -- 233
+newline$ -- 104
+num.names$ -- 74
+pop$ -- 251
 preamble$ -- 1
-purify$ -- 90
+purify$ -- 96
 quote$ -- 0
-skip$ -- 285
+skip$ -- 302
 stack$ -- 0
-substring$ -- 204
-swap$ -- 36
+substring$ -- 206
+swap$ -- 37
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 187
+type$ -- 198
 warning$ -- 1
-while$ -- 66
+while$ -- 69
 width$ -- 0
-write$ -- 236
+write$ -- 246
 (There was 1 warning)
