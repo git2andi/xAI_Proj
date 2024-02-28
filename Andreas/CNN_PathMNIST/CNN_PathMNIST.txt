@@ -1,3 +1,5 @@
+# Same code as Xception
+
 CNN PathMNIST
 
 class SimpleCNN(nn.Module):

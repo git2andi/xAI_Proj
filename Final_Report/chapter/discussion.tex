@@ -1,2 +1,5 @@
 \section{Discussion}\label{discussion}
-//TODO
+
+In our initial experiments with the MNIST dataset using the SimpleCNN model, we compared the effectiveness of the ReLU and LeakyReLU activation functions. We found no significant difference in performance between them, which led us to continue with ReLU due to the simplicity of our model. For the PathMNIST challenge, our experiments with SimpleCNN showed that using only batch normalisation yielded slightly better results than combining it with dropout layers, suggesting that the latter might introduce unnecessary complexity that reduces model performance in this particular task.
+
+Using the Xception architecture for the PathMNIST dataset significantly improved the results, demonstrating the value of deeper, more complex models for processing complicated datasets. However, this came at the expense of computational resources, emphasising the need to strike a balance between the complexity of the model and the practicalities of computational effort. This experience highlighted the critical trade-offs in deep learning between achieving high accuracy and coping with resource constraints, particularly in the context of complex medical imaging tasks.

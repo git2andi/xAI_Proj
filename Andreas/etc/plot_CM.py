@@ -12,10 +12,8 @@ if file_extension == '.npy':
     confusion_matrix = np.load(file_path)
 elif file_extension == '.txt':
     with open(file_path, 'r') as file:
-        # Read lines, split by space, convert to integers, and form a matrix
         confusion_matrix = np.array([list(map(int, line.split())) for line in file])
 
-# Print the confusion matrix
 print("Confusion Matrix:")
 print(confusion_matrix)
 

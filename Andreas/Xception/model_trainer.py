@@ -47,7 +47,8 @@ class ModelTrainer:
     def load_model(self):
         ssl._create_default_https_context = ssl._create_unverified_context # Reset context (for pretrainedmodels)
         model = pretrainedmodels.__dict__["xception"](pretrained="imagenet")
-        #model = timm.create_model('xception', pretrained=True)
+        #model = timm.create_model('xception', pretrained=True) 
+        # timm is actively maintained, but calling the model like this only load legacy model by default, idk how to correct. 
         num_ftrs = model.last_linear.in_features
         model.last_linear = nn.Linear(num_ftrs, self.num_classes)
         
@@ -128,7 +129,7 @@ class ModelTrainer:
         metrics = self.calculate_metrics(np.concatenate(ground_truth_list), np.concatenate(pred_list))
 
 
-        # Check if 99.6%+
+        # Check if val acc 99.6%+
         if val_accuracy >= 99.6:
             torch.save(self.best_model_state, os.path.join(self.model_path, f"996_{self.model_name}.pth"))
             print(f"Model saved with validation accuracy of 99.6% or higher.")
@@ -138,7 +139,7 @@ class ModelTrainer:
         if val_accuracy > self.best_val_accuracy:
             self.best_val_accuracy = val_accuracy
             self.patience_counter = 0
-            self.best_model_state = copy.deepcopy(self.model.state_dict())  # Save best model state
+            self.best_model_state = copy.deepcopy(self.model.state_dict())
             torch.save(self.best_model_state, os.path.join(self.model_path, f"best_{self.model_name}.pth"))
             print("New best model saved with accuracy:", val_accuracy)
     
@@ -195,8 +196,6 @@ class ModelTrainer:
         else:
             print("No model state to save.")
 
-
-
     def generate_predictions(self, test_dataloader):
         test_predictions = []
         self.model.eval()
@@ -215,6 +214,7 @@ class ModelTrainer:
 
 
 
+# Maybe refractor, but works as is
 class SimpleCNN(nn.Module):
     def __init__(self, num_classes):
         super(SimpleCNN, self).__init__()

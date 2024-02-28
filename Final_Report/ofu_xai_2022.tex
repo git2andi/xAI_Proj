@@ -12,7 +12,7 @@
 
 % to compile a preprint version, e.g., for submission to arXiv, add add the
 % [preprint] option:
-%     \usepackage[preprint]{ofu_xai_2022}
+%     \usepackage[preprint]{ofu_xai_2022}s
 
 
 % to compile a camera-ready version, add the [final] option, e.g.:
@@ -96,6 +96,29 @@
 \input{chapter/experiments.tex}
 \input{chapter/discussion.tex}
 \input{chapter/conclusion.tex}
+
+
+\begin{figure}
+  \centering
+  \fbox{\rule[-.5cm]{0cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
+  \caption{Sample figure caption.}
+\end{figure}
+
+\begin{table}
+  \caption{Sample table title}\label{sample-table}
+  \centering
+  \begin{tabular}{lll}
+    \toprule
+    \multicolumn{2}{c}{Part}                   \\
+    \cmidrule(r){1-2}
+    Name     & Description     & Size ($\mu$m) \\
+    \midrule
+    Dendrite & Input terminal  & $\sim$100     \\
+    Axon     & Output terminal & $\sim$10      \\
+    Soma     & Cell body       & up to $10^6$  \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 % \begin{ack}
 % Use unnumbered first level headings for the acknowledgments. All acknowledgments
