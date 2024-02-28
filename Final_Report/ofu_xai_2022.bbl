@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{8}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -42,6 +42,10 @@ Y.~Lecun, L.~Bottou, Y.~Bengio, and P.~Haffner.
 \newblock \emph{Proceedings of the IEEE}, 86\penalty0 (11):\penalty0
   2278--2324, 1998.
 \newblock \doi{10.1109/5.726791}.
+
+\bibitem[Loshchilov and Hutter(2019)]{loshchilov2019decoupled}
+I.~Loshchilov and F.~Hutter.
+\newblock Decoupled weight decay regularization, 2019.
 
 \bibitem[Yang et~al.(2021)Yang, Shi, and Ni]{medmnistv1}
 J.~Yang, R.~Shi, and B.~Ni.
