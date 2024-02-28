@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.26)  28 FEB 2024 20:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.26)  28 FEB 2024 21:54
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -634,134 +634,132 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 {C:/Users/Andi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]) (chapter/methods.tex (chapter/foundations.tex
-<./figures/Pipeline.png, id=170, 1421.31pt x 680.5425pt>
+<./figures/Pipeline.png, id=181, 1421.31pt x 680.5425pt>
 File: ./figures/Pipeline.png Graphic file (type png)
 <use ./figures/Pipeline.png>
 Package pdftex.def Info: ./figures/Pipeline.png  used on input line 8.
 (pdftex.def)             Requested size: 369.53189pt x 176.93687pt.
  [2 <./figures/Pipeline.png>] [3]) (chapter/architectures.tex (chapter/simplecnn.tex) (chapter/alexnet.tex) (chapter/resnet.tex [4]
-<figures/ResidualBlock.png, id=233, 511.15968pt x 301.125pt>
+<figures/ResidualBlock.png, id=246, 511.15968pt x 301.125pt>
 File: figures/ResidualBlock.png Graphic file (type png)
 <use figures/ResidualBlock.png>
 Package pdftex.def Info: figures/ResidualBlock.png  used on input line 6.
 (pdftex.def)             Requested size: 158.99156pt x 93.66022pt.
-<figures/BottleNeckBlock.png, id=238, 489.32813pt x 399.74344pt>
+<figures/BottleNeckBlock.png, id=251, 489.32813pt x 399.74344pt>
 File: figures/BottleNeckBlock.png Graphic file (type png)
 <use figures/BottleNeckBlock.png>
 Package pdftex.def Info: figures/BottleNeckBlock.png  used on input line 15.
 (pdftex.def)             Requested size: 139.12216pt x 113.65358pt.
 ) (chapter/xception.tex [5 <./figures/ResidualBlock.png> <./figures/BottleNeckBlock.png>]))) (chapter/experiments.tex (chapter/data.tex
-<figures/MNIST.png, id=257, 859.71187pt x 118.56796pt>
+<figures/MNIST.png, id=269, 859.71187pt x 118.56796pt>
 File: figures/MNIST.png Graphic file (type png)
 <use figures/MNIST.png>
 Package pdftex.def Info: figures/MNIST.png  used on input line 6.
 (pdftex.def)             Requested size: 317.9892pt x 43.85678pt.
  [6 <./figures/MNIST.png>]
-<figures/MedMNIST.png, id=271, 708.39656pt x 130.23656pt>
+<figures/MedMNIST.png, id=283, 708.39656pt x 130.23656pt>
 File: figures/MedMNIST.png Graphic file (type png)
 <use figures/MedMNIST.png>
 Package pdftex.def Info: figures/MedMNIST.png  used on input line 18.
 (pdftex.def)             Requested size: 317.9892pt x 58.46281pt.
 ) (chapter/experimentsSimpleCNN.tex
-<figures/simpleCNN_old_vs_new.png, id=275, 722.7pt x 361.35pt>
+<figures/simpleCNN_old_vs_new.png, id=287, 722.7pt x 361.35pt>
 File: figures/simpleCNN_old_vs_new.png Graphic file (type png)
 <use figures/simpleCNN_old_vs_new.png>
 Package pdftex.def Info: figures/simpleCNN_old_vs_new.png  used on input line 11.
 (pdftex.def)             Requested size: 298.11374pt x 149.05872pt.
-<figures/simpleCNN_PathMNIST_variations.png, id=277, 988.6536pt x 581.0508pt>
+<figures/simpleCNN_PathMNIST_variations.png, id=289, 988.6536pt x 581.0508pt>
 File: figures/simpleCNN_PathMNIST_variations.png Graphic file (type png)
 <use figures/simpleCNN_PathMNIST_variations.png>
 Package pdftex.def Info: figures/simpleCNN_PathMNIST_variations.png  used on input line 19.
 (pdftex.def)             Requested size: 317.9892pt x 186.88872pt.
 ) (chapter/experimentsAlexNet.tex [7 <./figures/MedMNIST.png>]
-<./figures/model_1_no_balancing_conf_matrix_cropped.png, id=290, 307.1475pt x 248.72925pt>
+<./figures/model_1_no_balancing_conf_matrix_cropped.png, id=303, 307.1475pt x 248.72925pt>
 File: ./figures/model_1_no_balancing_conf_matrix_cropped.png Graphic file (type png)
 <use ./figures/model_1_no_balancing_conf_matrix_cropped.png>
 Package pdftex.def Info: ./figures/model_1_no_balancing_conf_matrix_cropped.png  used on input line 6.
-(pdftex.def)             Requested size: 230.36005pt x 186.54648pt.
+(pdftex.def)             Requested size: 184.28992pt x 149.2387pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8 <./figures/simpleCNN_old_vs_new.png> <./figures/simpleCNN_PathMNIST_variations.png>]
-<./figures/Alex_420_no_balancing_conf_matrix_cropped.png, id=300, 312.86888pt x 254.1495pt>
+<./figures/Alex_420_no_balancing_conf_matrix_cropped.png, id=313, 312.86888pt x 254.1495pt>
 File: ./figures/Alex_420_no_balancing_conf_matrix_cropped.png Graphic file (type png)
 <use ./figures/Alex_420_no_balancing_conf_matrix_cropped.png>
-Package pdftex.def Info: ./figures/Alex_420_no_balancing_conf_matrix_cropped.png  used on input line 34.
-(pdftex.def)             Requested size: 194.76982pt x 158.21869pt.
-<./figures/Alex_420_with_balancing_conf_matrix_cropped.png, id=301, 311.36325pt x 250.23488pt>
+Package pdftex.def Info: ./figures/Alex_420_no_balancing_conf_matrix_cropped.png  used on input line 33.
+(pdftex.def)             Requested size: 178.86702pt x 145.30106pt.
+<./figures/Alex_420_with_balancing_conf_matrix_cropped.png, id=314, 311.36325pt x 250.23488pt>
 File: ./figures/Alex_420_with_balancing_conf_matrix_cropped.png Graphic file (type png)
 <use ./figures/Alex_420_with_balancing_conf_matrix_cropped.png>
-Package pdftex.def Info: ./figures/Alex_420_with_balancing_conf_matrix_cropped.png  used on input line 38.
-(pdftex.def)             Requested size: 194.76982pt x 156.53004pt.
+Package pdftex.def Info: ./figures/Alex_420_with_balancing_conf_matrix_cropped.png  used on input line 37.
+(pdftex.def)             Requested size: 178.86702pt x 143.75029pt.
+ [9 <./figures/model_1_no_balancing_conf_matrix_cropped.png>]
 File: ./figures/Alex_420_with_balancing_conf_matrix_cropped.png Graphic file (type png)
 <use ./figures/Alex_420_with_balancing_conf_matrix_cropped.png>
-Package pdftex.def Info: ./figures/Alex_420_with_balancing_conf_matrix_cropped.png  used on input line 66.
-(pdftex.def)             Requested size: 194.76982pt x 156.53004pt.
-<./figures/Alex_420_augment_conf_matrix_cropped.png, id=304, 308.95425pt x 249.63263pt>
+Package pdftex.def Info: ./figures/Alex_420_with_balancing_conf_matrix_cropped.png  used on input line 67.
+(pdftex.def)             Requested size: 178.86702pt x 143.75029pt.
+<./figures/Alex_420_augment_conf_matrix_cropped.png, id=325, 308.95425pt x 249.63263pt>
 File: ./figures/Alex_420_augment_conf_matrix_cropped.png Graphic file (type png)
 <use ./figures/Alex_420_augment_conf_matrix_cropped.png>
-Package pdftex.def Info: ./figures/Alex_420_augment_conf_matrix_cropped.png  used on input line 70.
-(pdftex.def)             Requested size: 194.76982pt x 157.37222pt.
-
-Underfull \vbox (badness 1931) has occurred while \output is active []
-
- [9 <./figures/model_1_no_balancing_conf_matrix_cropped.png>]
-<./figures/Alex_4_with_balancing_conf_matrix_cropped.png, id=313, 310.45987pt x 251.13824pt>
+Package pdftex.def Info: ./figures/Alex_420_augment_conf_matrix_cropped.png  used on input line 71.
+(pdftex.def)             Requested size: 178.86702pt x 144.52039pt.
+<./figures/Alex_4_with_balancing_conf_matrix_cropped.png, id=327, 310.45987pt x 251.13824pt>
 File: ./figures/Alex_4_with_balancing_conf_matrix_cropped.png Graphic file (type png)
 <use ./figures/Alex_4_with_balancing_conf_matrix_cropped.png>
-Package pdftex.def Info: ./figures/Alex_4_with_balancing_conf_matrix_cropped.png  used on input line 81.
-(pdftex.def)             Requested size: 194.76982pt x 157.55498pt.
-<./figures/Alex_4_with_augment_conf_matrix_cropped.png, id=314, 311.06212pt x 250.83713pt>
+Package pdftex.def Info: ./figures/Alex_4_with_balancing_conf_matrix_cropped.png  used on input line 82.
+(pdftex.def)             Requested size: 178.86702pt x 144.69077pt.
+<./figures/Alex_4_with_augment_conf_matrix_cropped.png, id=328, 311.06212pt x 250.83713pt>
 File: ./figures/Alex_4_with_augment_conf_matrix_cropped.png Graphic file (type png)
 <use ./figures/Alex_4_with_augment_conf_matrix_cropped.png>
-Package pdftex.def Info: ./figures/Alex_4_with_augment_conf_matrix_cropped.png  used on input line 85.
-(pdftex.def)             Requested size: 194.76982pt x 157.06752pt.
- [10 <./figures/Alex_420_no_balancing_conf_matrix_cropped.png> <./figures/Alex_420_with_balancing_conf_matrix_cropped.png>] [11 <./figures/Alex_420_augment_conf_matrix_cropped.png> <./figures/Alex_4_with_balancing_conf_matrix_cropped.png> <./figures/Alex_4_with_augment_conf_matrix_cropped.png>]) (chapter/experimentsResNet.tex [12]
-<figures/Resnet18_8_epochs.png, id=344, 722.7pt x 361.35pt>
+Package pdftex.def Info: ./figures/Alex_4_with_augment_conf_matrix_cropped.png  used on input line 86.
+(pdftex.def)             Requested size: 178.86702pt x 144.2417pt.
+ [10 <./figures/Alex_420_no_balancing_conf_matrix_cropped.png> <./figures/Alex_420_with_balancing_conf_matrix_cropped.png>] [11 <./figures/Alex_420_augment_conf_matrix_cropped.png> <./figures/Alex_4_with_balancing_conf_matrix_cropped.png> <./figures/Alex_4_with_augment_conf_matrix_cropped.png>]) (chapter/experimentsResNet.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/Resnet18_8_epochs.png, id=354, 722.7pt x 361.35pt>
 File: figures/Resnet18_8_epochs.png Graphic file (type png)
 <use figures/Resnet18_8_epochs.png>
-Package pdftex.def Info: figures/Resnet18_8_epochs.png  used on input line 30.
+Package pdftex.def Info: figures/Resnet18_8_epochs.png  used on input line 31.
 (pdftex.def)             Requested size: 298.11374pt x 149.05872pt.
-<figures/model_18_v5_accuracy.png, id=346, 722.7pt x 361.35pt>
+[12]
+<figures/model_18_v5_accuracy.png, id=361, 722.7pt x 361.35pt>
 File: figures/model_18_v5_accuracy.png Graphic file (type png)
 <use figures/model_18_v5_accuracy.png>
-Package pdftex.def Info: figures/model_18_v5_accuracy.png  used on input line 38.
+Package pdftex.def Info: figures/model_18_v5_accuracy.png  used on input line 39.
 (pdftex.def)             Requested size: 298.11374pt x 149.05872pt.
-<figures/model_152_v4_accuracy.png, id=350, 722.7pt x 361.35pt>
+<figures/model_152_v4_accuracy.png, id=365, 722.7pt x 361.35pt>
 File: figures/model_152_v4_accuracy.png Graphic file (type png)
 <use figures/model_152_v4_accuracy.png>
-Package pdftex.def Info: figures/model_152_v4_accuracy.png  used on input line 47.
+Package pdftex.def Info: figures/model_152_v4_accuracy.png  used on input line 48.
 (pdftex.def)             Requested size: 298.11374pt x 149.05872pt.
 ) (chapter/experimentsXception.tex [13 <./figures/Resnet18_8_epochs.png> <./figures/model_18_v5_accuracy.png>]
-<figures/xception_PathMNIST_result.png, id=369, 988.6536pt x 581.0508pt>
+<figures/xception_PathMNIST_result.png, id=383, 988.6536pt x 581.0508pt>
 File: figures/xception_PathMNIST_result.png Graphic file (type png)
 <use figures/xception_PathMNIST_result.png>
 Package pdftex.def Info: figures/xception_PathMNIST_result.png  used on input line 12.
 (pdftex.def)             Requested size: 317.9892pt x 186.88872pt.
-)) (chapter/discussion.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14 <./figures/model_152_v4_accuracy.png>]) (chapter/conclusion.tex [15 <./figures/xception_PathMNIST_result.png>]) (ofu_xai_2022.bbl
+)) (chapter/discussion.tex [14 <./figures/model_152_v4_accuracy.png>] [15 <./figures/xception_PathMNIST_result.png>]) (chapter/conclusion.tex) (ofu_xai_2022.bbl
 Underfull \hbox (badness 2913) in paragraph at lines 18--23
 \T1/cmtt/m/n/10 pytorch$[]\T1/ptm/m/n/10 (+20) , 2018.  Ac-cessed: 14.01.2024, PyPI link: []$\T1/cmtt/m/n/10 https : / / pypi . org / project /
  []
 
-) [16]
-Underfull \hbox (badness 10000) in paragraph at lines 133--136
+[16]) [17]
+Underfull \hbox (badness 10000) in paragraph at lines 134--137
 [][]  []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--142
+Underfull \hbox (badness 10000) in paragraph at lines 140--143
 [][]  []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--149
+Underfull \hbox (badness 10000) in paragraph at lines 146--150
 [][]  []
  []
 
-[17] (chapter/appendix.tex
+[18] (chapter/appendix.tex
 \openout3 = `ofu_xai_2022.pyg'.
 
  (_minted-ofu_xai_2022/default.pygstyle) (_minted-ofu_xai_2022/9523B1358A47C73610C8227F0ACC6DA3C79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex
@@ -773,46 +771,46 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <7> not available
  (_minted-ofu_xai_2022/361A8C1CCEF340C783AFF8DCB46417EDC79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex)
 \openout3 = `ofu_xai_2022.pyg'.
 
- (_minted-ofu_xai_2022/249FE7E204F8C0E096D14A7B4FFA6254C79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex [18])
+ (_minted-ofu_xai_2022/249FE7E204F8C0E096D14A7B4FFA6254C79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex [19])
 \openout3 = `ofu_xai_2022.pyg'.
 
  (_minted-ofu_xai_2022/A5B559B839CFE77EB9D1B7301CF7E8E3C79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex)
 \openout3 = `ofu_xai_2022.pyg'.
 
  (_minted-ofu_xai_2022/3A0FA1E0F50B3DCF7B652551B86FB3C1C79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex)
-<./figures/AlexNet-architecture.png, id=411, 985.6825pt x 303.1325pt>
+<./figures/AlexNet-architecture.png, id=430, 985.6825pt x 303.1325pt>
 File: ./figures/AlexNet-architecture.png Graphic file (type png)
 <use ./figures/AlexNet-architecture.png>
 Package pdftex.def Info: ./figures/AlexNet-architecture.png  used on input line 172.
 (pdftex.def)             Requested size: 394.266pt x 121.25084pt.
- [19]
-<figures/xception_architecture.png, id=420, 814.54312pt x 572.1375pt>
+ [20]
+<figures/xception_architecture.png, id=438, 814.54312pt x 572.1375pt>
 File: figures/xception_architecture.png Graphic file (type png)
 <use figures/xception_architecture.png>
 Package pdftex.def Info: figures/xception_architecture.png  used on input line 178.
 (pdftex.def)             Requested size: 357.73405pt x 251.26985pt.
-) [20 <./figures/AlexNet-architecture.png> <./figures/xception_architecture.png>] [21] (ofu_xai_2022.aux)
+) [21 <./figures/AlexNet-architecture.png> <./figures/xception_architecture.png>] [22] (ofu_xai_2022.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-13>
  ***********
 Package rerunfilecheck Info: File `ofu_xai_2022.out' has not changed.
-(rerunfilecheck)             Checksum: 4389290919B3CBBE4544DC9893418957;4778.
+(rerunfilecheck)             Checksum: B5202FF4E89B8C21E1E6502DC7C03684;4871.
 runsystem(del ofu_xai_2022.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 18797 strings out of 474462
- 324588 string characters out of 5743355
+ 18801 strings out of 474462
+ 324659 string characters out of 5743355
  1943998 words of memory out of 5000000
- 40468 multiletter control sequences out of 15000+600000
+ 40470 multiletter control sequences out of 15000+600000
  600449 words of font info for 205 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,10n,81p,3094b,853s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 77i,10n,81p,3245b,853s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi525\ecit0800.pk> <C:\Users\Andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi525\ectt0800.pk> <C:\Users\Andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ofu_xai_2022.pdf (21 pages, 2767099 bytes).
+Output written on ofu_xai_2022.pdf (22 pages, 2773926 bytes).
 PDF statistics:
- 647 PDF objects out of 1000 (max. 8388607)
- 100 named destinations out of 1000 (max. 500000)
- 41848 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 667 PDF objects out of 1000 (max. 8388607)
+ 102 named destinations out of 1000 (max. 500000)
+ 41856 words of extra memory for PDF output out of 42996 (max. 10000000)
 
