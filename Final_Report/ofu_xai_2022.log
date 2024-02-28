@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.26)  28 FEB 2024 19:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.26)  28 FEB 2024 19:51
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -441,35 +441,61 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 runsystem(if not exist _minted-ofu_xai_2022 mkdir _minted-ofu_xai_2022)...executed.
 
+ (C:\Users\Andi\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+ (C:\Users\Andi\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (C:\Users\Andi\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen193
+\captionmargin=\dimen194
+\caption@leftmargin=\dimen195
+\caption@rightmargin=\dimen196
+\caption@width=\dimen197
+\caption@indent=\dimen198
+\caption@parindent=\dimen199
+\caption@hangindent=\dimen256
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count330
+\c@continuedfloat=\count331
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count332
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count333
+)
 runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > ofu_xai_2022.aex <nul: /p x=^%~$PATH:i>> ofu_xai_2022.aex)...executed.
 
 runsystem(del ofu_xai_2022.aex)...executed.
 
  (C:\Users\Andi\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count330
+\l__color_backend_stack_int=\count334
 \l__pdf_internal_box=\box63
 ) (ofu_xai_2022.aux)
 \openout1 = `ofu_xai_2022.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -537,24 +563,24 @@ LaTeX Font Info:    ... okay on input line 83.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 83.
+Package hyperref Info: Link coloring OFF on input line 84.
 (ofu_xai_2022.out) (ofu_xai_2022.out)
 \@outlinefile=\write5
 \openout5 = `ofu_xai_2022.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 83.
-Package microtype Info: Applying patch `item' on input line 83.
-Package microtype Info: Applying patch `toc' on input line 83.
-Package microtype Info: Applying patch `eqnum' on input line 83.
-Package microtype Info: Applying patch `footnote' on input line 83.
-Package microtype Info: Applying patch `verbatim' on input line 83.
+LaTeX Info: Redefining \microtypecontext on input line 84.
+Package microtype Info: Applying patch `item' on input line 84.
+Package microtype Info: Applying patch `toc' on input line 84.
+Package microtype Info: Applying patch `eqnum' on input line 84.
+Package microtype Info: Applying patch `footnote' on input line 84.
+Package microtype Info: Applying patch `verbatim' on input line 84.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 83.
+LaTeX Info: Redefining \showhyphens on input line 84.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -562,38 +588,41 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 ) (C:\Users\Andi\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count331
-\scratchdimen=\dimen193
+\scratchcounter=\count335
+\scratchdimen=\dimen257
 \scratchbox=\box64
-\nofMPsegments=\count332
-\nofMParguments=\count333
+\nofMPsegments=\count336
+\nofMParguments=\count337
 \everyMPshowfont=\toks32
-\MPscratchCnt=\count334
-\MPscratchDim=\dimen194
-\MPnumerator=\count335
-\makeMPintoPDFobject=\count336
+\MPscratchCnt=\count338
+\MPscratchDim=\dimen258
+\MPnumerator=\count339
+\makeMPintoPDFobject=\count340
 \everyMPtoPDFconversion=\toks33
 ) (C:\Users\Andi\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\Andi\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-)) (C:\Users\Andi\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+ (C:\Users\Andi\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 87.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 88.
  (C:\Users\Andi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Users\Andi\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 87.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 88.
  (C:\Users\Andi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\Andi\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 87.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 88.
  (C:\Users\Andi\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
@@ -604,81 +633,104 @@ Package microtype Info: Loading generic protrusion settings for font family
  (chapter/introduction.tex) (chapter/methods.tex [1
 
 
-{C:/Users/Andi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] (chapter/foundations.tex) (chapter/architectures.tex (chapter/simplecnn.tex) (chapter/resnet.tex [2]) (chapter/xception.tex))) (chapter/experiments.tex (chapter/data.tex
-<figures/MNIST.png, id=119, 859.71187pt x 118.56796pt>
+{C:/Users/Andi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] (chapter/foundations.tex
+<./figures/Pipeline.png, id=150, 1421.31pt x 680.5425pt>
+File: ./figures/Pipeline.png Graphic file (type png)
+<use ./figures/Pipeline.png>
+Package pdftex.def Info: ./figures/Pipeline.png  used on input line 8.
+(pdftex.def)             Requested size: 390.85062pt x 187.14456pt.
+ [2 <./figures/Pipeline.png>]) (chapter/architectures.tex (chapter/simplecnn.tex [3]) (chapter/alexnet.tex
+<./figures/AlexNet-architecture.png, id=202, 985.6825pt x 303.1325pt>
+File: ./figures/AlexNet-architecture.png Graphic file (type png)
+<use ./figures/AlexNet-architecture.png>
+Package pdftex.def Info: ./figures/AlexNet-architecture.png  used on input line 5.
+(pdftex.def)             Requested size: 394.266pt x 121.25084pt.
+ [4]) (chapter/resnet.tex) (chapter/xception.tex))) (chapter/experiments.tex (chapter/data.tex [5 <./figures/AlexNet-architecture.png>]
+<figures/MNIST.png, id=220, 859.71187pt x 118.56796pt>
 File: figures/MNIST.png Graphic file (type png)
 <use figures/MNIST.png>
 Package pdftex.def Info: figures/MNIST.png  used on input line 6.
 (pdftex.def)             Requested size: 317.9892pt x 43.85678pt.
- [3
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.13 
-      <./figures/MNIST.png>]
-<figures/MedMNIST.png, id=134, 708.39656pt x 130.23656pt>
+<figures/MedMNIST.png, id=228, 708.39656pt x 130.23656pt>
 File: figures/MedMNIST.png Graphic file (type png)
 <use figures/MedMNIST.png>
 Package pdftex.def Info: figures/MedMNIST.png  used on input line 18.
 (pdftex.def)             Requested size: 317.9892pt x 58.46281pt.
-) (chapter/experimentsSimpleCNN.tex
-<figures/simpleCNN_old_vs_new.png, id=138, 722.7pt x 361.35pt>
+) (chapter/experimentsSimpleCNN.tex [6 <./figures/MNIST.png> <./figures/MedMNIST.png>]
+<figures/simpleCNN_old_vs_new.png, id=241, 722.7pt x 361.35pt>
 File: figures/simpleCNN_old_vs_new.png Graphic file (type png)
 <use figures/simpleCNN_old_vs_new.png>
 Package pdftex.def Info: figures/simpleCNN_old_vs_new.png  used on input line 11.
 (pdftex.def)             Requested size: 298.11374pt x 149.05872pt.
-<figures/simpleCNN_PathMNIST_variations.png, id=140, 988.6536pt x 581.0508pt>
+<figures/simpleCNN_PathMNIST_variations.png, id=243, 988.6536pt x 581.0508pt>
 File: figures/simpleCNN_PathMNIST_variations.png Graphic file (type png)
 <use figures/simpleCNN_PathMNIST_variations.png>
 Package pdftex.def Info: figures/simpleCNN_PathMNIST_variations.png  used on input line 19.
 (pdftex.def)             Requested size: 317.9892pt x 186.88872pt.
-) (chapter/experimentsAlexNet.tex) (chapter/experimentsResNet.tex) (chapter/experimentsXception.tex [4
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1 \subsection
-               {Xception}\label{resultsXceptions} <./figures/MedMNIST.png>] [5
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.6 F
-     or training the Xception model, we used the AdamW optimizer \citep{losh...
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.6 F
-     or training the Xception model, we used the AdamW optimizer \citep{losh... <./figures/simpleCNN_old_vs_new.png> <./figures/simpleCNN_PathMNIST_variations.png>]
-<figures/xception_PathMNIST_result.png, id=166, 988.6536pt x 581.0508pt>
+) (chapter/experimentsAlexNet.tex [7 <./figures/simpleCNN_old_vs_new.png> <./figures/simpleCNN_PathMNIST_variations.png>]
+<./figures/model_1_no_balancing_conf_matrix_cropped.png, id=255, 307.1475pt x 248.72925pt>
+File: ./figures/model_1_no_balancing_conf_matrix_cropped.png Graphic file (type png)
+<use ./figures/model_1_no_balancing_conf_matrix_cropped.png>
+Package pdftex.def Info: ./figures/model_1_no_balancing_conf_matrix_cropped.png  used on input line 6.
+(pdftex.def)             Requested size: 230.36005pt x 186.54648pt.
+<./figures/Alex_420_no_balancing_conf_matrix_cropped.png, id=258, 312.86888pt x 254.1495pt>
+File: ./figures/Alex_420_no_balancing_conf_matrix_cropped.png Graphic file (type png)
+<use ./figures/Alex_420_no_balancing_conf_matrix_cropped.png>
+Package pdftex.def Info: ./figures/Alex_420_no_balancing_conf_matrix_cropped.png  used on input line 34.
+(pdftex.def)             Requested size: 194.76982pt x 158.21869pt.
+<./figures/Alex_420_with_balancing_conf_matrix_cropped.png, id=259, 311.36325pt x 250.23488pt>
+File: ./figures/Alex_420_with_balancing_conf_matrix_cropped.png Graphic file (type png)
+<use ./figures/Alex_420_with_balancing_conf_matrix_cropped.png>
+Package pdftex.def Info: ./figures/Alex_420_with_balancing_conf_matrix_cropped.png  used on input line 38.
+(pdftex.def)             Requested size: 194.76982pt x 156.53004pt.
+ [8 <./figures/model_1_no_balancing_conf_matrix_cropped.png>]
+File: ./figures/Alex_420_with_balancing_conf_matrix_cropped.png Graphic file (type png)
+<use ./figures/Alex_420_with_balancing_conf_matrix_cropped.png>
+Package pdftex.def Info: ./figures/Alex_420_with_balancing_conf_matrix_cropped.png  used on input line 66.
+(pdftex.def)             Requested size: 194.76982pt x 156.53004pt.
+<./figures/Alex_420_augment_conf_matrix_cropped.png, id=270, 308.95425pt x 249.63263pt>
+File: ./figures/Alex_420_augment_conf_matrix_cropped.png Graphic file (type png)
+<use ./figures/Alex_420_augment_conf_matrix_cropped.png>
+Package pdftex.def Info: ./figures/Alex_420_augment_conf_matrix_cropped.png  used on input line 70.
+(pdftex.def)             Requested size: 194.76982pt x 157.37222pt.
+ [9 <./figures/Alex_420_no_balancing_conf_matrix_cropped.png> <./figures/Alex_420_with_balancing_conf_matrix_cropped.png>]
+<./figures/Alex_4_with_balancing_conf_matrix_cropped.png, id=279, 310.45987pt x 251.13824pt>
+File: ./figures/Alex_4_with_balancing_conf_matrix_cropped.png Graphic file (type png)
+<use ./figures/Alex_4_with_balancing_conf_matrix_cropped.png>
+Package pdftex.def Info: ./figures/Alex_4_with_balancing_conf_matrix_cropped.png  used on input line 81.
+(pdftex.def)             Requested size: 194.76982pt x 157.55498pt.
+<./figures/Alex_4_with_augment_conf_matrix_cropped.png, id=280, 311.06212pt x 250.83713pt>
+File: ./figures/Alex_4_with_augment_conf_matrix_cropped.png Graphic file (type png)
+<use ./figures/Alex_4_with_augment_conf_matrix_cropped.png>
+Package pdftex.def Info: ./figures/Alex_4_with_augment_conf_matrix_cropped.png  used on input line 85.
+(pdftex.def)             Requested size: 194.76982pt x 157.06752pt.
+ [10 <./figures/Alex_420_augment_conf_matrix_cropped.png>]) (chapter/experimentsResNet.tex) (chapter/experimentsXception.tex [11 <./figures/Alex_4_with_balancing_conf_matrix_cropped.png> <./figures/Alex_4_with_augment_conf_matrix_cropped.png>]
+<figures/xception_PathMNIST_result.png, id=310, 988.6536pt x 581.0508pt>
 File: figures/xception_PathMNIST_result.png Graphic file (type png)
 <use figures/xception_PathMNIST_result.png>
 Package pdftex.def Info: figures/xception_PathMNIST_result.png  used on input line 12.
 (pdftex.def)             Requested size: 317.9892pt x 186.88872pt.
 )) (chapter/discussion.tex) (chapter/conclusion.tex) (ofu_xai_2022.bbl
-Underfull \hbox (badness 2913) in paragraph at lines 9--14
+Underfull \hbox (badness 2913) in paragraph at lines 18--23
 \T1/cmtt/m/n/10 pytorch$[]\T1/ptm/m/n/10 (+20) , 2018.  Ac-cessed: 14.01.2024, PyPI link: []$\T1/cmtt/m/n/10 https : / / pypi . org / project /
  []
 
-[6
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.32 ... Marx, Valous, Ferber, et~al.]{kather2019}
-                                                   <./figures/xception_PathMNIST_result.png>]) [7]
-Underfull \hbox (badness 10000) in paragraph at lines 132--135
+[12 <./figures/xception_PathMNIST_result.png>]) [13]
+Underfull \hbox (badness 10000) in paragraph at lines 133--136
 [][]  []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--141
+Underfull \hbox (badness 10000) in paragraph at lines 139--142
 [][]  []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--148
+Underfull \hbox (badness 10000) in paragraph at lines 145--149
 [][]  []
  []
 
-[8] (chapter/appendix.tex
+[14] (chapter/appendix.tex
 \openout3 = `ofu_xai_2022.pyg'.
 
  (_minted-ofu_xai_2022/default.pygstyle) (_minted-ofu_xai_2022/9523B1358A47C73610C8227F0ACC6DA3C79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex
@@ -690,44 +742,34 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <7> not available
  (_minted-ofu_xai_2022/361A8C1CCEF340C783AFF8DCB46417EDC79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex)
 \openout3 = `ofu_xai_2022.pyg'.
 
- (_minted-ofu_xai_2022/249FE7E204F8C0E096D14A7B4FFA6254C79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex [9])
-<figures/xception_architecture.png, id=197, 814.54312pt x 572.1375pt>
+ (_minted-ofu_xai_2022/249FE7E204F8C0E096D14A7B4FFA6254C79BBAFF29FF66829DEDC39F3F1D1D4F.pygtex [15])
+<figures/xception_architecture.png, id=346, 814.54312pt x 572.1375pt>
 File: figures/xception_architecture.png Graphic file (type png)
 <use figures/xception_architecture.png>
 Package pdftex.def Info: figures/xception_architecture.png  used on input line 127.
 (pdftex.def)             Requested size: 357.73405pt x 251.26985pt.
-) [10
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.161 \end{document}
-                     <./figures/xception_architecture.png>] [11
-pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.161 \end{document}
-                    ] (ofu_xai_2022.aux)
+) [16 <./figures/xception_architecture.png>] [17] (ofu_xai_2022.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-13>
  ***********
 Package rerunfilecheck Info: File `ofu_xai_2022.out' has not changed.
-(rerunfilecheck)             Checksum: 1109298354FF45ED32D89C5D532EF3B3;2299.
+(rerunfilecheck)             Checksum: 809C7BF10984E66455E544BA6B943BD2;4077.
 runsystem(del ofu_xai_2022.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 17111 strings out of 474462
- 288239 string characters out of 5743355
+ 18702 strings out of 474462
+ 321282 string characters out of 5743355
  1943998 words of memory out of 5000000
- 38868 multiletter control sequences out of 15000+600000
- 599368 words of font info for 193 fonts, out of 8000000 for 9000
+ 40399 multiletter control sequences out of 15000+600000
+ 600004 words of font info for 202 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,10n,81p,1728b,853s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi525\ectt0800.pk> <C:\Users\Andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ofu_xai_2022.pdf (11 pages, 1720975 bytes).
+ 77i,10n,81p,2334b,853s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi525\ectt0800.pk> <C:\Users\Andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on ofu_xai_2022.pdf (17 pages, 2555141 bytes).
 PDF statistics:
- 350 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 41151 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 525 PDF objects out of 1000 (max. 8388607)
+ 84 named destinations out of 1000 (max. 500000)
+ 41271 words of extra memory for PDF output out of 42996 (max. 10000000)
 

@@ -1,9 +1,18 @@
-\begin{thebibliography}{8}
+\begin{thebibliography}{17}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Alzubaidi et~al.(2021)Alzubaidi, Zhang, Humaidi, Al-Dujaili, Duan,
+  Al-Shamma, Santamar{\'\i}a, Fadhel, Al-Amidie, and
+  Farhan]{alzubaidi2021review}
+L.~Alzubaidi, J.~Zhang, A.~J. Humaidi, A.~Al-Dujaili, Y.~Duan, O.~Al-Shamma,
+  J.~Santamar{\'\i}a, M.~A. Fadhel, M.~Al-Amidie, and L.~Farhan.
+\newblock Review of deep learning: Concepts, cnn architectures, challenges,
+  applications, future directions.
+\newblock \emph{Journal of big Data}, 8:\penalty0 1--74, 2021.
 
 \bibitem[Cadene(2018)]{cadene2023pretrainedmodels}
 R.~Cadene.
@@ -22,6 +31,17 @@ Google.
 \newblock \url{https://colab.research.google.com}, 2024.
 \newblock Accessed: 14.01.2024.
 
+\bibitem[Hand et~al.(2021)Hand, Christen, and Kirielle]{hand2021f}
+D.~J. Hand, P.~Christen, and N.~Kirielle.
+\newblock F*: an interpretable transformation of the f-measure.
+\newblock \emph{Machine Learning}, 110\penalty0 (3):\penalty0 451--456, 2021.
+
+\bibitem[Hub(2024)]{pytorchAlexNet}
+P.~Hub.
+\newblock {A}lex{N}et --- pytorch.org.
+\newblock \url{https://pytorch.org/hub/pytorch_vision_alexnet/}, 2024.
+\newblock [Accessed 27-02-2024].
+
 \bibitem[Kather et~al.(2018)Kather, Halama, and Marx]{kather2018}
 J.~N. Kather, N.~Halama, and A.~Marx.
 \newblock 100.000 histological images of human colorectal cancer and healthy
@@ -36,6 +56,31 @@ J.~N. Kather, J.~Krisam, P.~Charoentong, T.~Luedde, E.~Herpel, C.-A. Weis,
   deep learning: A retrospective multicenter study.
 \newblock \emph{PLoS Medicine}, 16\penalty0 (1):\penalty0 e1002730, 2019.
 
+\bibitem[Kaur et~al.(2019)Kaur, Pannu, and Malhi]{kaurbalancing}
+H.~Kaur, H.~S. Pannu, and A.~K. Malhi.
+\newblock A systematic review on imbalanced data challenges in machine
+  learning: Applications and solutions.
+\newblock 52\penalty0 (4), aug 2019.
+\newblock ISSN 0360-0300.
+\newblock \doi{10.1145/3343440}.
+\newblock URL \url{https://doi.org/10.1145/3343440}.
+
+\bibitem[Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and
+  Hinton]{AlexNetoriginal}
+A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In F.~Pereira, C.~Burges, L.~Bottou, and K.~Weinberger, editors,
+  \emph{Advances in Neural Information Processing Systems}, volume~25. Curran
+  Associates, Inc., 2012.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf}.
+
+\bibitem[Kulkarni et~al.(2020)Kulkarni, Chong, and
+  Batarseh]{kulkarni2020foundations}
+A.~Kulkarni, D.~Chong, and F.~A. Batarseh.
+\newblock Foundations of data imbalance and solutions for a data democracy.
+\newblock In \emph{Data democracy}, pages 83--106. Elsevier, 2020.
+
 \bibitem[Lecun et~al.(1998)Lecun, Bottou, Bengio, and Haffner]{mnist}
 Y.~Lecun, L.~Bottou, Y.~Bengio, and P.~Haffner.
 \newblock Gradient-based learning applied to document recognition.
@@ -46,6 +91,25 @@ Y.~Lecun, L.~Bottou, Y.~Bengio, and P.~Haffner.
 \bibitem[Loshchilov and Hutter(2019)]{loshchilov2019decoupled}
 I.~Loshchilov and F.~Hutter.
 \newblock Decoupled weight decay regularization, 2019.
+
+\bibitem[Maharana et~al.(2022)Maharana, Mondal, and Nemade]{maharana2022review}
+K.~Maharana, S.~Mondal, and B.~Nemade.
+\newblock A review: Data pre-processing and data augmentation techniques.
+\newblock \emph{Global Transitions Proceedings}, 3\penalty0 (1):\penalty0
+  91--99, 2022.
+
+\bibitem[Santurkar et~al.(2018)Santurkar, Tsipras, Ilyas, and
+  Madry]{santurkar2018does}
+S.~Santurkar, D.~Tsipras, A.~Ilyas, and A.~Madry.
+\newblock How does batch normalization help optimization?
+\newblock \emph{Advances in neural information processing systems}, 31, 2018.
+
+\bibitem[WeightedRandomSamplerdoc(2024)]{pytorchTorchutilsdatax2014}
+WeightedRandomSamplerdoc.
+\newblock torch.utils.data \&x2014; {P}y{T}orch 2.2 documentation ---
+  pytorch.org.
+\newblock \url{https://pytorch.org/docs/stable/data.html}, 2024.
+\newblock [Accessed 27-02-2024].
 
 \bibitem[Yang et~al.(2021)Yang, Shi, and Ni]{medmnistv1}
 J.~Yang, R.~Shi, and B.~Ni.

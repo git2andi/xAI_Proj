@@ -5,44 +5,46 @@ Reallocating 'name_of_file' (item size: 1) to 13 items.
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: abbrvnat.bst
 Database file #1: bibliography.bib
-You've used 8 entries,
+Warning--empty journal in kaurbalancing
+You've used 17 entries,
             2773 wiz_defined-function locations,
-            640 strings with 6057 characters,
-and the built_in function-call counts, 3774 in all, are:
-= -- 317
-> -- 251
-< -- 5
-+ -- 86
-- -- 78
-* -- 293
-:= -- 582
-add.period$ -- 25
-call.type$ -- 8
-change.case$ -- 49
-chr.to.int$ -- 8
-cite$ -- 16
-duplicate$ -- 151
-empty$ -- 301
-format.name$ -- 88
-if$ -- 790
+            701 strings with 8111 characters,
+and the built_in function-call counts, 8287 in all, are:
+= -- 711
+> -- 567
+< -- 9
++ -- 192
+- -- 175
+* -- 680
+:= -- 1293
+add.period$ -- 60
+call.type$ -- 17
+change.case$ -- 107
+chr.to.int$ -- 17
+cite$ -- 35
+duplicate$ -- 340
+empty$ -- 639
+format.name$ -- 194
+if$ -- 1727
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 3
-newline$ -- 49
-num.names$ -- 32
-pop$ -- 116
+missing$ -- 10
+newline$ -- 100
+num.names$ -- 70
+pop$ -- 233
 preamble$ -- 1
-purify$ -- 41
+purify$ -- 90
 quote$ -- 0
-skip$ -- 139
+skip$ -- 285
 stack$ -- 0
-substring$ -- 99
-swap$ -- 18
-text.length$ -- 1
+substring$ -- 204
+swap$ -- 36
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 88
-warning$ -- 0
-while$ -- 29
+type$ -- 187
+warning$ -- 1
+while$ -- 66
 width$ -- 0
-write$ -- 108
+write$ -- 236
+(There was 1 warning)
