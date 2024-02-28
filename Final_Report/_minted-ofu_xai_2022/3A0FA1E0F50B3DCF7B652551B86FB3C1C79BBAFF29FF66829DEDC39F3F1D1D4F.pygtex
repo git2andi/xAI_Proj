@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+    \PYG{c+c1}{\PYGZsh{} Calculate weights for each class}
+    \PYG{n}{class\PYGZus{}weights} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{n}{count} \PYG{k}{for} \PYG{n}{count} \PYG{o+ow}{in} \PYG{n}{t\PYGZus{}occurences}\PYG{p}{]}
+
+    \PYG{c+c1}{\PYGZsh{} Create a list of weights corresponding to each sample in the dataset}
+    \PYG{n}{sample\PYGZus{}weights} \PYG{o}{=} \PYG{p}{[}\PYG{n}{class\PYGZus{}weights}\PYG{p}{[}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{train\PYGZus{}dataset}\PYG{p}{[}\PYG{n}{label\PYGZus{}idx}\PYG{p}{][}\PYG{l+m+mi}{1}\PYG{p}{])]} \PYG{k}{for} \PYG{n}{label\PYGZus{}idx} \PYG{o+ow}{in} \PYG{n}{train\PYGZus{}set}\PYG{o}{.}\PYG{n}{indices}\PYG{p}{]}
+
+    \PYG{c+c1}{\PYGZsh{} Convert the list of weights to a PyTorch tensor}
+    \PYG{n}{weights} \PYG{o}{=} \PYG{n}{torch}\PYG{o}{.}\PYG{n}{DoubleTensor}\PYG{p}{(}\PYG{n}{sample\PYGZus{}weights}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Use WeightedRandomSampler to balance the classes}
+    \PYG{n}{sampler} \PYG{o}{=} \PYG{n}{WeightedRandomSampler}\PYG{p}{(}\PYG{n}{weights}\PYG{p}{,} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{sample\PYGZus{}weights}\PYG{p}{),} \PYG{n}{replacement} \PYG{o}{=} \PYG{k+kc}{True}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{}len(train\PYGZus{}set) target\PYGZus{}number * num\PYGZus{}classes}
+\end{Verbatim}

@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n}{preprocessing} \PYG{o}{=} \PYG{n}{transforms}\PYG{o}{.}\PYG{n}{Compose}\PYG{p}{([}
+    \PYG{n}{transforms}\PYG{o}{.}\PYG{n}{Resize}\PYG{p}{(}\PYG{l+m+mi}{256}\PYG{p}{),}
+    \PYG{n}{transforms}\PYG{o}{.}\PYG{n}{CenterCrop}\PYG{p}{(}\PYG{l+m+mi}{224}\PYG{p}{),}
+    \PYG{n}{transforms}\PYG{o}{.}\PYG{n}{ToTensor}\PYG{p}{(),}
+    \PYG{n}{transforms}\PYG{o}{.}\PYG{n}{Normalize}\PYG{p}{(}\PYG{n}{mean}\PYG{o}{=}\PYG{p}{[}\PYG{l+m+mf}{0.485}\PYG{p}{,} \PYG{l+m+mf}{0.456}\PYG{p}{,} \PYG{l+m+mf}{0.406}\PYG{p}{],} \PYG{n}{std}\PYG{o}{=}\PYG{p}{[}\PYG{l+m+mf}{0.229}\PYG{p}{,} \PYG{l+m+mf}{0.224}\PYG{p}{,} \PYG{l+m+mf}{0.225}\PYG{p}{]),}
+\PYG{p}{])}
+
+\PYG{c+c1}{\PYGZsh{} augmentations to be applied}
+\PYG{n}{augmentations} \PYG{o}{=} \PYG{n}{v2}\PYG{o}{.}\PYG{n}{Compose}\PYG{p}{([}
+    \PYG{n}{v2}\PYG{o}{.}\PYG{n}{RandomHorizontalFlip}\PYG{p}{(}\PYG{l+m+mf}{0.1}\PYG{p}{),}
+    \PYG{n}{v2}\PYG{o}{.}\PYG{n}{RandomVerticalFlip}\PYG{p}{(}\PYG{l+m+mf}{0.1}\PYG{p}{)}
+\PYG{p}{])}
+
+\PYG{n}{augmentations\PYGZus{}2} \PYG{o}{=} \PYG{n}{v2}\PYG{o}{.}\PYG{n}{RandomApply}\PYG{p}{(}\PYG{n}{torch}\PYG{o}{.}\PYG{n}{nn}\PYG{o}{.}\PYG{n}{ModuleList}\PYG{p}{(}
+    \PYG{p}{[}\PYG{n}{v2}\PYG{o}{.}\PYG{n}{RandomRotation}\PYG{p}{(}\PYG{l+m+mi}{30}\PYG{p}{),]),} \PYG{n}{p}\PYG{o}{=}\PYG{l+m+mf}{0.1}\PYG{p}{)}
+\PYG{n}{augmentations\PYGZus{}3} \PYG{o}{=} \PYG{n}{v2}\PYG{o}{.}\PYG{n}{RandomApply}\PYG{p}{(}\PYG{n}{torch}\PYG{o}{.}\PYG{n}{nn}\PYG{o}{.}\PYG{n}{ModuleList}\PYG{p}{(}
+    \PYG{p}{[}\PYG{n}{transforms}\PYG{o}{.}\PYG{n}{ColorJitter}\PYG{p}{(),]),} \PYG{n}{p}\PYG{o}{=}\PYG{l+m+mf}{0.1}\PYG{p}{)}
+
+\end{Verbatim}

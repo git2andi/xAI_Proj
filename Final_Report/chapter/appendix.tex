@@ -120,14 +120,64 @@ class SimpleCNN(nn.Module):
         return torch.log_softmax(x, dim=1)
 \end{minted}
 
+
+\subsection{Data Transformation and Augmentation}\label{training_transformation}
+
+Normalization for ImageNet and Data Augmentation techniques used.
+
+\begin{minted}[mathescape, linenos, fontsize=\scriptsize]{python}
+preprocessing = transforms.Compose([
+    transforms.Resize(256),
+    transforms.CenterCrop(224),
+    transforms.ToTensor(),
+    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+])
+ 
+# augmentations to be applied
+augmentations = v2.Compose([
+    v2.RandomHorizontalFlip(0.1),
+    v2.RandomVerticalFlip(0.1)
+])
+
+augmentations_2 = v2.RandomApply(torch.nn.ModuleList(
+    [v2.RandomRotation(30),]), p=0.1)
+augmentations_3 = v2.RandomApply(torch.nn.ModuleList(
+    [transforms.ColorJitter(),]), p=0.1)
+
+\end{minted}
+
+\subsection{WeightedRandomSampler}\label{}
+Data balancing with WeightedRandomSampler
+
+\begin{minted}[mathescape, linenos, fontsize=\scriptsize]{python}
+    # Calculate weights for each class
+    class_weights = [1 / count for count in t_occurences]
+
+    # Create a list of weights corresponding to each sample in the dataset
+    sample_weights = [class_weights[int(train_dataset[label_idx][1])] for label_idx in train_set.indices]
+
+    # Convert the list of weights to a PyTorch tensor
+    weights = torch.DoubleTensor(sample_weights)
+
+    # Use WeightedRandomSampler to balance the classes
+    sampler = WeightedRandomSampler(weights, len(sample_weights), replacement = True) #len(train_set) target_number * num_classes
+\end{minted}
+
+
+
 \subsection{Pretrained Model Architectures}\label{model_architectures}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{./figures/AlexNet-architecture.png}
+	\caption{Original AlexNet architecture given by~\citeauthor{AlexNetoriginal}.}~\label{fig:alexnet}
+\end{figure}
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.9\textwidth]{figures/xception_architecture.png}
     \caption{Xceptions architecture as outlined by \citeauthor{chollet2017xception}.}\label{fig:xceptionArchitecture}
 \end{figure}
-
 
 \subsection{Additional Tables}\label{Appendixtables}
 
