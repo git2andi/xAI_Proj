@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.26)  28 FEB 2024 21:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.26)  28 FEB 2024 22:11
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -733,13 +733,19 @@ File: figures/model_152_v4_accuracy.png Graphic file (type png)
 <use figures/model_152_v4_accuracy.png>
 Package pdftex.def Info: figures/model_152_v4_accuracy.png  used on input line 48.
 (pdftex.def)             Requested size: 298.11374pt x 149.05872pt.
-) (chapter/experimentsXception.tex [13 <./figures/Resnet18_8_epochs.png> <./figures/model_18_v5_accuracy.png>]
+) (chapter/experimentsXception.tex
+Underfull \vbox (badness 1248) has occurred while \output is active []
+
+ [13 <./figures/Resnet18_8_epochs.png> <./figures/model_18_v5_accuracy.png>]
 <figures/xception_PathMNIST_result.png, id=383, 988.6536pt x 581.0508pt>
 File: figures/xception_PathMNIST_result.png Graphic file (type png)
 <use figures/xception_PathMNIST_result.png>
-Package pdftex.def Info: figures/xception_PathMNIST_result.png  used on input line 12.
+Package pdftex.def Info: figures/xception_PathMNIST_result.png  used on input line 10.
 (pdftex.def)             Requested size: 317.9892pt x 186.88872pt.
-)) (chapter/discussion.tex [14 <./figures/model_152_v4_accuracy.png>] [15 <./figures/xception_PathMNIST_result.png>]) (chapter/conclusion.tex) (ofu_xai_2022.bbl
+)) (chapter/discussion.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14 <./figures/model_152_v4_accuracy.png>] [15 <./figures/xception_PathMNIST_result.png>]) (chapter/conclusion.tex) (ofu_xai_2022.bbl
 Underfull \hbox (badness 2913) in paragraph at lines 18--23
 \T1/cmtt/m/n/10 pytorch$[]\T1/ptm/m/n/10 (+20) , 2018.  Ac-cessed: 14.01.2024, PyPI link: []$\T1/cmtt/m/n/10 https : / / pypi . org / project /
  []
@@ -781,13 +787,13 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <7> not available
 <./figures/AlexNet-architecture.png, id=430, 985.6825pt x 303.1325pt>
 File: ./figures/AlexNet-architecture.png Graphic file (type png)
 <use ./figures/AlexNet-architecture.png>
-Package pdftex.def Info: ./figures/AlexNet-architecture.png  used on input line 172.
+Package pdftex.def Info: ./figures/AlexNet-architecture.png  used on input line 171.
 (pdftex.def)             Requested size: 394.266pt x 121.25084pt.
  [20]
 <figures/xception_architecture.png, id=438, 814.54312pt x 572.1375pt>
 File: figures/xception_architecture.png Graphic file (type png)
 <use figures/xception_architecture.png>
-Package pdftex.def Info: figures/xception_architecture.png  used on input line 178.
+Package pdftex.def Info: figures/xception_architecture.png  used on input line 177.
 (pdftex.def)             Requested size: 357.73405pt x 251.26985pt.
 ) [21 <./figures/AlexNet-architecture.png> <./figures/xception_architecture.png>] [22] (ofu_xai_2022.aux)
  ***********
@@ -808,7 +814,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  77i,10n,81p,3245b,853s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi525\ecit0800.pk> <C:\Users\Andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi525\ectt0800.pk> <C:\Users\Andi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Andi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ofu_xai_2022.pdf (22 pages, 2773926 bytes).
+Output written on ofu_xai_2022.pdf (22 pages, 2773938 bytes).
 PDF statistics:
  667 PDF objects out of 1000 (max. 8388607)
  102 named destinations out of 1000 (max. 500000)
